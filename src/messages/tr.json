@@ -1,0 +1,186 @@
+﻿{
+  "nav": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetler",
+    "about": "Hakkımızda",
+    "contact": "İletişim"
+  },
+  "services": {
+    "company-formation": "Şirket Kuruluşu",
+    "residence-work-permits": "İkamet ve Çalışma İzinleri",
+    "bookkeeping": "Muhasebe Hizmetleri",
+    "tax-consulting": "Vergi Danışmanlığı",
+    "final-reports": "Girişimciler için Nihai Raporlar",
+    "business-analysis": "İş Analizleri",
+    "electronic-documents": "Elektronik Belge Yönetimi",
+    "real-estate": "Emlak",
+    "employment-agency-services": "İstihdam aracılık hizmetleri",
+    "visa": "Vize"
+  },
+  "hero": {
+    "title": "Profesyonel Muhasebe Hizmetleri",
+    "subtitle": "İşinizin büyümesi için uzman finansal çözümler",
+    "cta": "Başlayın",
+    "ctaSecondary": "Daha Fazla Bilgi"
+  },
+  "servicesSection": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "İhtiyaçlarınıza özel kapsamlı çözümler",
+    "learnMore": "Daha Fazla Bilgi",
+    "companyFormation": {
+      "title": "Şirket Kuruluşu",
+      "description": "LLC, mağaza veya diğer şirket türlerinin kuruluşunda tam yasal ve idari destek."
+    },
+    "permits": {
+      "title": "İkamet ve Çalışma İzinleri",
+      "description": "Karadağ'daki yabancı vatandaşlar için izin belgelerinin hazırlanması ve sunulmasında profesyonel yardım."
+    },
+    "bookkeeping": {
+      "title": "Muhasebe Hizmetleri",
+      "description": "İş defterlerinin tutulması, kayıtlar ve yasal düzenlemelere uygun mali tabloların hazırlanması."
+    },
+    "taxConsulting": {
+      "title": "Vergi Danışmanlığı",
+      "description": "Vergi alanında uzman danışmanlık, vergi yükümlülüklerinin optimizasyonu ve vergi beyannamelerinin hazırlanması."
+    },
+    "finalReports": {
+      "title": "Girişimciler için Nihai Raporlar",
+      "description": "Girişimciler ve tüzel kişilikler için yıllık mali tabloların ve bilançoların hazırlanması."
+    },
+    "businessAnalysis": {
+      "title": "İş Analizleri",
+      "description": "Detaylı finansal analizler, karlılık değerlendirmesi ve iş geliştirme önerileri."
+    },
+    "electronicDocuments": {
+      "title": "Elektronik Belge Yönetimi",
+      "description": "İş süreçlerinin dijitalleştirilmesi ve vergi daireleri ile kurumlarla elektronik belge değişimi."
+    },
+  "realEstate": {
+    "title": "Gayrimenkul Hizmetleri",
+    "description": "Mülk kaydı, belgelendirme ve gayrimenkul vergisi danışmanlığı."
+  },
+  "employmentAgency": {
+    "title": "İstihdam Ajansı Hizmetleri",
+    "description": "İşletmeler için işe alım ve istihdam yönetimi hizmetleri."
+  },
+  "visa": {
+    "title": "Vize Hizmetleri",
+    "description": "Vize başvurusu ve seyahat belgelendirme yardımı."
+  }
+  },
+  "about": {
+    "title": "Ajansımız Hakkında",
+    "description": "Olağanüstü finansal hizmetler sunmaya adanmış sertifikalı muhasebecilerden oluşan bir ekibiz. Yıllarca süren deneyimimiz ve mükemmellik taahhüdümüzle işletmelerin mali hedeflerine ulaşmasına yardımcı oluyoruz.",
+    "experience": "Aktif iş ortağı",
+    "clients": "Mutlu Müşteri",
+    "experts": "Uzman Muhasebeci",
+    "subtitle": "Biz, üstün mali hizmetler sağlamaya adanmış sertifikalı muhasebecilerden oluşan bir ekibiz. Yılların deneyimi ve mükemmelliğe olan bağlılığımızla, işletmelerin mali hedeflerine ulaşmasına yardımcı oluyoruz.",
+    "missionTitle": "Misyonumuz",
+    "missionDescription": "Küçük ve orta ölçekli işletmelere yüksek kaliteli muhasebe hizmetleri sağlıyoruz, şeffaflık, uzmanlık ve adanmışlık aracılığıyla mali başarı elde etmelerine yardımcı oluyoruz.",
+    "valuesTitle": "Değerlerimiz",
+    "values": {
+      "expertise": {
+        "title": "Uzmanlık",
+        "description": "Yılların deneyimine sahip sertifikalı muhasebecilerden oluşan bir ekip."
+      },
+      "trust": {
+        "title": "Güven",
+        "description": "Her iş ilişkisinde şeffaflık ve dürüstlük."
+      },
+      "dedication": {
+        "title": "Adanmışlık",
+        "description": "Sizin başarınız bizim başarımız. Gönülden çalışırız."
+      },
+      "growth": {
+        "title": "Büyüme",
+        "description": "İşletmenizin büyümesine ve başarılı olmasına yardımcı oluyoruz."
+      }
+    },
+    "team": {
+      "title": "Ekibimiz",
+      "description": "Size yardımcı olmaya hazır sertifikalı muhasebeciler, vergi danışmanları ve mali uzmanlardan oluşan profesyonel ekip."
+    },
+    "stats": {
+      "clients": "Mutlu Müşteriler",
+      "years": "Yılın Deneyimi",
+      "satisfaction": "Memnuniyet",
+      "support": "Destek"
+    }
+  },
+  "contact": {
+    "emailTitle": "E-posta",
+    "phoneTitle": "Telefon",
+    "addressTitle": "Adres",
+    "hoursTitle": "Çalışma Saatleri",
+    "title": "İletişime Geçin",
+    "subtitle": "Finanslarınızı düzene sokmaya hazır mısınız? Bugün bize ulaşın",
+    "name": "Ad Soyad",
+    "email": "E-posta Adresi",
+    "phone": "Telefon Numarası",
+    "message": "Mesajınız",
+    "submit": "Mesaj Gönder",
+    "placeholders": {
+      "name": "Ad Soyad",
+      "email": "email@example.com",
+      "phone": "+382 XX XXX XXX",
+      "message": "Mesajınızı yazın..."
+    },
+    "info": {
+      "email": "E-posta",
+      "phone": "Telefon",
+      "location": "Konum"
+    },
+    "form": {
+      "title": "Bize bir mesaj gönderin",
+      "name": "Adı Soyadı",
+      "namePlaceholder": "Adınız",
+      "email": "Email Adresi",
+      "emailPlaceholder": "sizin@email.com",
+      "phone": "Telefon",
+      "phonePlaceholder": "+382...",
+      "message": "Mesaj",
+      "messagePlaceholder": "Nasıl yardımcı olabiliriz?",
+      "submit": "Mesaj Gönder",
+      "sending": "Gönderiliyor...",
+      "successMessage": "Mesaj başarıyla gönderildi! Yakında size geri dönüş yapacağız."
+    },
+    "contactInfo": {
+      "hours": {
+        "weekdays": "Pzt-Cum: 08:00 - 17:00",
+        "weekend": "Cmt: 09:00 - 13:00"
+      }
+    },
+    "map": {
+      "title": "Haritada bizi bulun"
+    }
+  },
+  "footer": {
+    "description": "Güvenebileceğiniz profesyonel muhasebe hizmetleri",
+    "rights": "Tüm hakları saklıdır",
+    "quickLinks": "Hızlı Bağlantılar",
+    "contact": "İletişim",
+    "backToTop": "Başa Dön",
+    "links": {
+      "home": "Ana Sayfa",
+      "services": "Hizmetler",
+      "about": "Hakkımızda",
+      "contact": "İletişim"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Eğitici makaleler, rehberler ve işletme geliştirme ipuçları",
+    "search": "Makaleleri ara...",
+    "allPosts": "Tüm Yazılar",
+    "educational": "Eğitici Makaleler",
+    "practical": "Pratik Rehberler",
+    "tips": "İpuçları",
+    "seo": "SEO/Otorite",
+    "readMore": "Devamını Oku",
+    "readTime": "dk okuma",
+    "backToBlog": "Bloga Geri Dön",
+    "author": "Yazar",
+    "share": "Makaleyi Paylaş",
+    "notFound": "Makale bulunamadı"
+  }
+}

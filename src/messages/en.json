@@ -1,0 +1,186 @@
+﻿{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "services": {
+    "company-formation": "Company Formation",
+    "residence-work-permits": "Residence and Work Permits",
+    "bookkeeping": "Bookkeeping Services",
+    "tax-consulting": "Tax Consulting",
+    "final-reports": "Final Reports for Entrepreneurs",
+    "business-analysis": "Business Analysis",
+    "electronic-documents": "Electronic Document Management",
+    "real-estate": "Real estate",
+    "employment-agency-services": "Employment agency services",
+    "visa": "Visa"
+  },
+  "hero": {
+    "title": "Professional Accounting Services",
+    "subtitle": "Expert financial solutions for your business growth",
+    "cta": "Get Started",
+    "ctaSecondary": "Learn More"
+  },
+  "servicesSection": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive solutions tailored to your needs",
+    "learnMore": "Learn More",
+    "companyFormation": {
+      "title": "Company Formation",
+      "description": "Complete legal and administrative support in establishing LLC, sole proprietorship, or other business entities."
+    },
+    "permits": {
+      "title": "Residence and Work Permits",
+      "description": "Professional assistance in preparing and submitting documentation for foreign nationals' permits in Montenegro."
+    },
+    "bookkeeping": {
+      "title": "Bookkeeping Services",
+      "description": "Maintaining business books, records, and preparing financial statements in accordance with legal regulations."
+    },
+    "taxConsulting": {
+      "title": "Tax Consulting",
+      "description": "Expert consulting in taxation, optimization of tax obligations, and preparation of tax returns."
+    },
+    "finalReports": {
+      "title": "Final Reports for Entrepreneurs",
+      "description": "Preparation of annual financial statements and balance sheets for entrepreneurs and legal entities."
+    },
+    "businessAnalysis": {
+      "title": "Business Analysis",
+      "description": "Detailed financial analysis, profitability assessment, and recommendations for business improvement."
+    },
+    "electronicDocuments": {
+      "title": "Electronic Document Management",
+      "description": "Digitalization of business processes and electronic exchange of documents with tax authorities and institutions."
+    },
+  "realEstate": {
+    "title": "Real Estate Services",
+    "description": "Property registration, documentation and real estate tax consultation."
+  },
+  "employmentAgency": {
+    "title": "Employment Agency Services",
+    "description": "Recruitment and employment management services for businesses."
+  },
+  "visa": {
+    "title": "Visa Services",
+    "description": "Complete visa application and travel documentation assistance."
+  }
+  },
+  "about": {
+    "title": "About Our Agency",
+    "description": "We are a team of certified accountants dedicated to providing exceptional financial services. With years of experience and commitment to excellence, we help businesses achieve their financial goals.",
+    "experience": "Active business partners",
+    "clients": "Happy Clients",
+    "experts": "Expert Accountants",
+    "subtitle": "We are a team of certified accountants dedicated to providing exceptional financial services. With years of experience and commitment to excellence, we help businesses achieve their financial goals.",
+    "missionTitle": "Our Mission",
+    "missionDescription": "We provide top-quality accounting services to small and medium-sized enterprises, helping them achieve financial success through transparency, expertise, and dedication.",
+    "valuesTitle": "Our Values",
+    "values": {
+      "expertise": {
+        "title": "Expertise",
+        "description": "Team of certified accountants with years of experience."
+      },
+      "trust": {
+        "title": "Trust",
+        "description": "Transparency and integrity in every business relationship."
+      },
+      "dedication": {
+        "title": "Dedication",
+        "description": "Your success is our success. We work with heart."
+      },
+      "growth": {
+        "title": "Growth",
+        "description": "We help your business grow and succeed."
+      }
+    },
+    "team": {
+      "title": "Our Team",
+      "description": "Professional team of certified accountants, tax advisors and financial experts ready to help you."
+    },
+    "stats": {
+      "clients": "Happy Clients",
+      "years": "Years of Experience",
+      "satisfaction": "Satisfaction",
+      "support": "Support"
+    }
+  },
+  "contact": {
+    "emailTitle": "Email",
+    "phoneTitle": "Phone",
+    "addressTitle": "Address",
+    "hoursTitle": "Business Hours",
+    "title": "Get In Touch",
+    "subtitle": "Ready to streamline your finances? Contact us today",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Your Message",
+    "submit": "Send Message",
+    "placeholders": {
+      "name": "Full Name",
+      "email": "email@example.com",
+      "phone": "+382 XX XXX XXX",
+      "message": "Enter your message..."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    },
+    "form": {
+      "title": "Send us a message",
+      "name": "Full Name",
+      "namePlaceholder": "Your name",
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+382...",
+      "message": "Message",
+      "messagePlaceholder": "How can we help you?",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successMessage": "Message sent successfully! We will respond to you soon."
+    },
+    "contactInfo": {
+      "hours": {
+        "weekdays": "Mon-Fri: 08:00 - 17:00",
+        "weekend": "Sat: 09:00 - 13:00"
+      }
+    },
+    "map": {
+      "title": "Find us on map"
+    }
+  },
+  "footer": {
+    "description": "Professional accounting services you can trust",
+    "rights": "All rights reserved",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "backToTop": "Back to Top",
+    "links": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About Us",
+      "contact": "Contact"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Educational articles, guides and business development tips",
+    "search": "Search articles...",
+    "allPosts": "All Posts",
+    "educational": "Educational Articles",
+    "practical": "Practical Guides",
+    "tips": "Tips",
+    "seo": "SEO/Authority",
+    "readMore": "Read More",
+    "readTime": "min read",
+    "backToBlog": "Back to Blog",
+    "author": "Author",
+    "share": "Share Article",
+    "notFound": "Article not found"
+  }
+}

@@ -1,0 +1,185 @@
+﻿{
+  "nav": {
+    "home": "Početna",
+    "services": "Usluge",
+    "about": "O Nama",
+    "contact": "Kontakt"
+  },
+  "services": {
+    "company-formation": "Osnivanje preduzeća",
+    "residence-work-permits": "Dozvole za boravak i rad",
+    "bookkeeping": "Knjigovodstvene usluge",
+    "tax-consulting": "Poresko savetovanje",
+    "final-reports": "Završni izveštaji za preduzetnike",
+    "business-analysis": "Analize poslovanja",
+    "electronic-documents": "Elektronsko slanje i prijem dokumentacije",
+    "real-estate": "Nekretnine",
+    "employment-agency-services": "Posredovanje u zapošljavanju",
+    "visa": "Vize"
+  },
+  "hero": {
+    "title": "Profesionalne Računovodstvene Usluge",
+    "subtitle": "Stručna finansijska rješenja za rast vašeg poslovanja",
+    "cta": "Počnite",
+    "ctaSecondary": "Saznajte Više"
+  },
+  "servicesSection": {
+    "title": "Naše Usluge",
+    "subtitle": "Sveobuhvatna rješenja prilagođena vašim potrebama",
+    "learnMore": "Saznajte više",
+    "companyFormation": {
+      "title": "Osnivanje preduzeća",
+      "description": "Kompletna pravna i administrativna podrška u procesu osnivanja DOO, radnje ili druge vrste društva."
+    },
+    "permits": {
+      "title": "Dozvole za boravak i rad",
+      "description": "Profesionalna pomoć u pripremi i podnošenju dokumentacije za dozvole stranih državljana u Crnoj Gori."
+    },
+    "bookkeeping": {
+      "title": "Knjigovodstvene usluge",
+      "description": "Vođenje poslovnih knjiga, evidencija i izrada finansijskih izvještaja u skladu sa zakonskom regulativom."
+    },
+    "taxConsulting": {
+      "title": "Poresko savetovanje",
+      "description": "Stručno savjetovanje u oblasti poreza, optimizacija poreskih obaveza i priprema poreskih prijava."
+    },
+    "finalReports": {
+      "title": "Završni izveštaji za preduzetnike",
+      "description": "Izrada godišnjih finansijskih izvještaja i bilansa za preduzetnike i pravna lica."
+    },
+    "businessAnalysis": {
+      "title": "Analize poslovanja",
+      "description": "Detaljne finansijske analize, procjena profitabilnosti i preporuke za unapređenje poslovanja."
+    },
+    "electronicDocuments": {
+      "title": "Elektronsko slanje i prijem dokumentacije",
+      "description": "Digitalizacija poslovnih procesa i elektronska razmjena dokumenata sa poreskim organima i institucijama."
+    },
+      "realEstate": {
+    "title": "Usluge nekretnina",
+    "description": "Registracija svojine, dokumentacija i porezno savjetovanje za nekretnine."
+  },
+  "employmentAgency": {
+    "title": "Posredovanje u zapošljavanju",
+    "description": "Regrutacija i usluge upravljanja zaposlenjem za preduzeća."
+  },
+  "visa": {
+    "title": "Usluge vizuma",
+    "description": "Potpuna pomoć pri aplikaciji za vizu i dokumentacija za putovanje."
+  }
+  },
+  "about": {
+    "title": "O Našoj Agenciji",
+    "description": "Mi smo tim certificiranih računovođa posvećenih pružanju izuzetnih finansijskih usluga. Sa godinama iskustva i predanošću izvrsnosti, pomažemo preduzećima da postignu svoje finansijske ciljeve.",
+    "experience": "Aktivnih poslovnih partnera",
+    "clients": "Zadovoljnih Klijenata",
+    "experts": "Stručnih Računovođa",
+    "missionTitle": "Naša misija",
+    "missionDescription": "Pružamo vrhunske računovodstvene usluge malim i srednjim preduzećima, pomažući im da postignu finansijski uspjeh kroz transparentnost, stručnost i posvećenost.",
+    "valuesTitle": "Naše vrijednosti",
+    "values": {
+      "expertise": {
+        "title": "Stručnost",
+        "description": "Tim sertifikovanih računovođa sa dugogodišnjim iskustvom."
+      },
+      "trust": {
+        "title": "Povjerenje",
+        "description": "Transparentnost i integritet u svakom poslovnom odnosu."
+      },
+      "dedication": {
+        "title": "Posvećenost",
+        "description": "Vaš uspjeh je naš uspjeh. Radimo sa srcem."
+      },
+      "growth": {
+        "title": "Rast",
+        "description": "Pomažemo vašem poslovanju da raste i napreduje."
+      }
+    },
+    "team": {
+      "title": "Naš tim",
+      "description": "Profesionalni tim sertifikovanih računovođa, poreskih savjetnika i finansijskih stručnjaka spreman da vam pomogne."
+    },
+    "stats": {
+      "clients": "Zadovoljnih klijenata",
+      "years": "Godina iskustva",
+      "satisfaction": "Zadovoljstvo",
+      "support": "Podrška"
+    }
+  },
+  "contact": {
+    "emailTitle": "Email",
+    "phoneTitle": "Telefon",
+    "addressTitle": "Adresa",
+    "hoursTitle": "Radno Vrijeme",
+    "title": "Kontaktirajte Nas",
+    "subtitle": "Spremni da uredite svoje finansije? Kontaktirajte nas danas",
+    "name": "Ime i Prezime",
+    "email": "Email Adresa",
+    "phone": "Telefon",
+    "message": "Vaša Poruka",
+    "submit": "Pošalji Poruku",
+    "placeholders": {
+      "name": "Ime i Prezime",
+      "email": "email@example.com",
+      "phone": "+382 XX XXX XXX",
+      "message": "Unesite vašu poruku..."
+    },
+    "form": {
+      "title": "Pošaljite nam poruku",
+      "name": "Ime i prezime",
+      "namePlaceholder": "Vaše ime",
+      "email": "Email adresa",
+      "emailPlaceholder": "vas@email.com",
+      "phone": "Telefon",
+      "phonePlaceholder": "+382...",
+      "message": "Poruka",
+      "messagePlaceholder": "Kako vam možemo pomoći?",
+      "submit": "Pošalji poruku",
+      "sending": "Šaljem...",
+      "successMessage": "Poruka uspješno poslata! Odgovorićemo vam uskoro."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Telefon",
+      "location": "Lokacija"
+    },
+    "contactInfo": {
+      "hours": {
+        "weekdays": "Pon-Pet: 08:00 - 17:00",
+        "weekend": "Sub: 09:00 - 13:00"
+      }
+    },
+    "map": {
+      "title": "Pogledajte nas na mapi"
+    }
+  },
+  "footer": {
+    "description": "Profesionalne računovodstvene usluge kojima možete vjerovati",
+    "rights": "Sva prava zadržana",
+    "quickLinks": "Brzi Linkovi",
+    "contact": "Kontakt",
+    "backToTop": "Nazad na vrh",
+    "links": {
+      "home": "Početna",
+      "services": "Usluge",
+      "about": "O Nama",
+      "contact": "Kontakt"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Edukativni članci, vodiči i saveti za poslovni razvoj",
+    "search": "Pretraži članke...",
+    "allPosts": "Svi postovi",
+    "educational": "Edukativni članci",
+    "practical": "Praktični vodiči",
+    "tips": "Saveti",
+    "seo": "SEO/Autoritet",
+    "readMore": "Pročitaj više",
+    "readTime": "min čitanja",
+    "backToBlog": "Nazad na blog",
+    "author": "Autor",
+    "share": "Podijeli članak",
+    "notFound": "Članak nije pronađen"
+  }
+}
