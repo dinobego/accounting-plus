@@ -21,8 +21,8 @@ export default function Header() {
     { key: 'final-reports', href: '/services/final-reports' },
     { key: 'business-analysis', href: '/services/business-analysis' },
     { key: 'electronic-documents', href: '/services/electronic-documents' },
-     { key: 'real-estate', href: '/services/real-estate' },
-     { key: 'employment-agency-services', href: '/services/employment-agency-services' },
+    { key: 'real-estate', href: '/services/real-estate' },
+    { key: 'employment-agency-services', href: '/services/employment-agency-services' },
     { key: 'visa', href: '/services/visa' }
   ];
 
@@ -31,18 +31,17 @@ export default function Header() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-<Link 
-  href="/" 
-  className="hover:opacity-80 transition-opacity cursor-pointer"
->
-  <img 
-    src="/images/logoBlue.png" 
-    alt="AccPro" 
-    className="h-24 w-auto"
-  />
-</Link>
-
-
+          <Link 
+            href="/" 
+            className="hover:opacity-80 transition-opacity cursor-pointer"
+            prefetch
+          >
+            <img 
+              src="/images/logoBlue.png" 
+              alt="AccPro" 
+              className="h-24 w-auto"
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
@@ -68,11 +67,12 @@ export default function Header() {
                     transition={{ duration: 0.2 }}
                     className="absolute left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-gray-100 py-3 backdrop-blur-xl"
                   >
-                    {services.map((service, idx) => (
+                    {services.map((service) => (
                       <Link
                         key={service.key}
                         href={service.href}
                         className="block px-6 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 hover:translate-x-1 cursor-pointer group/item"
+                        prefetch
                       >
                         <span className="text-blue-600 font-bold mr-2">•</span>
                         <span className="group-hover/item:font-semibold">{tServices(service.key)}</span>
@@ -145,6 +145,7 @@ export default function Header() {
                           href={service.href}
                           className="block py-2.5 px-4 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all cursor-pointer hover:translate-x-1"
                           onClick={() => setIsOpen(false)}
+                          prefetch
                         >
                           <span className="text-blue-600 font-bold mr-2">•</span>
                           {tServices(service.key)}
@@ -176,6 +177,7 @@ function NavLink({ href, label, isBlog = false }: { href: string; label: string;
           ? 'text-blue-600 font-semibold hover:text-blue-700' 
           : 'text-gray-700 hover:text-blue-600'
       }`}
+      prefetch
     >
       {label}
     </Link>
@@ -203,6 +205,7 @@ function MobileNavLink({
           ? 'text-blue-600 font-semibold hover:bg-blue-100'
           : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
       }`}
+      prefetch
     >
       {label}
     </Link>
