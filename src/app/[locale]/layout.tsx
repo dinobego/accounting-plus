@@ -1,25 +1,39 @@
-import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import { Inter } from 'next/font/google';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
+import { ReactNode } from 'react';
+import ClientWrapper from './client-wrapper';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export const metadata = {
+  title: 'AccPro',
+};
 
 export default async function LocaleLayout({
   children,
-  params: { locale }
+  params,
 }: {
-  children: React.ReactNode;
-  params: { locale: string };
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body className={inter.className}>
-        <NextIntlClientProvider messages={messages}>
+    <html lang={locale} suppressHydrationWarning>
+      <body>
+        <ClientWrapper messages={messages} locale={locale}>
           {children}
-        </NextIntlClientProvider>
+        </ClientWrapper>
       </body>
     </html>
   );
