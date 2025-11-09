@@ -11,6 +11,9 @@ export function generateStaticParams() {
 
 export const metadata = {
   title: 'AccPro',
+  verification:{
+    google:"dxZZXjwpnjWhCYwk94DWOYmkw_gz15w53TZ0SlM2K1E",
+  }
 };
 
 export default async function LocaleLayout({
