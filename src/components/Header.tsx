@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 w-full bg-gradient-to-r from-white via-blue-50 to-white backdrop-blur-lg z-50 shadow-lg border-b border-blue-100">
-      <nav className="container mx-auto px-4 py-1">
+      <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
 <Link 
