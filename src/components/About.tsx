@@ -80,7 +80,7 @@ export default function About() {
                 <div className="text-gray-900 font-semibold mb-1">
                   {stat.label}
                 </div>
-                <div className="text-gray-500 text-sm">{stat.desc}</div>
+  <div className="text-gray-500 text-sm">{stat.label}</div>
               </motion.div>
             );
           })}
