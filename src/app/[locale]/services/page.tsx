@@ -385,7 +385,7 @@ export default function ServicePage() {
         <div className="min-h-screen pt-32 flex items-center justify-center">
           <h1 className="text-4xl font-bold text-gray-900">Service not found</h1>
         </div>
-        <Footer />
+       
       </>
     );
   }

@@ -209,7 +209,7 @@ const contactInfo = [
         </div>
       </div>
 
-      <Footer />
+    
     </>
   );
 }
