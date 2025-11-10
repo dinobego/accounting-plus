@@ -10,11 +10,32 @@ export function generateStaticParams() {
 }
 
 export const metadata = {
-  title: 'Accounting plus',
-  description: 'Stručna finansijska rješenja za rast Vašeg poslovanja.',
-
+  title: 'Accounting plus - Profesionalne računovodstvene usluge',
+  description: 'Stručna finansijska rješenja za rast Vašeg poslovanja. Usluge: Osnivanje preduzeća, Poresko savjetovanje, Analiza poslovanja i više.',
   icons: {
-    icon: '/images/icon.png'  
+    icon: '/images/icon.jpg'  
+  },
+  openGraph: {
+    title: 'Accounting plus - Profesionalne računovodstvene usluge',
+    description: 'Stručna finansijska rješenja za rast Vašeg poslovanja. Osnivanje preduzeća, Poresko savjetovanje, Analiza poslovanja, Knjigovodstvo.',
+    url: 'https://accounting-plus.me',
+    siteName: 'Accounting plus',
+    images: [
+      {
+        url: 'https://accounting-plus.me/images/logoBlue.png',
+        width: 1200,
+        height: 630,
+        alt: 'Accounting plus'
+      }
+    ],
+    locale: 'sr_RS',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Accounting plus',
+    description: 'Stručna finansijska rješenja za rast Vašeg poslovanja',
+    images: ['https://accounting-plus.me/images/logoBlue.png']
   },
   verification: {
     google: "dxZZXjwpnjWhCYwk94DWOYmkw_gz15w53TZ0SlM2K1E",
@@ -39,6 +60,15 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        <meta property="og:title" content="Accounting plus - Profesionalne računovodstvene usluge" />
+        <meta property="og:description" content="Stručna finansijska rješenja za rast Vašeg poslovanja. Osnivanje preduzeća, Poresko savjetovanje, Analiza poslovanja, Knjigovodstvo." />
+        <meta property="og:url" content="https://accounting-plus.me" />
+        <meta property="og:image" content="https://accounting-plus.me/images/logoBlue.png" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Accounting plus" />
+        <meta name="twitter:description" content="Stručna finansijska rješenja za rast Vašeg poslovanja" />
+        <meta name="twitter:image" content="https://accounting-plus.me/images/logoBlue.png" />
         <link rel="icon" href="/images/icon.jpg" type="image/jpeg" />
       </head>
       <body>
