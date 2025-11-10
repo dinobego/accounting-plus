@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import { useRouter, usePathname } from "@/i18n/routing";
 import { Globe } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 const FlagEN = () => (
   <svg className="w-6 h-4" viewBox="0 0 60 40">
@@ -18,7 +19,7 @@ const FlagEN = () => (
 const FlagTR = () => (
   <Image
     src="/flags/tr.png"
-    alt="Montenegro flag"
+    alt="Turkey flag"
     width={24}
     height={16}
     className="w-6 h-4 object-cover"
@@ -46,16 +47,21 @@ export default function LanguageSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
   const currentLocale = params.locale as string;
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleLanguageChange = (locale: string) => {
     router.push(pathname, { locale });
+    setIsOpen(false);
   };
 
   const currentLanguage = languages.find((lang) => lang.code === currentLocale);
 
   return (
-    <div className="relative group">
-      <button className="cursor-pointer flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors">
+    <div className="relative">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="cursor-pointer flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors touch-action-auto pointer-events-auto z-[9999] relative"
+      >
         <Globe size={18} className="text-blue-600" />
         {currentLanguage && <currentLanguage.Flag />}
         <span className="text-sm font-medium">
@@ -63,20 +69,31 @@ export default function LanguageSwitcher() {
         </span>
       </button>
 
-      <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-        {languages.map((language) => (
-          <button
-            key={language.code}
-            onClick={() => handleLanguageChange(language.code)}
-            className={`cursor-pointer w-full flex items-center space-x-3 px-4 py-3 hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg transition-colors ${
-              currentLocale === language.code ? "bg-blue-50" : ""
-            }`}
-          >
-            <language.Flag />
-            <span className="text-sm font-medium">{language.name}</span>
-          </button>
-        ))}
-      </div>
+      {/* Dropdown */}
+      {isOpen && (
+        <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-2xl z-[10000] border border-gray-100">
+          {languages.map((language) => (
+            <button
+              key={language.code}
+              onClick={() => handleLanguageChange(language.code)}
+              className={`cursor-pointer w-full flex items-center space-x-3 px-4 py-3 hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg transition-colors pointer-events-auto touch-action-auto ${
+                currentLocale === language.code ? "bg-blue-50" : ""
+              }`}
+            >
+              <language.Flag />
+              <span className="text-sm font-medium">{language.name}</span>
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Close dropdown kad se klikne van */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-[9998]"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
     </div>
   );
 }

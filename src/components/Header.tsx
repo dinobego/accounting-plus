@@ -87,14 +87,16 @@ export default function Header() {
             <NavLink href="/blog" label="Blog" isBlog />
             <NavLink href="/contact" label={t('contact')} />
 
-            <div className="ml-4 pl-4 border-l border-gray-200">
+            <div className="ml-4 pl-4 border-l border-gray-200 relative z-[999]">
               <LanguageSwitcher />
             </div>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
-            <LanguageSwitcher />
+          <div className="md:hidden flex items-center space-x-4 relative z-[9999]">
+            <div className="relative z-[9999]">
+              <LanguageSwitcher />
+            </div>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer p-2 hover:bg-blue-50 rounded-lg"
@@ -112,7 +114,7 @@ export default function Header() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden mt-4 bg-gradient-to-b from-blue-50 to-white rounded-2xl p-4 max-h-[70vh] overflow-y-auto border border-blue-100"
+              className="md:hidden mt-4 bg-gradient-to-b from-blue-50 to-white rounded-2xl p-4 max-h-[70vh] overflow-y-auto border border-blue-100 relative z-40 pointer-events-auto"
             >
               <MobileNavLink href="/" label={t('home')} onClick={() => setIsOpen(false)} />
 
@@ -167,7 +169,6 @@ export default function Header() {
   );
 }
 
-// Desktop Navigation Link Component
 function NavLink({ href, label, isBlog = false }: { href: string; label: string; isBlog?: boolean }) {
   return (
     <Link
@@ -184,7 +185,6 @@ function NavLink({ href, label, isBlog = false }: { href: string; label: string;
   );
 }
 
-// Mobile Navigation Link Component
 function MobileNavLink({ 
   href, 
   label, 
