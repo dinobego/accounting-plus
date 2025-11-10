@@ -10,7 +10,7 @@
     "residence-work-permits": "Dozvole za boravak i rad",
     "bookkeeping": "Knjigovodstvene usluge",
     "tax-consulting": "Poresko savjetovanje",
-    "final-reports": "Završni izveštaji za preduzetnike",
+    "final-reports": "Završni finansijski izveštaji za privredna društva",
     "business-analysis": "Analize poslovanja",
     "electronic-documents": "Elektronsko slanje i prijem dokumentacije",
     "real-estate": "Nekretnine",
@@ -44,8 +44,8 @@
       "description": "Stručno savjetovanje u oblasti poreza, optimizacija poreskih obaveza i priprema poreskih prijava."
     },
     "finalReports": {
-      "title": "Završni izveštaji za preduzetnike",
-      "description": "Izrada godišnjih finansijskih izvještaja i bilansa za preduzetnike i pravna lica."
+      "title": "Završni finansijski izveštaji za privredna društva",
+      "description": "Izrada godišnjih finansijskih izvještaja i bilansa za privredna društva."
     },
     "businessAnalysis": {
       "title": "Analize poslovanja",

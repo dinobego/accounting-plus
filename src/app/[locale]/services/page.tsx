@@ -155,7 +155,7 @@ const servicesContent: { [key: string]: any } = {
   'final-reports': {
     title: 'Final Reports for Entrepreneurs',
     titleTr: 'Girişimciler için Nihai Raporlar',
-    titleMe: 'Završni izveštaji za preduzetnike',
+    titleMe: 'Završni finansijski izveštaji za privredna društva',
     titleEn: 'Final Reports for Entrepreneurs',
     descriptionEn: 'Professional preparation of annual financial statements and reports',
     descriptionTr: 'Yıllık mali tablo ve raporların profesyonel hazırlığı',

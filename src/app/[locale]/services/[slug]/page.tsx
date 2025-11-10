@@ -222,7 +222,7 @@ const servicesContent: { [key: string]: any } = {
     `
   },
   'final-reports': {
-    titleMe: '📊 Završni izvještaji za preduzetnike',
+    titleMe: '📊 Završni finansijski izveštaji za privredna društva',
     titleEn: '📊 Final Reports for Entrepreneurs',
     titleTr: '📊 Girişimciler için Nihai Raporlar',
     descriptionMe: 'Na kraju svake poslovne godine, preduzeća su u obavezi da predaju završne izvještaje. Naš tim priprema sveobuhvatne i tačne bilanse.',
