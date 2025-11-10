@@ -10,9 +10,14 @@ export function generateStaticParams() {
 }
 
 export const metadata = {
-  title: 'AccPro',
-  verification:{
-    google:"dxZZXjwpnjWhCYwk94DWOYmkw_gz15w53TZ0SlM2K1E",
+  title: 'Accounting plus',
+  description: 'Stručna finansijska rješenja za rast Vašeg poslovanja.',
+
+  icons: {
+    icon: '/images/icon.png'  
+  },
+  verification: {
+    google: "dxZZXjwpnjWhCYwk94DWOYmkw_gz15w53TZ0SlM2K1E",
   }
 };
 
@@ -33,6 +38,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/images/icon.jpg" type="image/jpeg" />
+      </head>
       <body>
         <ClientWrapper messages={messages} locale={locale}>
           {children}

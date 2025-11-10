@@ -4,8 +4,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Šta je bilans stanja i zašto je važan za Vaše poslovanje?',
     category: 'Edukativni članci',
     date: '2025-11-04',
-    readTime: 5,
-    author: 'AccPro Tim',
+    readTime: 2,
+    author: 'Accounting plus tim',
    image:"/images/1.jpg",
     content: `
       <h2>Uvod u bilans stanja</h2>
@@ -30,8 +30,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Kako otvoriti preduzeće u Crnoj Gori – korak po korak vodič',
     category: 'Edukativni članci',
     date: '2025-11-02',
-    readTime: 8,
-    author: 'AccPro Tim',
+    readTime: 1,
+    author: 'Accounting plus tim',
    image:"/images/2.jpg",
     content: `
       <h2>Uvod</h2>
@@ -51,8 +51,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Porez na dobit: sve što vlasnici firmi treba da znaju',
     category: 'Edukativni članci',
     date: '2025-10-30',
-    readTime: 6,
-    author: 'AccPro Tim',
+    readTime: 1,
+    author: 'Accounting plus tim',
    image:"/images/3.jpg",
     content: `
       <h2>Šta je porez na dobit?</h2>
@@ -72,8 +72,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'PDV obaveze i rokovi u 2025. godini',
     category: 'Edukativni članci',
     date: '2025-10-28',
-    readTime: 7,
-    author: 'AccPro Tim',
+    readTime: 1,
+    author: 'Accounting plus tim',
    image:"/images/4.jpg",
     content: `
       <h2>Šta je PDV?</h2>
@@ -90,8 +90,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Vođenje knjiga za preduzetnike – najčešće greške',
     category: 'Edukativni članci',
     date: '2025-10-26',
-    readTime: 5,
-    author: 'AccPro Tim',
+    readTime: 1,
+    author: 'Accounting plus tim',
    image:"/images/5.jpg",
     content: `
       <h2>Najčešće greške pri vođenju knjiga</h2>
@@ -108,8 +108,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Checklista za kraj poslovne godine – šta sve morate predati računovođi',
     category: 'Praktični vodiči',
     date: '2025-10-25',
-    readTime: 4,
-    author: 'AccPro Tim',
+    readTime: 1,
+    author: 'Accounting plus tim',
    image:"/images/6.jpg",
     content: `
       <h2>Checklista za kraj godine</h2>
@@ -126,8 +126,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Kako pravilno obračunati i prijaviti porez na zarade',
     category: 'Praktični vodiči',
     date: '2025-10-20',
-    readTime: 6,
-    author: 'AccPro Tim',
+    readTime: 1,
+    author: 'Accounting plus tim',
    image:"/images/7.jpg",
     content: `
       <h2>Obračun poreza na zarade</h2>
@@ -144,8 +144,8 @@ export const blogPostsData: { [key: string]: any } = {
   title: '10 savjeta za lakšu saradnju sa računovođom',
   category: 'Praktični vodiči',
   date: '2025-10-18',
-  readTime: 5,
-  author: 'AccPro Tim',
+  readTime: 1,
+  author: 'Accounting plus tim',
  image:"/images/8.jpg",
   content: `
     <h2>10 savjeta za bolju saradnju</h2>
@@ -171,8 +171,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Kako tumačiti finansijske izvještaje svoje firme',
     category: 'Saveti',
     date: '2025-10-15',
-    readTime: 7,
-    author: 'AccPro Tim',
+    readTime: 1,
+    author: 'Accounting plus tim',
    image:"/images/9.jpg",
     content: `
       <h2>Razumijevanje finansijskih izvještaja</h2>
@@ -189,8 +189,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Planiranje budžeta za mikro i mala preduzeća',
     category: 'Saveti',
     date: '2025-10-12',
-    readTime: 8,
-    author: 'AccPro Tim',
+    readTime: 1,
+    author: 'Accounting plus tim',
    image:"/images/10.jpg",
     content: `
       <h2>Zašto je budžet važan?</h2>
@@ -207,8 +207,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Kako prepoznati da vam je potreban profesionalni računovođa',
     category: 'Saveti',
     date: '2025-10-10',
-    readTime: 5,
-    author: 'AccPro Tim',
+    readTime: 1,
+    author: 'Accounting plus tim',
    image:"/images/11.jpg",
     content: `
       <h2>Znakovi da trebate računovođu</h2>
@@ -222,8 +222,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Razlika između knjigovodstva i računovodstva',
     category: 'SEO/Autoritet',
     date: '2025-10-05',
-    readTime: 4,
-    author: 'AccPro Tim',
+    readTime: 1,
+    author: 'Accounting plus tim',
    image:"/images/12.jpg",
     content: `
       <h2>Šta je razlika?</h2>
@@ -240,8 +240,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Kako izabrati najboljeg računovođu za Vašu firmu',
     category: 'SEO/Autoritet',
     date: '2025-10-01',
-    readTime: 6,
-    author: 'AccPro Tim',
+    readTime: 1,
+    author: 'Accounting plus tim',
    image:"/images/13.jpg",
     content: `
       <h2>Ključni kriterijumi za izbor</h2>
@@ -258,8 +258,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Koje dokumente morate čuvati i koliko dugo?',
     category: 'SEO/Autoritet',
     date: '2025-09-28',
-    readTime: 5,
-    author: 'AccPro Tim',
+    readTime: 1,
+    author: 'Accounting plus tim',
    image:"/images/14.jpg",
     content: `
       <h2>Zakoni o čuvanju dokumenata</h2>
@@ -278,8 +278,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'What is a Balance Sheet and Why is it Important for Your Business?',
     category: 'Educational Articles',
     date: '2025-11-04',
-    readTime: 5,
-    author: 'AccPro Team',
+    readTime: 2,
+    author: 'Accounting plus team',
    image:"/images/1.jpg",
     content: `
       <h2>Introduction to Balance Sheet</h2>
@@ -299,8 +299,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'How to Open a Business in Montenegro – Step by Step Guide',
     category: 'Educational Articles',
     date: '2025-11-02',
-    readTime: 8,
-    author: 'AccPro Team',
+    readTime: 1,
+    author: 'Accounting plus team',
    image:"/images/2.jpg",
     content: `
       <h2>Introduction</h2>
@@ -320,8 +320,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Corporate Income Tax: Everything Business Owners Need to Know',
     category: 'Educational Articles',
     date: '2025-10-30',
-    readTime: 6,
-    author: 'AccPro Team',
+    readTime: 1,
+    author: 'Accounting plus team',
    image:"/images/3.jpg",
     content: `
       <h2>What is Corporate Income Tax?</h2>
@@ -341,8 +341,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'VAT Obligations and Deadlines in 2025',
     category: 'Educational Articles',
     date: '2025-10-28',
-    readTime: 7,
-    author: 'AccPro Team',
+    readTime: 1,
+    author: 'Accounting plus team',
    image:"/images/4.jpg",
     content: `
       <h2>What is VAT?</h2>
@@ -359,8 +359,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Bookkeeping for Entrepreneurs – Common Mistakes',
     category: 'Educational Articles',
     date: '2025-10-26',
-    readTime: 5,
-    author: 'AccPro Team',
+    readTime: 1,
+    author: 'Accounting plus team',
    image:"/images/5.jpg",
     content: `
       <h2>Common Bookkeeping Mistakes</h2>
@@ -377,8 +377,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Year-End Checklist – What to Submit to Your Accountant',
     category: 'Practical Guides',
     date: '2025-10-25',
-    readTime: 4,
-    author: 'AccPro Team',
+    readTime: 1,
+    author: 'Accounting plus team',
    image:"/images/6.jpg",
     content: `
       <h2>Year-End Checklist</h2>
@@ -395,8 +395,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'How to Properly Calculate and Report Payroll Tax',
     category: 'Practical Guides',
     date: '2025-10-20',
-    readTime: 6,
-    author: 'AccPro Team',
+    readTime: 1,
+    author: 'Accounting plus team',
    image:"/images/7.jpg",
     content: `
       <h2>Payroll Tax Calculation</h2>
@@ -413,8 +413,8 @@ export const blogPostsData: { [key: string]: any } = {
   title: '10 Tips for Easier Cooperation with Your Accountant',
   category: 'Practical Guides',
   date: '2025-10-18',
-  readTime: 5,
-  author: 'AccPro Team',
+  readTime: 1,
+  author: 'Accounting plus team',
  image:"/images/8.jpg",
   content: `
     <h2>10 Tips for Better Cooperation</h2>
@@ -440,8 +440,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'How to Interpret Your Company\'s Financial Statements',
     category: 'Tips',
     date: '2025-10-15',
-    readTime: 7,
-    author: 'AccPro Team',
+    readTime: 1,
+    author: 'Accounting plus team',
    image:"/images/9.jpg",
     content: `
       <h2>Understanding Financial Statements</h2>
@@ -458,8 +458,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Budget Planning for Micro and Small Businesses',
     category: 'Tips',
     date: '2025-10-12',
-    readTime: 8,
-    author: 'AccPro Team',
+    readTime: 1,
+    author: 'Accounting plus team',
    image:"/images/10.jpg",
     content: `
       <h2>Why is Budget Important?</h2>
@@ -476,8 +476,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'How to Recognize When You Need a Professional Accountant',
     category: 'Tips',
     date: '2025-10-10',
-    readTime: 5,
-    author: 'AccPro Team',
+    readTime: 1,
+    author: 'Accounting plus team',
    image:"/images/11.jpg",
     content: `
       <h2>Signs You Need an Accountant</h2>
@@ -491,8 +491,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'The Difference Between Bookkeeping and Accounting',
     category: 'SEO/Authority',
     date: '2025-10-05',
-    readTime: 4,
-    author: 'AccPro Team',
+    readTime: 1,
+    author: 'Accounting plus team',
    image:"/images/12.jpg",
     content: `
       <h2>What is the Difference?</h2>
@@ -509,8 +509,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'How to Choose the Best Accountant for Your Company',
     category: 'SEO/Authority',
     date: '2025-10-01',
-    readTime: 6,
-    author: 'AccPro Team',
+    readTime: 1,
+    author: 'Accounting plus team',
    image:"/images/13.jpg",
     content: `
       <h2>Key Selection Criteria</h2>
@@ -527,8 +527,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Which Documents Must You Keep and For How Long?',
     category: 'SEO/Authority',
     date: '2025-09-28',
-    readTime: 5,
-    author: 'AccPro Team',
+    readTime: 1,
+    author: 'Accounting plus team',
    image:"/images/14.jpg",
     content: `
       <h2>Document Retention Laws</h2>
@@ -547,8 +547,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Bilanco Nedir ve İşletmeniz İçin Neden Önemlidir?',
     category: 'Egitici Makaleler',
     date: '2025-11-04',
-    readTime: 5,
-    author: 'AccPro Ekibi',
+    readTime: 2,
+    author: 'Accounting plus ekibi',
    image:"/images/1.jpg",
     content: `
       <h2>Bilanco Tanitimi</h2>
@@ -573,8 +573,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Karadag\'da Sirket Acma – Adim Adim Rehber',
     category: 'Egitici Makaleler',
     date: '2025-11-02',
-    readTime: 8,
-    author: 'AccPro Ekibi',
+    readTime: 1,
+    author: 'Accounting plus ekibi',
    image:"/images/2.jpg",
     content: `
       <h2>Giris</h2>
@@ -597,8 +597,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Kurumlar Vergisi: Isletme Sahipleri Bilmesi Gerekenler',
     category: 'Egitici Makaleler',
     date: '2025-10-30',
-    readTime: 6,
-    author: 'AccPro Ekibi',
+    readTime: 1,
+    author: 'Accounting plus ekibi',
    image:"/images/3.jpg",
     content: `
       <h2>Kurumlar Vergisi Nedir?</h2>
@@ -615,8 +615,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'KDV Yuklulukleri ve 2025 Son Tarihleri',
     category: 'Egitici Makaleler',
     date: '2025-10-28',
-    readTime: 7,
-    author: 'AccPro Ekibi',
+    readTime: 1,
+    author: 'Accounting plus ekibi',
    image:"/images/4.jpg",
     content: `
       <h2>KDV Nedir?</h2>
@@ -633,8 +633,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Girisimciler Icin Defter Tutma – Yaygın Hatalar',
     category: 'Egitici Makaleler',
     date: '2025-10-26',
-    readTime: 5,
-    author: 'AccPro Ekibi',
+    readTime: 1,
+    author: 'Accounting plus ekibi',
    image:"/images/5.jpg",
     content: `
       <h2>Yaygın Defter Tutma Hatalari</h2>
@@ -651,8 +651,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Yil Sonu Kontrol Listesi – Muhasebeciye Sunulmasi Gereken Belgeler',
     category: 'Pratik Rehberler',
     date: '2025-10-25',
-    readTime: 4,
-    author: 'AccPro Ekibi',
+    readTime: 1,
+    author: 'Accounting plus ekibi',
    image:"/images/6.jpg",
     content: `
       <h2>Yil Sonu Kontrol Listesi</h2>
@@ -669,8 +669,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Bordro Vergisini Nasil Dogru Hesaplayip Raporlayacaksiniz?',
     category: 'Pratik Rehberler',
     date: '2025-10-20',
-    readTime: 6,
-    author: 'AccPro Ekibi',
+    readTime: 1,
+    author: 'Accounting plus ekibi',
    image:"/images/7.jpg",
     content: `
       <h2>Bordro Vergisi Hesaplamasi</h2>
@@ -687,8 +687,8 @@ export const blogPostsData: { [key: string]: any } = {
   title: 'Muhasebecimizle Daha Kolay Isbirliginde 10 Ipucu',
   category: 'Pratik Rehberler',
   date: '2025-10-18',
-  readTime: 5,
-  author: 'AccPro Ekibi',
+  readTime: 1,
+  author: 'Accounting plus ekibi',
  image:"/images/8.jpg",
   content: `
     <h2>Daha İyi Isbirligi Icin 10 Ipucu</h2>
@@ -714,8 +714,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Sirketinizin Mali Tablolarini Nasil Yorumlayacaksiniz',
     category: 'Ipuclari',
     date: '2025-10-15',
-    readTime: 7,
-    author: 'AccPro Ekibi',
+    readTime: 1,
+    author: 'Accounting plus ekibi',
    image:"/images/9.jpg",
     content: `
       <h2>Mali Tablolari Anlama</h2>
@@ -732,8 +732,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Mikro ve Kucuk Isletmeler Icin Butce Planlama',
     category: 'Ipuclari',
     date: '2025-10-12',
-    readTime: 8,
-    author: 'AccPro Ekibi',
+    readTime: 1,
+    author: 'Accounting plus ekibi',
    image:"/images/10.jpg",
     content: `
       <h2>Butce Neden Onemlidir?</h2>
@@ -750,8 +750,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Profesyonel Muhasebeciye Ihtiyaciniz Oldugunu Nasil Anlarsınız?',
     category: 'Ipuclari',
     date: '2025-10-10',
-    readTime: 5,
-    author: 'AccPro Ekibi',
+    readTime: 1,
+    author: 'Accounting plus ekibi',
    image:"/images/11.jpg",
     content: `
       <h2>Muhasebeciye Ihtiyacinız Oldugunun Isaretleri</h2>
@@ -765,8 +765,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Defter Tutma ve Muhasebe Arasındaki Fark',
     category: 'SEO/Otorite',
     date: '2025-10-05',
-    readTime: 4,
-    author: 'AccPro Ekibi',
+    readTime: 1,
+    author: 'Accounting plus ekibi',
    image:"/images/12.jpg",
     content: `
       <h2>Fark Nedir?</h2>
@@ -783,8 +783,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Sirketiniz Icin En İyi Muhasebecisi Nasil Secersiniz',
     category: 'SEO/Otorite',
     date: '2025-10-01',
-    readTime: 6,
-    author: 'AccPro Ekibi',
+    readTime: 1,
+    author: 'Accounting plus ekibi',
    image:"/images/13.jpg",
     content: `
       <h2>Onemli Secim Kriterleri</h2>
@@ -801,8 +801,8 @@ export const blogPostsData: { [key: string]: any } = {
     title: 'Hangi Belgeleri Saklamalisiniz ve Ne Kadar Sure?',
     category: 'SEO/Otorite',
     date: '2025-09-28',
-    readTime: 5,
-    author: 'AccPro Ekibi',
+    readTime: 1,
+    author: 'Accounting plus ekibi',
    image:"/images/14.jpg",
     content: `
       <h2>Belge Saklama Kanunlari</h2>
@@ -822,8 +822,8 @@ export const blogPostsData: { [key: string]: any } = {
       title: '10 Tips for Easier Cooperation with Your Accountant',
       category: 'Practical Guides',
       date: '2025-10-18',
-      readTime: 5,
-      author: 'AccPro Team',
+      readTime: 1,
+      author: 'Accounting plus team',
      image:"/images/8.jpg",
       content: `
         <h2>10 Tips for Better Cooperation</h2>
@@ -851,8 +851,8 @@ export const blogPostsData: { [key: string]: any } = {
       title: 'Muhasebecimizle Daha Kolay Isbirliginde 10 Ipucu',
       category: 'Pratik Rehberler',
       date: '2025-10-18',
-      readTime: 5,
-      author: 'AccPro Ekibi',
+      readTime: 1,
+      author: 'Accounting plus ekibi',
      image:"/images/8.jpg",
       content: `
         <h2>Daha İyi Isbirligi Icin 10 Ipucu</h2>
@@ -880,8 +880,8 @@ export const blogPostsData: { [key: string]: any } = {
       title: 'Šta je bilans stanja i zašto je važan za Vaše poslovanje?',
       category: 'Edukativni članci',
       date: '2025-11-04',
-      readTime: 5,
-      author: 'AccPro Tim',
+      readTime: 1,
+      author: 'Accounting plus tim',
      image:"/images/1.jpg",
       content: `
         <h2>Uvod u bilans stanja</h2>
@@ -906,8 +906,8 @@ export const blogPostsData: { [key: string]: any } = {
       title: 'Kako otvoriti preduzeće u Crnoj Gori – korak po korak vodič',
       category: 'Edukativni članci',
       date: '2025-11-02',
-      readTime: 8,
-      author: 'AccPro Tim',
+      readTime: 1,
+      author: 'Accounting plus tim',
      image:"/images/2.jpg",
       content: `
         <h2>Uvod</h2>
@@ -927,8 +927,8 @@ export const blogPostsData: { [key: string]: any } = {
       title: 'Porez na dobit: sve što vlasnici firmi treba da znaju',
       category: 'Edukativni članci',
       date: '2025-10-30',
-      readTime: 6,
-      author: 'AccPro Tim',
+      readTime: 1,
+      author: 'Accounting plus tim',
      image:"/images/3.jpg",
       content: `
         <h2>Šta je porez na dobit?</h2>
@@ -948,8 +948,8 @@ export const blogPostsData: { [key: string]: any } = {
       title: 'PDV obaveze i rokovi u 2025. godini',
       category: 'Edukativni članci',
       date: '2025-10-28',
-      readTime: 7,
-      author: 'AccPro Tim',
+      readTime: 1,
+      author: 'Accounting plus tim',
      image:"/images/4.jpg",
       content: `
         <h2>Šta je PDV?</h2>
@@ -966,8 +966,8 @@ export const blogPostsData: { [key: string]: any } = {
       title: 'Vođenje knjiga za preduzetnike – najčešće greške',
       category: 'Edukativni članci',
       date: '2025-10-26',
-      readTime: 5,
-      author: 'AccPro Tim',
+      readTime: 1,
+      author: 'Accounting plus tim',
      image:"/images/5.jpg",
       content: `
         <h2>Najčešće greške pri vođenju knjiga</h2>
@@ -984,8 +984,8 @@ export const blogPostsData: { [key: string]: any } = {
       title: '10 savjeta za lakšu saradnju sa računovođom',
       category: 'Praktični vodiči',
       date: '2025-10-18',
-      readTime: 5,
-      author: 'AccPro Tim',
+      readTime: 1,
+      author: 'Accounting plus tim',
      image:"/images/8.jpg",
       content: `
         <h2>10 savjeta za bolju saradnju</h2>
