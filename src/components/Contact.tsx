@@ -1,17 +1,62 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
-import { Send, Mail, Phone, User, MessageSquare } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Send, Mail, Phone, User, MessageSquare, CheckCircle, XCircle } from "lucide-react";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
+
+emailjs.init('HaHtjF1LCb7T8TNCx');
 
 export default function Contact() {
   const t = useTranslations("contact");
   const [focused, setFocused] = useState("");
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+  const [toastType, setToastType] = useState<'success' | 'error'>('success');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Form submitted!");
+    setIsSubmitting(true);
+    
+    try {
+      const response = await emailjs.send(
+        'service_k184mtc',
+        'template_4b114ae',
+        {
+          to_email: 'racunovodstvo2020@hotmail.com',
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message
+        },
+        'HaHtjF1LCb7T8TNCx'
+      );
+
+      if (response.status === 200) {
+        setToastType('success');
+        setShowToast(true);
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        setTimeout(() => setShowToast(false), 5000);
+      } else {
+        setToastType('error');
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 5000);
+      }
+    } catch (error: any) {
+      setToastType('error');
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 5000);
+      console.error('EmailJS Error:', error.text || error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -19,6 +64,44 @@ export default function Contact() {
       id="contact"
       className="py-24 px-4 bg-gradient-to-b from-white via-blue-50 to-indigo-100 relative overflow-hidden"
     >
+      {/* Toast Notification */}
+      <AnimatePresence>
+        {showToast && (
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            className="fixed top-24 right-8 z-[9999] max-w-md"
+          >
+            <div
+              className={`rounded-2xl shadow-2xl p-6 flex items-center space-x-4 ${
+                toastType === 'success'
+                  ? 'bg-gradient-to-r from-green-500 to-emerald-600'
+                  : 'bg-gradient-to-r from-red-500 to-rose-600'
+              }`}
+            >
+              {toastType === 'success' ? (
+                <CheckCircle className="text-white" size={32} />
+              ) : (
+                <XCircle className="text-white" size={32} />
+              )}
+              <div className="flex-1">
+                <h4 className="text-white font-bold text-lg">
+                  {toastType === 'success'
+                    ? t('form.successMessage')
+                    : 'Greška pri slanju poruke'}
+                </h4>
+                <p className="text-white/90 text-sm">
+                  {toastType === 'success'
+                    ? ''
+                    : 'Pokušajte ponovo'}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Dekorativni background krugovi */}
       <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-blue-300 opacity-20 filter blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-indigo-300 opacity-20 filter blur-3xl"></div>
@@ -66,6 +149,8 @@ export default function Contact() {
                 />
                 <input
                   type="text"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   onFocus={() => setFocused("name")}
                   onBlur={() => setFocused("")}
                   className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none text-gray-800"
@@ -89,6 +174,8 @@ export default function Contact() {
                 />
                 <input
                   type="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   onFocus={() => setFocused("email")}
                   onBlur={() => setFocused("")}
                   className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none text-gray-800"
@@ -112,6 +199,8 @@ export default function Contact() {
                 />
                 <input
                   type="tel"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   onFocus={() => setFocused("phone")}
                   onBlur={() => setFocused("")}
                   className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none text-gray-800"
@@ -133,6 +222,8 @@ export default function Contact() {
                   size={20}
                 />
                 <textarea
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   onFocus={() => setFocused("message")}
                   onBlur={() => setFocused("")}
                   rows={5}
@@ -148,9 +239,10 @@ export default function Contact() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               type="submit"
-              className="w-full flex items-center justify-center px-8 py-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-lg font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 group shadow-xl hover:shadow-2xl cursor-pointer"
+              disabled={isSubmitting}
+              className="w-full flex items-center justify-center px-8 py-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-lg font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 group shadow-xl hover:shadow-2xl cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <span>{t("submit")}</span>
+              <span>{isSubmitting ? 'Šalje se...' : t("submit")}</span>
               <Send
                 className="ml-3 group-hover:translate-x-2 group-hover:-translate-y-1 transition-transform duration-300"
                 size={22}
@@ -161,51 +253,50 @@ export default function Contact() {
           {/* Dodatne info kartice */}
           <div className="mt-12 pt-8 border-t border-gray-200">
             <div className="grid md:grid-cols-3 gap-6 text-center">
-         <motion.div
-  whileHover={{ y: -5 }}
-  className="p-4 rounded-xl bg-blue-50 cursor-pointer"
-  onClick={() => {
-    window.location.href = "mailto:racunovodstvo2020@hotmail.com";
-  }}
->
-  <Mail className="mx-auto mb-2 text-blue-600" size={24} />
-  <p className="text-sm font-semibold text-gray-700">
-    {t("info.email")}
-  </p>
-  <p className="text-sm text-gray-600">Accounting plus</p>
-</motion.div>
-
-             <motion.div
-  whileHover={{ y: -5 }}
-  className="p-4 rounded-xl bg-indigo-50 cursor-pointer"
-  onClick={() => {
-    window.location.href = "tel:+382698428843";
-  }}
->
-  <Phone className="mx-auto mb-2 text-indigo-600" size={24} />
-  <p className="text-sm font-semibold text-gray-700">
-    {t("info.phone")}
-  </p>
-  <p className="text-sm text-gray-600">+382 69 842 843</p>
-</motion.div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="p-4 rounded-xl bg-blue-50 cursor-pointer"
+                onClick={() => {
+                  window.location.href = "mailto:racunovodstvo2020@hotmail.com";
+                }}
+              >
+                <Mail className="mx-auto mb-2 text-blue-600" size={24} />
+                <p className="text-sm font-semibold text-gray-700">
+                  {t("info.email")}
+                </p>
+                <p className="text-sm text-gray-600">Accounting plus</p>
+              </motion.div>
 
               <motion.div
-  whileHover={{ y: -5 }}
-  className="p-4 rounded-xl bg-purple-50 cursor-pointer"
-  onClick={() => {
-    window.open("https://maps.app.goo.gl/NsofWhWD3LGVeWNT9?g_st=ipc", "_blank");
-  }}
->
-  <MessageSquare
-    className="mx-auto mb-2 text-purple-600"
-    size={24}
-  />
-  <p className="text-sm font-semibold text-gray-700">
-    {t("info.location")}
-  </p>
-  <p className="text-sm text-gray-600">Podgorica, Montenegro</p>
-</motion.div>
+                whileHover={{ y: -5 }}
+                className="p-4 rounded-xl bg-indigo-50 cursor-pointer"
+                onClick={() => {
+                  window.location.href = "tel:+382698428843";
+                }}
+              >
+                <Phone className="mx-auto mb-2 text-indigo-600" size={24} />
+                <p className="text-sm font-semibold text-gray-700">
+                  {t("info.phone")}
+                </p>
+                <p className="text-sm text-gray-600">+382 69 842 843</p>
+              </motion.div>
 
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="p-4 rounded-xl bg-purple-50 cursor-pointer"
+                onClick={() => {
+                  window.open("https://maps.app.goo.gl/NsofWhWD3LGVeWNT9?g_st=ipc", "_blank");
+                }}
+              >
+                <MessageSquare
+                  className="mx-auto mb-2 text-purple-600"
+                  size={24}
+                />
+                <p className="text-sm font-semibold text-gray-700">
+                  {t("info.location")}
+                </p>
+                <p className="text-sm text-gray-600">Podgorica, Montenegro</p>
+              </motion.div>
             </div>
           </div>
         </motion.div>

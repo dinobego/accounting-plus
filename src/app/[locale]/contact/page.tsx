@@ -1,15 +1,14 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Clock } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Mail, Phone, MapPin, Send, Clock, CheckCircle, XCircle } from 'lucide-react';
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import emailjs from '@emailjs/browser';
 
-// Inicijalizuj EmailJS
-emailjs.init('YOUR_PUBLIC_KEY'); // Zamijeni sa tvojim Public Key
+emailjs.init('HaHtjF1LCb7T8TNCx');
 
 export default function ContactPage() {
   const t = useTranslations('contact');
@@ -20,6 +19,8 @@ export default function ContactPage() {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+  const [toastType, setToastType] = useState<'success' | 'error'>('success');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,25 +28,33 @@ export default function ContactPage() {
     
     try {
       const response = await emailjs.send(
-        'YOUR_SERVICE_ID',  // Zamijeni
-        'YOUR_TEMPLATE_ID', // Zamijeni
+        'service_k184mtc',
+        'template_4b114ae',
         {
-          to_email: 'dinobegovic6@gmail.com',
+          to_email: 'racunovodstvo2020@hotmail.com',
           from_name: formData.name,
           from_email: formData.email,
           phone: formData.phone,
           message: formData.message
-        }
+        },
+        'HaHtjF1LCb7T8TNCx'
       );
 
       if (response.status === 200) {
-        alert(t('form.successMessage'));
+        setToastType('success');
+        setShowToast(true);
         setFormData({ name: '', email: '', phone: '', message: '' });
+        setTimeout(() => setShowToast(false), 5000);
       } else {
-        alert('Greška pri slanju poruke. Pokušajte ponovo.');
+        setToastType('error');
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 5000);
       }
-    } catch (error) {
-      alert('Greška pri slanju poruke. Pokušajte ponovo.');
+    } catch (error: any) {
+      setToastType('error');
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 5000);
+      console.error('EmailJS Error:', error.text || error);
     } finally {
       setIsSubmitting(false);
     }
@@ -78,6 +87,44 @@ export default function ContactPage() {
     <>
       <Header />
       
+      {/* Toast Notification */}
+      <AnimatePresence>
+        {showToast && (
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            className="fixed top-24 right-8 z-[9999] max-w-md"
+          >
+            <div
+              className={`rounded-2xl shadow-2xl p-6 flex items-center space-x-4 ${
+                toastType === 'success'
+                  ? 'bg-gradient-to-r from-green-500 to-emerald-600'
+                  : 'bg-gradient-to-r from-red-500 to-rose-600'
+              }`}
+            >
+              {toastType === 'success' ? (
+                <CheckCircle className="text-white" size={32} />
+              ) : (
+                <XCircle className="text-white" size={32} />
+              )}
+              <div className="flex-1">
+                <h4 className="text-white font-bold text-lg">
+                  {toastType === 'success'
+                    ? t('form.successMessage')
+                    : 'Greška pri slanju poruke'}
+                </h4>
+                <p className="text-white/90 text-sm">
+                  {toastType === 'success'
+                    ? ''
+                    : 'Pokušajte ponovo'}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <motion.div
