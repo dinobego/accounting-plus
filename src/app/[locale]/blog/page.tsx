@@ -15,8 +15,8 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       id: 1,
       slug: 'sta-je-bilans-stanja',
       category: 'edukativni',
-      title: 'Šta je bilans stanja i zašto je važan za vaše poslovanje?',
-      excerpt: 'Saznajte šta je bilans stanja i kako ga koristi vaše poslovanje.',
+      title: 'Šta je bilans stanja i zašto je važan za Vaše poslovanje?',
+      excerpt: 'Saznajte šta je bilans stanja i kako ga koristi Vaše poslovanje.',
       image:"/images/1.jpg",
       date: '2025-11-04',
       readTime:2 
@@ -85,8 +85,8 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       id: 8,
       slug: '10-saveta-saradnja-racunovedjom',
       category: 'praktichni',
-      title: '10 saveta za lakšu saradnju sa računovođom',
-      excerpt: '10 praktičnih saveta koji će unaprediti vašu saradnju sa računovođom.',
+      title: '10 savjeta za lakšu saradnju sa računovođom',
+      excerpt: '10 praktičnih savjeta koji će unaprediti Vašu saradnju sa računovođom.',
       image:"/images/8.jpg",
       date: '2025-10-18',
       readTime:1
@@ -96,7 +96,7 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       slug: 'tumacenje-finansijskih-izvestaaja',
       category: 'saveti',
       title: 'Kako tumačiti finansijske izveštaje svoje firme',
-      excerpt: 'Naučite kako čitati i razumeti finansijske izveštaje vašeg preduzeća.',
+      excerpt: 'Naučite kako čitati i razumeti finansijske izveštaje Vašeg preduzeća.',
       image:"/images/9.jpg",
       date: '2025-10-15',
       readTime:1
@@ -106,7 +106,7 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       slug: 'planiranje-budzeta',
       category: 'saveti',
       title: 'Planiranje budžeta za mikro i mala preduzeća',
-      excerpt: 'Kako efikasno planirati budžet za vašu malu firmu.',
+      excerpt: 'Kako efikasno planirati budžet za Vašu malu firmu.',
       image:"/images/10.jpg",
       date: '2025-10-12',
       readTime:1
@@ -135,8 +135,8 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       id: 13,
       slug: 'kako-izabrati-racunovodjeu',
       category: 'seo',
-      title: 'Kako izabrati najboljeg računovođu za vašu firmu',
-      excerpt: 'Vodič sa savjetima kako odabrati pravi tim za vaše računovodstvene potrebe.',
+      title: 'Kako izabrati najboljeg računovođu za Vašu firmu',
+      excerpt: 'Vodič sa savjetima kako odabrati pravi tim za Vaše računovodstvene potrebe.',
       image:"/images/13.jpg",
       date: '2025-10-01',
       readTime:1
@@ -443,7 +443,7 @@ const categoriesByLocale: { [locale: string]: any[] } = {
     { id: 'all', label: 'Svi postovi', icon: BookOpen },
     { id: 'edukativni', label: 'Edukativni članci', icon: BookOpen },
     { id: 'praktichni', label: 'Praktični vodiči', icon: Lightbulb },
-    { id: 'saveti', label: 'Saveti', icon: Brain },
+    { id: 'saveti', label: 'Savjeti', icon: Brain },
     { id: 'seo', label: 'SEO/Autoritet', icon: Brain }
   ],
   en: [

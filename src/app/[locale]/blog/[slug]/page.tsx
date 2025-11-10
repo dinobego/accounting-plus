@@ -209,7 +209,7 @@ export default function BlogPostPage() {
               <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Sviđa vam se ovaj članak?</h3>
-                  <p className="text-gray-600 text-lg">Podijelite ga sa vašim kolegama i prijateljima</p>
+                  <p className="text-gray-600 text-lg">Podijelite ga sa Vašim kolegama i prijateljima</p>
                 </div>
                 <div className="flex gap-4">
                   {/* Facebook Share */}

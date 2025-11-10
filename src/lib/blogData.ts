@@ -1,7 +1,7 @@
 export const blogPostsData: { [key: string]: any } = {
   // ===== SRPSKI =====
   'sta-je-bilans-stanja': {
-    title: 'Šta je bilans stanja i zašto je važan za vaše poslovanje?',
+    title: 'Šta je bilans stanja i zašto je važan za Vaše poslovanje?',
     category: 'Edukativni članci',
     date: '2025-11-04',
     readTime: 5,
@@ -9,7 +9,7 @@ export const blogPostsData: { [key: string]: any } = {
    image:"/images/1.jpg",
     content: `
       <h2>Uvod u bilans stanja</h2>
-      <p>Bilans stanja je jedan od tri ključna finansijska izveštaja. Poznato i kao bilans, predstavlja finansijsku poziciju vaše kompanije u specifičnom vremenu. Obično se kreira na kraju svakog kvartala ili godišnje.</p>
+      <p>Bilans stanja je jedan od tri ključna finansijska izvještaja. Poznato i kao bilans, predstavlja finansijsku poziciju Vaše kompanije u specifičnom vremenu. Obično se kreira na kraju svakog kvartala ili godišnje.</p>
       
       <h2>Šta sadrži bilans stanja?</h2>
       <p>Bilans stanja se sastoji od tri glavne komponente:</p>
@@ -20,10 +20,10 @@ export const blogPostsData: { [key: string]: any } = {
       </ul>
       
       <h2>Zašto je bilans stanja važan?</h2>
-      <p>Bilans stanja vam pokazuje finansijsku stabilnost vaše kompanije, likvidnost i mogućnost plaćanja obveza, razinu zaduženosti i potencijal za rast.</p>
+      <p>Bilans stanja vam pokazuje finansijsku stabilnost Vaše kompanije, likvidnost i mogućnost plaćanja obveza, nivo zaduženosti i potencijal za rast.</p>
       
       <h2>Zaključak</h2>
-      <p>Razumevanje bilanса stanja ključno je za donošenje pametnih poslovnih odluka.</p>
+      <p>Razumijevanje bilansа stanja ključno je za donošenje pametnih poslovnih odluka.</p>
     `
   },
   'kako-otvoriti-preduzece': {
@@ -35,7 +35,7 @@ export const blogPostsData: { [key: string]: any } = {
    image:"/images/2.jpg",
     content: `
       <h2>Uvod</h2>
-      <p>Otvaranje preduzeća u Crnoj Gori je sada lakše nego ikad. Ovaj vodič vas kroz sve korake potrebne za legalno pokretanje vašeg biznisa.</p>
+      <p>Otvaranje preduzeća u Crnoj Gori je sada lakše nego ikad. Ovaj vodič Vas vodi kroz sve korake potrebne za legalno pokretanje Vašeg biznisa.</p>
       
       <h2>Korak 1: Priprema dokumentacije</h2>
       <p>Prije nego što se registrujeete, trebate pripremiti sljedeću dokumentaciju: lični dokument, dokaz o adresi, dokaz o kvalifikacijama i plan biznisa.</p>
@@ -44,7 +44,7 @@ export const blogPostsData: { [key: string]: any } = {
       <p>Trebate odlučiti koju vrstu preduzeća želite otvoriti: DOO za većinu biznisa, AD za veće firme ili trgovac samostalni za male biznise.</p>
       
       <h2>Zaključak</h2>
-      <p>Otvaranje preduzeća je važan korak, ali sa pravim vodiščem bit će mnogo lakše.</p>
+      <p>Otvaranje preduzeća je važan korak, ali sa pravim vodičem biće mnogo lakše.</p>
     `
   },
   'porez-na-dobit': {
@@ -59,13 +59,13 @@ export const blogPostsData: { [key: string]: any } = {
       <p>Porez na dobit je fiskalna obaveza koju plaćaju preduzeća na svoju neto dobit. U Crnoj Gori, trenutna stopa poreza na dobit je 9%.</p>
       
       <h2>Ko mora platiti porez na dobit?</h2>
-      <p>Sve pravne osobe koje obavljaju gospodarsku djelatnost moraju platiti porez na dobit.</p>
+      <p>Porez na dobit dužne su plaćati sve pravne osobe koje ostvaruju dohodak obavljanjem djelatnosti.</p>
       
       <h2>Kako se obračunava neto dobit?</h2>
-      <p>Neto dobit = Ukupan prihod - Dozvoljeni odbitci. Dozvoljeni odbitci uključuju troškove materijala, zaposlenih, iznajmljivanja i amortizaciju.</p>
+      <p>Neto dobit = Ukupan prihod - Dozvoljeni odbici. Dozvoljeni odbici uključuju troškove materijala, zaposlenih, iznajmljivanja i amortizaciju.</p>
       
       <h2>Zaključak</h2>
-      <p>Razumevanje poreza na dobit pomaže da bolje upravljate finansijama vaše firme.</p>
+      <p>Razumijevanje poreza na dobit pomaže da bolje upravljate finansijama Vaše firme.</p>
     `
   },
   'pdv-obaveze-2025': {
@@ -95,13 +95,13 @@ export const blogPostsData: { [key: string]: any } = {
    image:"/images/5.jpg",
     content: `
       <h2>Najčešće greške pri vođenju knjiga</h2>
-      <p>Vođenje poslovnih knjiga je kritično za svaki biznis. Evo najčešćih grešaka: mešanje ličnih i poslovnih sredstava, nepotpuna dokumentacija, neispravan redoslijed knjiženja.</p>
+      <p>Vođenje poslovnih knjiga je kritično za svaki biznis. Evo najčešćih grešaka: miješanje ličnih i poslovnih sredstava, nepotpuna dokumentacija, neispravan redoslijed knjiženja.</p>
       
       <h2>Kako izbjegnuti ove greške?</h2>
-      <p>Koristi računovodstveni software, redovno pratи transakcije, konsultuj profesionalnog računovođu i vedi detaljne evidencije.</p>
+      <p>Koristi računovodstveni software, redovno prati transakcije, konsultuj profesionalnog računovođu i vodi detaljne evidencije.</p>
       
       <h2>Zaključak</h2>
-      <p>Ispravno vođenje knjiga štiti vaš biznis od problema.</p>
+      <p>Ispravno vođenje knjiga štiti Vaš biznis od problema.</p>
     `
   },
   'checklista-kraju-godine': {
@@ -116,10 +116,10 @@ export const blogPostsData: { [key: string]: any } = {
       <p>Važna dokumentacija koju trebate predati računovođi: bankovni izvodi, sve fakture i račune, dokaze o plaćanjima, izvode o stanju zaliha.</p>
       
       <h2>Dokumentacija o zaposlenima</h2>
-      <p>Listu zaposlenih sa primanjima, podatke o doprinosa i poreza, podatke o godišnjim odmacima i bolovima.</p>
+      <p>Listu zaposlenih sa primanjima, podatke o doprinosa i poreza, podatke o godišnjim odmorima i bolovima.</p>
       
       <h2>Zaključak</h2>
-      <p>Pravovremena priprema dokumentacije olakšava završetak poslovne godine.</p>
+      <p>Pravovremjena priprema dokumentacije olakšava završetak poslovne godine.</p>
     `
   },
   'obracun-poreza-na-zarade': {
@@ -137,29 +137,29 @@ export const blogPostsData: { [key: string]: any } = {
       <p>Bruto zarada, doprinos za penziju, doprinos za nezaposlenost, porez na dohodak i neto zarada.</p>
       
       <h2>Zaključak</h2>
-      <p>Redovno plaćanje poreza štiti vaš biznis.</p>
+      <p>Redovno plaćanje poreza štiti Vaš biznis.</p>
     `
   },
 '10-saveta-saradnja-racunovedjom': {
-  title: '10 saveta za lakšu saradnju sa računovođom',
+  title: '10 savjeta za lakšu saradnju sa računovođom',
   category: 'Praktični vodiči',
   date: '2025-10-18',
   readTime: 5,
   author: 'AccPro Tim',
  image:"/images/8.jpg",
   content: `
-    <h2>10 saveta za bolju saradnju</h2>
+    <h2>10 savjeta za bolju saradnju</h2>
     <ol style="list-style-type: decimal; padding-left: 20px;">
       <li>Čuvaj sve dokumente.</li>
       <li>Budi organizovan.</li>
       <li>Redovno komuniciraj.</li>
       <li>Koristi računovodstveni software.</li>
-      <li>Ne mešaj lična i poslovna sredstva.</li>
+      <li>Ne miješaj lična i poslovna sredstva.</li>
       <li>Imaj jasne upite.</li>
       <li>Plati na vrijeme.</li>
       <li>Budi dostupan.</li>
       <li>Traži savete.</li>
-      <li>Razumevaj važnost poreza.</li>
+      <li>Razumijeva važnost poreza.</li>
     </ol>
     
     <h2>Zaključak</h2>
@@ -168,21 +168,21 @@ export const blogPostsData: { [key: string]: any } = {
 },
 
   'tumacenje-finansijskih-izvestaaja': {
-    title: 'Kako tumačiti finansijske izveštaje svoje firme',
+    title: 'Kako tumačiti finansijske izvještaje svoje firme',
     category: 'Saveti',
     date: '2025-10-15',
     readTime: 7,
     author: 'AccPro Tim',
    image:"/images/9.jpg",
     content: `
-      <h2>Razumevanje finansijskih izveštaja</h2>
-      <p>Finansijski izveštaji su ključni za razumevanje zdravlja vaše firme.</p>
+      <h2>Razumijevanje finansijskih izvještaja</h2>
+      <p>Finansijski izvještaji su ključni za razumijevanje zdravlja Vaše firme.</p>
       
-      <h2>Tri glavna finansijska izveštaja</h2>
+      <h2>Tri glavna finansijska izvještaja</h2>
       <p>Bilans stanja, izvještaj o dohodku i izvještaj o novčanom toku.</p>
       
       <h2>Zaključak</h2>
-      <p>Redovno praćenje финансијских извештаја помаже вам да управљате пословањем.</p>
+      <p>Redovno praćenje finansijskih izvještaja pomaže Vam da upravljate poslovanjem.</p>
     `
   },
   'planiranje-budzeta': {
@@ -194,10 +194,10 @@ export const blogPostsData: { [key: string]: any } = {
    image:"/images/10.jpg",
     content: `
       <h2>Zašto je budžet važan?</h2>
-      <p>Budžet je plan kako ćeš koristiti svoju financiju. To je ključ za kontrolu troškova.</p>
+      <p>Budžet je plan kako ćeš koristiti svoju finansiju. To je ključ za kontrolu troškova.</p>
       
       <h2>Redovne kategorije u budžetu</h2>
-      <p>Troškovi personala, lokala i utilities, materijala, marketinga, transporta i rezerva za neplanirane troškove.</p>
+      <p>Troškovi personala, lokala, materijala, marketinga, transporta i rezerva za neplanirane troškove.</p>
       
       <h2>Zaključak</h2>
       <p>Dobar budžet je osnova finansijskog uspjeha.</p>
@@ -215,7 +215,7 @@ export const blogPostsData: { [key: string]: any } = {
       <p>Rastući biznis, zapošljavanje prvog zaposlenog, neizvjesnost oko poreza, nedostatak vremena, kompleksne transakcije ili redovni problemi sa poreskom upravom.</p>
       
       <h2>Zaključak</h2>
-      <p>Prepoznavanje potrebe za računovođom na vrijeme čuva vaš biznis.</p>
+      <p>Prepoznavanje potrebe za računovođom na vrijeme čuva Vaš biznis.</p>
     `
   },
   'razlika-knjigovodstva-racunovodstva': {
@@ -237,7 +237,7 @@ export const blogPostsData: { [key: string]: any } = {
     `
   },
   'kako-izabrati-racunovodjeu': {
-    title: 'Kako izabrati najboljeg računovođu za vašu firmu',
+    title: 'Kako izabrati najboljeg računovođu za Vašu firmu',
     category: 'SEO/Autoritet',
     date: '2025-10-01',
     readTime: 6,
@@ -248,7 +248,7 @@ export const blogPostsData: { [key: string]: any } = {
       <p>Iskustvo i kvalifikacije, reputacija, komunikacija, cijene, tehnologija i specijalnosti.</p>
       
       <h2>Procesna pitanja</h2>
-      <p>Kako dugo su u biznisu? Koliko klijenta imaju? Koja je njihova komunikacijska praksa? Kakvi su njihovi rokovi?</p>
+      <p>Koliko dugo su u biznisu? Koliko klijenta imaju? Koja je njihova komunikacijska praksa? Kakvi su njihovi rokovi?</p>
       
       <h2>Zaključak</h2>
       <p>Pravi izbor računovodje donosi uspjeh.</p>
@@ -266,10 +266,10 @@ export const blogPostsData: { [key: string]: any } = {
       <p>Zakoni zahtijevaju da čuvate poslovne dokumente određeno vrijeme.</p>
       
       <h2>Vremenske periode čuvanja</h2>
-      <p>3 godine: fakture, račune, bankovne izvode. 5 godina: poslovne knjige, godišnje financijske izveštaje. 10 godina: ugovore sa velikim vrijednostima.</p>
+      <p>3 godine: fakture, račune, bankovne izvode. 5 godina: poslovne knjige, godišnje finansijske izvještaje. 10 godina: ugovore sa velikim vrijednostima.</p>
       
       <h2>Zaključak</h2>
-      <p>Pravovremeno čuvanje dokumenata štiti vaš biznis.</p>
+      <p>Pravovremjeno čuvanje dokumenata štiti Vaš biznis.</p>
     `
   },
 
@@ -877,7 +877,7 @@ export const blogPostsData: { [key: string]: any } = {
   // ===== SRPSKI =====
   me: {
     'sta-je-bilans-stanja': {
-      title: 'Šta je bilans stanja i zašto je važan za vaše poslovanje?',
+      title: 'Šta je bilans stanja i zašto je važan za Vaše poslovanje?',
       category: 'Edukativni članci',
       date: '2025-11-04',
       readTime: 5,
@@ -885,7 +885,7 @@ export const blogPostsData: { [key: string]: any } = {
      image:"/images/1.jpg",
       content: `
         <h2>Uvod u bilans stanja</h2>
-        <p>Bilans stanja je jedan od tri ključna finansijska izveštaja. Poznato i kao bilans, predstavlja finansijsku poziciju vaše kompanije u specifičnom vremenu. Obično se kreira na kraju svakog kvartala ili godišnje.</p>
+        <p>Bilans stanja je jedan od tri ključna finansijska izvještaja. Poznato i kao bilans, predstavlja finansijsku poziciju Vaše kompanije u specifičnom vremenu. Obično se kreira na kraju svakog kvartala ili godišnje.</p>
         
         <h2>Šta sadrži bilans stanja?</h2>
         <p>Bilans stanja se sastoji od tri glavne komponente:</p>
@@ -896,10 +896,10 @@ export const blogPostsData: { [key: string]: any } = {
         </ul>
         
         <h2>Zašto je bilans stanja važan?</h2>
-        <p>Bilans stanja vam pokazuje finansijsku stabilnost vaše kompanije, likvidnost i mogućnost plaćanja obveza, razinu zaduženosti i potencijal za rast.</p>
+        <p>Bilans stanja vam pokazuje finansijsku stabilnost Vaše kompanije, likvidnost i mogućnost plaćanja obveza, nivo zaduženosti i potencijal za rast.</p>
         
         <h2>Zaključak</h2>
-        <p>Razumevanje bilanса stanja ključno je za donošenje pametnih poslovnih odluka.</p>
+        <p>Razumijevanje bilansа stanja ključno je za donošenje pametnih poslovnih odluka.</p>
       `
     },
     'kako-otvoriti-preduzece': {
@@ -911,7 +911,7 @@ export const blogPostsData: { [key: string]: any } = {
      image:"/images/2.jpg",
       content: `
         <h2>Uvod</h2>
-        <p>Otvaranje preduzeća u Crnoj Gori je sada lakše nego ikad. Ovaj vodič vas kroz sve korake potrebne za legalno pokretanje vašeg biznisa.</p>
+        <p>Otvaranje preduzeća u Crnoj Gori je sada lakše nego ikad. Ovaj vodič vas kroz sve korake potrebne za legalno pokretanje Vašeg biznisa.</p>
         
         <h2>Korak 1: Priprema dokumentacije</h2>
         <p>Prije nego što se registrujeete, trebate pripremiti sljedeću dokumentaciju: lični dokument, dokaz o adresi, dokaz o kvalifikacijama i plan biznisa.</p>
@@ -920,7 +920,7 @@ export const blogPostsData: { [key: string]: any } = {
         <p>Trebate odlučiti koju vrstu preduzeća želite otvoriti: DOO za većinu biznisa, AD za veće firme ili trgovac samostalni za male biznise.</p>
         
         <h2>Zaključak</h2>
-        <p>Otvaranje preduzeća je važan korak, ali sa pravim vodiščem bit će mnogo lakše.</p>
+        <p>Otvaranje preduzeća je važan korak, ali sa pravim vodičem biće mnogo lakše.</p>
       `
     },
     'porez-na-dobit': {
@@ -935,13 +935,13 @@ export const blogPostsData: { [key: string]: any } = {
         <p>Porez na dobit je fiskalna obaveza koju plaćaju preduzeća na svoju neto dobit. U Crnoj Gori, trenutna stopa poreza na dobit je 9%.</p>
         
         <h2>Ko mora platiti porez na dobit?</h2>
-        <p>Sve pravne osobe koje obavljaju gospodarsku djelatnost moraju platiti porez na dobit.</p>
+        <p>Porez na dobit dužne su plaćati sve pravne osobe koje ostvaruju dohodak obavljanjem djelatnosti.</p>
         
         <h2>Kako se obračunava neto dobit?</h2>
-        <p>Neto dobit = Ukupan prihod - Dozvoljeni odbitci. Dozvoljeni odbitci uključuju troškove materijala, zaposlenih, iznajmljivanja i amortizaciju.</p>
+        <p>Neto dobit = Ukupan prihod - Dozvoljeni odbici. Dozvoljeni odbici uključuju troškove materijala, zaposlenih, iznajmljivanja i amortizaciju.</p>
         
         <h2>Zaključak</h2>
-        <p>Razumevanje poreza na dobit pomaže da bolje upravljate finansijama vaše firme.</p>
+        <p>Razumijevanje poreza na dobit pomaže da bolje upravljate finansijama Vaše firme.</p>
       `
     },
     'pdv-obaveze-2025': {
@@ -971,35 +971,35 @@ export const blogPostsData: { [key: string]: any } = {
      image:"/images/5.jpg",
       content: `
         <h2>Najčešće greške pri vođenju knjiga</h2>
-        <p>Vođenje poslovnih knjiga je kritično za svaki biznis. Evo najčešćih grešaka: mešanje ličnih i poslovnih sredstava, nepotpuna dokumentacija, neispravan redoslijed knjiženja.</p>
+        <p>Vođenje poslovnih knjiga je kritično za svaki biznis. Evo najčešćih grešaka: miješanje ličnih i poslovnih sredstava, nepotpuna dokumentacija, neispravan redoslijed knjiženja.</p>
         
         <h2>Kako izbjegnuti ove greške?</h2>
         <p>Koristi računovodstveni software, redovno pratі transakcije, konsultuj profesionalnog računovođu i vedi detaljne evidencije.</p>
         
         <h2>Zaključak</h2>
-        <p>Ispravno vođenje knjiga štiti vaš biznis od problema.</p>
+        <p>Ispravno vođenje knjiga štiti Vaš biznis od problema.</p>
       `
     },
     '10-saveta-saradnja-racunovedjom': {
-      title: '10 saveta za lakšu saradnju sa računovođom',
+      title: '10 savjeta za lakšu saradnju sa računovođom',
       category: 'Praktični vodiči',
       date: '2025-10-18',
       readTime: 5,
       author: 'AccPro Tim',
      image:"/images/8.jpg",
       content: `
-        <h2>10 saveta za bolju saradnju</h2>
+        <h2>10 savjeta za bolju saradnju</h2>
         <ol style="list-style-type: decimal; padding-left: 20px;">
           <li>Čuvaj sve dokumente.</li>
           <li>Budi organizovan.</li>
           <li>Redovno komuniciraj.</li>
           <li>Koristi računovodstveni software.</li>
-          <li>Ne mešaj lična i poslovna sredstva.</li>
+          <li>Ne miješaj lična i poslovna sredstva.</li>
           <li>Imaj jasne upite.</li>
           <li>Plati na vrijeme.</li>
           <li>Budi dostupan.</li>
           <li>Traži savete.</li>
-          <li>Razumevaj važnost poreza.</li>
+          <li>Razumijeva važnost poreza.</li>
         </ol>
         <h2>Zaključak</h2>
         <p>Dobra saradnja sa računovođom je ključna za uspjeh.</p>
