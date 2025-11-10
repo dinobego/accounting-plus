@@ -13,7 +13,7 @@ export const metadata = {
   title: 'Accounting plus - Profesionalne računovodstvene usluge',
   description: 'Stručna finansijska rješenja za rast Vašeg poslovanja. Usluge: Osnivanje preduzeća, Poresko savjetovanje, Analiza poslovanja i više.',
   icons: {
-    icon: '/images/icon.jpg'  
+    icon: '/images/icon.png'  
   },
   openGraph: {
     title: 'Accounting plus - Profesionalne računovodstvene usluge',
