@@ -34,7 +34,7 @@ export default function AboutPage() {
 
   const stats = [
     { number: '500+', label: t('stats.clients') },
-    { number: '15+', label: t('stats.years') },
+    { number: '30+', label: t('stats.years') },
     { number: '98%', label: t('stats.satisfaction') },
     { number: '24/7', label: t('stats.support') }
   ];

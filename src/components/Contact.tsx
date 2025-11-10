@@ -161,39 +161,51 @@ export default function Contact() {
           {/* Dodatne info kartice */}
           <div className="mt-12 pt-8 border-t border-gray-200">
             <div className="grid md:grid-cols-3 gap-6 text-center">
+         <motion.div
+  whileHover={{ y: -5 }}
+  className="p-4 rounded-xl bg-blue-50 cursor-pointer"
+  onClick={() => {
+    window.location.href = "mailto:racunovodstvo2020@hotmail.com";
+  }}
+>
+  <Mail className="mx-auto mb-2 text-blue-600" size={24} />
+  <p className="text-sm font-semibold text-gray-700">
+    {t("info.email")}
+  </p>
+  <p className="text-sm text-gray-600">Accounting plus</p>
+</motion.div>
+
+             <motion.div
+  whileHover={{ y: -5 }}
+  className="p-4 rounded-xl bg-indigo-50 cursor-pointer"
+  onClick={() => {
+    window.location.href = "tel:+382698428843";
+  }}
+>
+  <Phone className="mx-auto mb-2 text-indigo-600" size={24} />
+  <p className="text-sm font-semibold text-gray-700">
+    {t("info.phone")}
+  </p>
+  <p className="text-sm text-gray-600">+382 69 842 843</p>
+</motion.div>
+
               <motion.div
-                whileHover={{ y: -5 }}
-                className="p-4 rounded-xl bg-blue-50 cursor-pointer"
-              >
-                <Mail className="mx-auto mb-2 text-blue-600" size={24} />
-                <p className="text-sm font-semibold text-gray-700">
-                  {t("info.email")}
-                </p>
-                <p className="text-sm text-gray-600">info@accpro.com</p>
-              </motion.div>
-              <motion.div
-                whileHover={{ y: -5 }}
-                className="p-4 rounded-xl bg-indigo-50 cursor-pointer"
-              >
-                <Phone className="mx-auto mb-2 text-indigo-600" size={24} />
-                <p className="text-sm font-semibold text-gray-700">
-                  {t("info.phone")}
-                </p>
-                <p className="text-sm text-gray-600">+382 123 456 789</p>
-              </motion.div>
-              <motion.div
-                whileHover={{ y: -5 }}
-                className="p-4 rounded-xl bg-purple-50 cursor-pointer"
-              >
-                <MessageSquare
-                  className="mx-auto mb-2 text-purple-600"
-                  size={24}
-                />
-                <p className="text-sm font-semibold text-gray-700">
-                  {t("info.location")}
-                </p>
-                <p className="text-sm text-gray-600">Podgorica, Montenegro</p>
-              </motion.div>
+  whileHover={{ y: -5 }}
+  className="p-4 rounded-xl bg-purple-50 cursor-pointer"
+  onClick={() => {
+    window.open("https://maps.app.goo.gl/NsofWhWD3LGVeWNT9?g_st=ipc", "_blank");
+  }}
+>
+  <MessageSquare
+    className="mx-auto mb-2 text-purple-600"
+    size={24}
+  />
+  <p className="text-sm font-semibold text-gray-700">
+    {t("info.location")}
+  </p>
+  <p className="text-sm text-gray-600">Podgorica, Montenegro</p>
+</motion.div>
+
             </div>
           </div>
         </motion.div>

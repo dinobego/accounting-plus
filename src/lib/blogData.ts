@@ -6,7 +6,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-11-04',
     readTime: 5,
     author: 'AccPro Tim',
-    image: 'https://images.unsplash.com/photo-1554224311-beee415c15c7?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/1.jpg",
     content: `
       <h2>Uvod u bilans stanja</h2>
       <p>Bilans stanja je jedan od tri ključna finansijska izveštaja. Poznato i kao bilans, predstavlja finansijsku poziciju vaše kompanije u specifičnom vremenu. Obično se kreira na kraju svakog kvartala ili godišnje.</p>
@@ -32,7 +32,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-11-02',
     readTime: 8,
     author: 'AccPro Tim',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/2.jpg",
     content: `
       <h2>Uvod</h2>
       <p>Otvaranje preduzeća u Crnoj Gori je sada lakše nego ikad. Ovaj vodič vas kroz sve korake potrebne za legalno pokretanje vašeg biznisa.</p>
@@ -53,7 +53,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-30',
     readTime: 6,
     author: 'AccPro Tim',
-    image: 'https://images.unsplash.com/photo-1611632736579-6b16e2b50449?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/3.jpg",
     content: `
       <h2>Šta je porez na dobit?</h2>
       <p>Porez na dobit je fiskalna obaveza koju plaćaju preduzeća na svoju neto dobit. U Crnoj Gori, trenutna stopa poreza na dobit je 9%.</p>
@@ -74,7 +74,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-28',
     readTime: 7,
     author: 'AccPro Tim',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/4.jpg",
     content: `
       <h2>Šta je PDV?</h2>
       <p>Porez na dodanu vrijednost (PDV) je indirektni porez koji se primjenjuje na sve proizvode i usluge. Trenutna stopa u Crnoj Gori je 19%.</p>
@@ -92,7 +92,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-26',
     readTime: 5,
     author: 'AccPro Tim',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/5.jpg",
     content: `
       <h2>Najčešće greške pri vođenju knjiga</h2>
       <p>Vođenje poslovnih knjiga je kritično za svaki biznis. Evo najčešćih grešaka: mešanje ličnih i poslovnih sredstava, nepotpuna dokumentacija, neispravan redoslijed knjiženja.</p>
@@ -110,7 +110,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-25',
     readTime: 4,
     author: 'AccPro Tim',
-    image: 'https://images.unsplash.com/photo-1507842217343-583f20270319?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/6.jpg",
     content: `
       <h2>Checklista za kraj godine</h2>
       <p>Važna dokumentacija koju trebate predati računovođi: bankovni izvodi, sve fakture i račune, dokaze o plaćanjima, izvode o stanju zaliha.</p>
@@ -128,7 +128,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-20',
     readTime: 6,
     author: 'AccPro Tim',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/7.jpg",
     content: `
       <h2>Obračun poreza na zarade</h2>
       <p>Porez na zarade je kompleksan, ali važan dio obaveza svakog poslodavca.</p>
@@ -140,31 +140,40 @@ export const blogPostsData: { [key: string]: any } = {
       <p>Redovno plaćanje poreza štiti vaš biznis.</p>
     `
   },
-  '10-saveta-saradnja-racunovedjom': {
-    title: '10 saveta za lakšu saradnju sa računovođom',
-    category: 'Praktični vodiči',
-    date: '2025-10-18',
-    readTime: 5,
-    author: 'AccPro Tim',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
-    content: `
-      <h2>10 saveta za bolju saradnju</h2>
-      <p>1. Čuvaj sve dokumente. 2. Budi organizovan. 3. Redovno komuniciraj. 4. Koristi računovodstveni software. 5. Ne mešaj lična i poslovna sredstva.</p>
-      
-      <h2>Nastavak saveta</h2>
-      <p>6. Imaj jasne upite. 7. Plati na vrijeme. 8. Budi dostupan. 9. Traži savete. 10. Razumevaj važnost poreza.</p>
-      
-      <h2>Zaključak</h2>
-      <p>Dobra saradnja sa računovođom je ključna za uspjeh.</p>
-    `
-  },
+'10-saveta-saradnja-racunovedjom': {
+  title: '10 saveta za lakšu saradnju sa računovođom',
+  category: 'Praktični vodiči',
+  date: '2025-10-18',
+  readTime: 5,
+  author: 'AccPro Tim',
+ image:"/images/8.jpg",
+  content: `
+    <h2>10 saveta za bolju saradnju</h2>
+    <ol style="list-style-type: decimal; padding-left: 20px;">
+      <li>Čuvaj sve dokumente.</li>
+      <li>Budi organizovan.</li>
+      <li>Redovno komuniciraj.</li>
+      <li>Koristi računovodstveni software.</li>
+      <li>Ne mešaj lična i poslovna sredstva.</li>
+      <li>Imaj jasne upite.</li>
+      <li>Plati na vrijeme.</li>
+      <li>Budi dostupan.</li>
+      <li>Traži savete.</li>
+      <li>Razumevaj važnost poreza.</li>
+    </ol>
+    
+    <h2>Zaključak</h2>
+    <p>Dobra saradnja sa računovođom je ključna za uspjeh.</p>
+  `
+},
+
   'tumacenje-finansijskih-izvestaaja': {
     title: 'Kako tumačiti finansijske izveštaje svoje firme',
     category: 'Saveti',
     date: '2025-10-15',
     readTime: 7,
     author: 'AccPro Tim',
-    image: 'https://images.unsplash.com/photo-1611632736579-6b16e2b50449?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/9.jpg",
     content: `
       <h2>Razumevanje finansijskih izveštaja</h2>
       <p>Finansijski izveštaji su ključni za razumevanje zdravlja vaše firme.</p>
@@ -182,7 +191,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-12',
     readTime: 8,
     author: 'AccPro Tim',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/10.jpg",
     content: `
       <h2>Zašto je budžet važan?</h2>
       <p>Budžet je plan kako ćeš koristiti svoju financiju. To je ključ za kontrolu troškova.</p>
@@ -200,7 +209,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-10',
     readTime: 5,
     author: 'AccPro Tim',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/11.jpg",
     content: `
       <h2>Znakovi da trebate računovođu</h2>
       <p>Rastući biznis, zapošljavanje prvog zaposlenog, neizvjesnost oko poreza, nedostatak vremena, kompleksne transakcije ili redovni problemi sa poreskom upravom.</p>
@@ -215,7 +224,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-05',
     readTime: 4,
     author: 'AccPro Tim',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/12.jpg",
     content: `
       <h2>Šta je razlika?</h2>
       <p>Često se riječi knjiženje i računovodstvo koriste kao sinonimi, ali imaju različita značenja.</p>
@@ -233,7 +242,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-01',
     readTime: 6,
     author: 'AccPro Tim',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/13.jpg",
     content: `
       <h2>Ključni kriterijumi za izbor</h2>
       <p>Iskustvo i kvalifikacije, reputacija, komunikacija, cijene, tehnologija i specijalnosti.</p>
@@ -251,7 +260,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-09-28',
     readTime: 5,
     author: 'AccPro Tim',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/14.jpg",
     content: `
       <h2>Zakoni o čuvanju dokumenata</h2>
       <p>Zakoni zahtijevaju da čuvate poslovne dokumente određeno vrijeme.</p>
@@ -271,7 +280,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-11-04',
     readTime: 5,
     author: 'AccPro Team',
-    image: 'https://images.unsplash.com/photo-1554224311-beee415c15c7?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/1.jpg",
     content: `
       <h2>Introduction to Balance Sheet</h2>
       <p>A balance sheet is one of three key financial statements. Also known as a statement of financial position, it represents the financial position of your company at a specific point in time.</p>
@@ -292,7 +301,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-11-02',
     readTime: 8,
     author: 'AccPro Team',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/2.jpg",
     content: `
       <h2>Introduction</h2>
       <p>Opening a business in Montenegro is easier than ever. This guide takes you through all the steps needed to legally start your business.</p>
@@ -313,7 +322,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-30',
     readTime: 6,
     author: 'AccPro Team',
-    image: 'https://images.unsplash.com/photo-1611632736579-6b16e2b50449?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/3.jpg",
     content: `
       <h2>What is Corporate Income Tax?</h2>
       <p>Corporate income tax is a fiscal obligation paid by businesses on their net profit. In Montenegro, the current corporate income tax rate is 9%.</p>
@@ -334,7 +343,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-28',
     readTime: 7,
     author: 'AccPro Team',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/4.jpg",
     content: `
       <h2>What is VAT?</h2>
       <p>Value Added Tax (VAT) is an indirect tax applied to all products and services. The current rate in Montenegro is 19%.</p>
@@ -352,7 +361,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-26',
     readTime: 5,
     author: 'AccPro Team',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/5.jpg",
     content: `
       <h2>Common Bookkeeping Mistakes</h2>
       <p>Bookkeeping is critical for any business. Common mistakes include mixing personal and business funds, incomplete documentation, and improper record keeping.</p>
@@ -370,7 +379,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-25',
     readTime: 4,
     author: 'AccPro Team',
-    image: 'https://images.unsplash.com/photo-1507842217343-583f20270319?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/6.jpg",
     content: `
       <h2>Year-End Checklist</h2>
       <p>Important documents to submit to your accountant: bank statements for all accounts, all invoices and receipts, payment proofs, inventory statements.</p>
@@ -388,7 +397,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-20',
     readTime: 6,
     author: 'AccPro Team',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/7.jpg",
     content: `
       <h2>Payroll Tax Calculation</h2>
       <p>Payroll tax is a complex but important part of every employer's obligations.</p>
@@ -400,28 +409,40 @@ export const blogPostsData: { [key: string]: any } = {
       <p>Regular tax payment protects your business.</p>
     `
   },
-  'tips-working-accountant': {
-    title: '10 Tips for Easier Cooperation with Your Accountant',
-    category: 'Practical Guides',
-    date: '2025-10-18',
-    readTime: 5,
-    author: 'AccPro Team',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
-    content: `
-      <h2>10 Tips for Better Cooperation</h2>
-      <p>1. Keep all documents. 2. Stay organized. 3. Communicate regularly. 4. Use accounting software. 5. Don't mix personal and business funds. 6. Ask clear questions. 7. Pay on time. 8. Be available. 9. Seek advice. 10. Understand tax importance.</p>
-      
-      <h2>Conclusion</h2>
-      <p>Good cooperation with your accountant is key to success.</p>
-    `
-  },
+ 'tips-working-accountant': {
+  title: '10 Tips for Easier Cooperation with Your Accountant',
+  category: 'Practical Guides',
+  date: '2025-10-18',
+  readTime: 5,
+  author: 'AccPro Team',
+ image:"/images/8.jpg",
+  content: `
+    <h2>10 Tips for Better Cooperation</h2>
+    <ol style="list-style-type: decimal; padding-left: 20px;">
+      <li>Keep all documents.</li>
+      <li>Stay organized.</li>
+      <li>Communicate regularly.</li>
+      <li>Use accounting software.</li>
+      <li>Don't mix personal and business funds.</li>
+      <li>Ask clear questions.</li>
+      <li>Pay on time.</li>
+      <li>Be available.</li>
+      <li>Seek advice.</li>
+      <li>Understand tax importance.</li>
+    </ol>
+    
+    <h2>Conclusion</h2>
+    <p>Good cooperation with your accountant is key to success.</p>
+  `
+},
+
   'interpreting-financial-statements': {
     title: 'How to Interpret Your Company\'s Financial Statements',
     category: 'Tips',
     date: '2025-10-15',
     readTime: 7,
     author: 'AccPro Team',
-    image: 'https://images.unsplash.com/photo-1611632736579-6b16e2b50449?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/9.jpg",
     content: `
       <h2>Understanding Financial Statements</h2>
       <p>Financial statements are crucial for understanding the health of your business.</p>
@@ -439,7 +460,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-12',
     readTime: 8,
     author: 'AccPro Team',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/10.jpg",
     content: `
       <h2>Why is Budget Important?</h2>
       <p>A budget is a plan for how you will use your finances. It is the key to cost control.</p>
@@ -457,7 +478,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-10',
     readTime: 5,
     author: 'AccPro Team',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/11.jpg",
     content: `
       <h2>Signs You Need an Accountant</h2>
       <p>Growing business, hiring first employee, uncertainty about taxes, lack of time, complex transactions, or regular problems with tax authorities.</p>
@@ -472,7 +493,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-05',
     readTime: 4,
     author: 'AccPro Team',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/12.jpg",
     content: `
       <h2>What is the Difference?</h2>
       <p>The terms bookkeeping and accounting are often used interchangeably, but they have different meanings.</p>
@@ -490,7 +511,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-01',
     readTime: 6,
     author: 'AccPro Team',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/13.jpg",
     content: `
       <h2>Key Selection Criteria</h2>
       <p>Experience and qualifications, reputation, communication, pricing, technology, and specialties.</p>
@@ -508,7 +529,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-09-28',
     readTime: 5,
     author: 'AccPro Team',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/14.jpg",
     content: `
       <h2>Document Retention Laws</h2>
       <p>Laws require you to keep business documents for a certain period.</p>
@@ -528,7 +549,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-11-04',
     readTime: 5,
     author: 'AccPro Ekibi',
-    image: 'https://images.unsplash.com/photo-1554224311-beee415c15c7?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/1.jpg",
     content: `
       <h2>Bilanco Tanitimi</h2>
       <p>Bilanco, uc ana mali tablondan biridir. Finansal durum tablosu olarak da bilinir, sirketinizin belirli bir zaman noktasindaki finansal konumunu temsil eder. Genellikle her ceyrek veya yil sonunda hazirlanir.</p>
@@ -554,7 +575,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-11-02',
     readTime: 8,
     author: 'AccPro Ekibi',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/2.jpg",
     content: `
       <h2>Giris</h2>
       <p>Karadag\'da sirket acmak hic olmadigi kadar kolay. Bu rehber, isletmenizi yasal olarak baslatmak icin gereken tum adimları icerir.</p>
@@ -578,7 +599,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-30',
     readTime: 6,
     author: 'AccPro Ekibi',
-    image: 'https://images.unsplash.com/photo-1611632736579-6b16e2b50449?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/3.jpg",
     content: `
       <h2>Kurumlar Vergisi Nedir?</h2>
       <p>Kurumlar vergisi, isletmelerin net karlari uzerinden odedigi mali bir yukluluktedir. Karadag\'da mevcut kurumlar vergisi orani %9\'dur.</p>
@@ -596,7 +617,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-28',
     readTime: 7,
     author: 'AccPro Ekibi',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/4.jpg",
     content: `
       <h2>KDV Nedir?</h2>
       <p>Katma Deger Vergisi (KDV), tum urun ve hizmetlere uygulanan dolasli bir vergidir. Karadag\'daki mevcut oran %19\'dur.</p>
@@ -614,7 +635,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-26',
     readTime: 5,
     author: 'AccPro Ekibi',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/5.jpg",
     content: `
       <h2>Yaygın Defter Tutma Hatalari</h2>
       <p>Defter tutma, her isletme icin kritiktir. Yaygın hatalar arasında kisisel ve ticari fonları karistirma, eksik belgeler ve uygunsuz kayit tutma yer alir.</p>
@@ -632,7 +653,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-25',
     readTime: 4,
     author: 'AccPro Ekibi',
-    image: 'https://images.unsplash.com/photo-1507842217343-583f20270319?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/6.jpg",
     content: `
       <h2>Yil Sonu Kontrol Listesi</h2>
       <p>Muhasebeciye sunulmasi gereken onemli belgeler: tum hesaplar icin banka ekstreleri, tum faturalar ve makreuzlar, odeme kanitleri, envanter tablolari.</p>
@@ -650,7 +671,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-20',
     readTime: 6,
     author: 'AccPro Ekibi',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/7.jpg",
     content: `
       <h2>Bordro Vergisi Hesaplamasi</h2>
       <p>Bordro vergisi, her isveran icin karmasik ama onemli bir yukluluktedir.</p>
@@ -662,28 +683,40 @@ export const blogPostsData: { [key: string]: any } = {
       <p>Duzenli vergi odenmesi isletmenizi korur.</p>
     `
   },
-  'muhasebeci-ipuclari': {
-    title: 'Muhasebecimizle Daha Kolay Isbirliginde 10 Ipucu',
-    category: 'Pratik Rehberler',
-    date: '2025-10-18',
-    readTime: 5,
-    author: 'AccPro Ekibi',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
-    content: `
-      <h2>Daha İyi Isbirligi Icin 10 Ipucu</h2>
-      <p>1. Tum belgeleri saklayin. 2. Organize olun. 3. Duzenli iletisim kurun. 4. Muhasebe yazilimi kullanin. 5. Kisisel ve ticari fonları karistirmayin. 6. Net sorular sorun. 7. Zamaninda odeme yapin. 8. Musait olun. 9. Tavsiye isteyin. 10. Vergi onemini anlayin.</p>
-      
-      <h2>Sonuc</h2>
-      <p>Muhasebecimizle iyi isbirligi basarinin anahtaridir.</p>
-    `
-  },
+ 'muhasebeci-ipuclari': {
+  title: 'Muhasebecimizle Daha Kolay Isbirliginde 10 Ipucu',
+  category: 'Pratik Rehberler',
+  date: '2025-10-18',
+  readTime: 5,
+  author: 'AccPro Ekibi',
+ image:"/images/8.jpg",
+  content: `
+    <h2>Daha İyi Isbirligi Icin 10 Ipucu</h2>
+    <ol style="list-style-type: decimal; padding-left: 20px;">
+      <li>Tum belgeleri saklayin.</li>
+      <li>Organize olun.</li>
+      <li>Duzenli iletisim kurun.</li>
+      <li>Muhasebe yazilimi kullanin.</li>
+      <li>Kisisel ve ticari fonları karistirmayin.</li>
+      <li>Net sorular sorun.</li>
+      <li>Zamaninda odeme yapin.</li>
+      <li>Musait olun.</li>
+      <li>Tavsiye isteyin.</li>
+      <li>Vergi onemini anlayin.</li>
+    </ol>
+    
+    <h2>Sonuc</h2>
+    <p>Muhasebecimizle iyi isbirligi basarinin anahtaridir.</p>
+  `
+},
+
   'mali-tablolar-yorumlama': {
     title: 'Sirketinizin Mali Tablolarini Nasil Yorumlayacaksiniz',
     category: 'Ipuclari',
     date: '2025-10-15',
     readTime: 7,
     author: 'AccPro Ekibi',
-    image: 'https://images.unsplash.com/photo-1611632736579-6b16e2b50449?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/9.jpg",
     content: `
       <h2>Mali Tablolari Anlama</h2>
       <p>Mali tablolar, isletmenizin sagligini anlamak icin cok onemlidir.</p>
@@ -701,7 +734,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-12',
     readTime: 8,
     author: 'AccPro Ekibi',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/10.jpg",
     content: `
       <h2>Butce Neden Onemlidir?</h2>
       <p>Butce, finansmani nasil kullanacaniza dair bir plandir. Maliyet kontrolunun anahtaridir.</p>
@@ -719,7 +752,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-10',
     readTime: 5,
     author: 'AccPro Ekibi',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/11.jpg",
     content: `
       <h2>Muhasebeciye Ihtiyacinız Oldugunun Isaretleri</h2>
       <p>Buyuyen isletme, ilk calisani ise alma, vergiler hakkinda belirsizlik, zaman eksikligi, karmasik islemler veya vergi makamlarinda sik sorunlar.</p>
@@ -734,7 +767,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-05',
     readTime: 4,
     author: 'AccPro Ekibi',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/12.jpg",
     content: `
       <h2>Fark Nedir?</h2>
       <p>Defter tutma ve muhasebe terimleri genellikle birbirinin yerine kullanilir, ancak farklı anlamlara sahiptirler.</p>
@@ -752,7 +785,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-10-01',
     readTime: 6,
     author: 'AccPro Ekibi',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/13.jpg",
     content: `
       <h2>Onemli Secim Kriterleri</h2>
       <p>Deneyim ve nitelikler, itibar, iletisim, fiyatlandirma, teknoloji ve uzmanlıklar.</p>
@@ -770,7 +803,7 @@ export const blogPostsData: { [key: string]: any } = {
     date: '2025-09-28',
     readTime: 5,
     author: 'AccPro Ekibi',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+   image:"/images/14.jpg",
     content: `
       <h2>Belge Saklama Kanunlari</h2>
       <p>Kanunlar, ticari belgeleri belirli bir sure saklama zorunluogunu getiriyor.</p>
@@ -781,5 +814,196 @@ export const blogPostsData: { [key: string]: any } = {
       <h2>Sonuc</h2>
       <p>Uygun belge saklama isletmenizi korur.</p>
     `
+  },
+
+  // ===== ENGLESKI =====
+  en: {
+    'tips-working-accountant': {
+      title: '10 Tips for Easier Cooperation with Your Accountant',
+      category: 'Practical Guides',
+      date: '2025-10-18',
+      readTime: 5,
+      author: 'AccPro Team',
+     image:"/images/8.jpg",
+      content: `
+        <h2>10 Tips for Better Cooperation</h2>
+        <ol style="list-style-type: decimal; padding-left: 20px;">
+          <li>Keep all documents.</li>
+          <li>Stay organized.</li>
+          <li>Communicate regularly.</li>
+          <li>Use accounting software.</li>
+          <li>Don't mix personal and business funds.</li>
+          <li>Ask clear questions.</li>
+          <li>Pay on time.</li>
+          <li>Be available.</li>
+          <li>Seek advice.</li>
+          <li>Understand tax importance.</li>
+        </ol>
+        <h2>Conclusion</h2>
+        <p>Good cooperation with your accountant is key to success.</p>
+      `
+    }
+  },
+
+  // ===== TURSKI =====
+  tr: {
+    'muhasebeci-ipuclari': {
+      title: 'Muhasebecimizle Daha Kolay Isbirliginde 10 Ipucu',
+      category: 'Pratik Rehberler',
+      date: '2025-10-18',
+      readTime: 5,
+      author: 'AccPro Ekibi',
+     image:"/images/8.jpg",
+      content: `
+        <h2>Daha İyi Isbirligi Icin 10 Ipucu</h2>
+        <ol style="list-style-type: decimal; padding-left: 20px;">
+          <li>Tum belgeleri saklayin.</li>
+          <li>Organize olun.</li>
+          <li>Duzenli iletisim kurun.</li>
+          <li>Muhasebe yazilimi kullanin.</li>
+          <li>Kisisel ve ticari fonları karistirmayin.</li>
+          <li>Net sorular sorun.</li>
+          <li>Zamaninda odeme yapin.</li>
+          <li>Musait olun.</li>
+          <li>Tavsiye isteyin.</li>
+          <li>Vergi onemini anlayin.</li>
+        </ol>
+        <h2>Sonuc</h2>
+        <p>Muhasebecimizle iyi isbirligi basarinin anahtaridir.</p>
+      `
+    }
+  },
+
+  // ===== SRPSKI =====
+  me: {
+    'sta-je-bilans-stanja': {
+      title: 'Šta je bilans stanja i zašto je važan za vaše poslovanje?',
+      category: 'Edukativni članci',
+      date: '2025-11-04',
+      readTime: 5,
+      author: 'AccPro Tim',
+     image:"/images/1.jpg",
+      content: `
+        <h2>Uvod u bilans stanja</h2>
+        <p>Bilans stanja je jedan od tri ključna finansijska izveštaja. Poznato i kao bilans, predstavlja finansijsku poziciju vaše kompanije u specifičnom vremenu. Obično se kreira na kraju svakog kvartala ili godišnje.</p>
+        
+        <h2>Šta sadrži bilans stanja?</h2>
+        <p>Bilans stanja se sastoji od tri glavne komponente:</p>
+        <ul>
+          <li><strong>Aktiva</strong> – sve što kompanija posjeduje (novac, nekretnine, oprema, zalihe)</li>
+          <li><strong>Pasiva</strong> – sve što kompanija duguje (krediti, obaveze prema dobavljačima, porezi)</li>
+          <li><strong>Kapital</strong> – neto vrijednost kompanije (aktiva - pasiva)</li>
+        </ul>
+        
+        <h2>Zašto je bilans stanja važan?</h2>
+        <p>Bilans stanja vam pokazuje finansijsku stabilnost vaše kompanije, likvidnost i mogućnost plaćanja obveza, razinu zaduženosti i potencijal za rast.</p>
+        
+        <h2>Zaključak</h2>
+        <p>Razumevanje bilanса stanja ključno je za donošenje pametnih poslovnih odluka.</p>
+      `
+    },
+    'kako-otvoriti-preduzece': {
+      title: 'Kako otvoriti preduzeće u Crnoj Gori – korak po korak vodič',
+      category: 'Edukativni članci',
+      date: '2025-11-02',
+      readTime: 8,
+      author: 'AccPro Tim',
+     image:"/images/2.jpg",
+      content: `
+        <h2>Uvod</h2>
+        <p>Otvaranje preduzeća u Crnoj Gori je sada lakše nego ikad. Ovaj vodič vas kroz sve korake potrebne za legalno pokretanje vašeg biznisa.</p>
+        
+        <h2>Korak 1: Priprema dokumentacije</h2>
+        <p>Prije nego što se registrujeete, trebate pripremiti sljedeću dokumentaciju: lični dokument, dokaz o adresi, dokaz o kvalifikacijama i plan biznisa.</p>
+        
+        <h2>Korak 2: Izbor vrste preduzeća</h2>
+        <p>Trebate odlučiti koju vrstu preduzeća želite otvoriti: DOO za većinu biznisa, AD za veće firme ili trgovac samostalni za male biznise.</p>
+        
+        <h2>Zaključak</h2>
+        <p>Otvaranje preduzeća je važan korak, ali sa pravim vodiščem bit će mnogo lakše.</p>
+      `
+    },
+    'porez-na-dobit': {
+      title: 'Porez na dobit: sve što vlasnici firmi treba da znaju',
+      category: 'Edukativni članci',
+      date: '2025-10-30',
+      readTime: 6,
+      author: 'AccPro Tim',
+     image:"/images/3.jpg",
+      content: `
+        <h2>Šta je porez na dobit?</h2>
+        <p>Porez na dobit je fiskalna obaveza koju plaćaju preduzeća na svoju neto dobit. U Crnoj Gori, trenutna stopa poreza na dobit je 9%.</p>
+        
+        <h2>Ko mora platiti porez na dobit?</h2>
+        <p>Sve pravne osobe koje obavljaju gospodarsku djelatnost moraju platiti porez na dobit.</p>
+        
+        <h2>Kako se obračunava neto dobit?</h2>
+        <p>Neto dobit = Ukupan prihod - Dozvoljeni odbitci. Dozvoljeni odbitci uključuju troškove materijala, zaposlenih, iznajmljivanja i amortizaciju.</p>
+        
+        <h2>Zaključak</h2>
+        <p>Razumevanje poreza na dobit pomaže da bolje upravljate finansijama vaše firme.</p>
+      `
+    },
+    'pdv-obaveze-2025': {
+      title: 'PDV obaveze i rokovi u 2025. godini',
+      category: 'Edukativni članci',
+      date: '2025-10-28',
+      readTime: 7,
+      author: 'AccPro Tim',
+     image:"/images/4.jpg",
+      content: `
+        <h2>Šta je PDV?</h2>
+        <p>Porez na dodanu vrijednost (PDV) je indirektni porez koji se primjenjuje na sve proizvode i usluge. Trenutna stopa u Crnoj Gori je 19%.</p>
+        
+        <h2>PDV obaveze u 2025. godini</h2>
+        <p>Važni rokovi: mjesečne PDV prijave do 15. u mjesecu, polugodišnje do 31. jula i konačna godišnja prijava do 31. marta.</p>
+        
+        <h2>Zaključak</h2>
+        <p>Svoje PDV obaveze trebate shvatiti ozbiljno i redovno ih izvršavati.</p>
+      `
+    },
+    'vodenje-knjiga-greske': {
+      title: 'Vođenje knjiga za preduzetnike – najčešće greške',
+      category: 'Edukativni članci',
+      date: '2025-10-26',
+      readTime: 5,
+      author: 'AccPro Tim',
+     image:"/images/5.jpg",
+      content: `
+        <h2>Najčešće greške pri vođenju knjiga</h2>
+        <p>Vođenje poslovnih knjiga je kritično za svaki biznis. Evo najčešćih grešaka: mešanje ličnih i poslovnih sredstava, nepotpuna dokumentacija, neispravan redoslijed knjiženja.</p>
+        
+        <h2>Kako izbjegnuti ove greške?</h2>
+        <p>Koristi računovodstveni software, redovno pratі transakcije, konsultuj profesionalnog računovođu i vedi detaljne evidencije.</p>
+        
+        <h2>Zaključak</h2>
+        <p>Ispravno vođenje knjiga štiti vaš biznis od problema.</p>
+      `
+    },
+    '10-saveta-saradnja-racunovedjom': {
+      title: '10 saveta za lakšu saradnju sa računovođom',
+      category: 'Praktični vodiči',
+      date: '2025-10-18',
+      readTime: 5,
+      author: 'AccPro Tim',
+     image:"/images/8.jpg",
+      content: `
+        <h2>10 saveta za bolju saradnju</h2>
+        <ol style="list-style-type: decimal; padding-left: 20px;">
+          <li>Čuvaj sve dokumente.</li>
+          <li>Budi organizovan.</li>
+          <li>Redovno komuniciraj.</li>
+          <li>Koristi računovodstveni software.</li>
+          <li>Ne mešaj lična i poslovna sredstva.</li>
+          <li>Imaj jasne upite.</li>
+          <li>Plati na vrijeme.</li>
+          <li>Budi dostupan.</li>
+          <li>Traži savete.</li>
+          <li>Razumevaj važnost poreza.</li>
+        </ol>
+        <h2>Zaključak</h2>
+        <p>Dobra saradnja sa računovođom je ključna za uspjeh.</p>
+      `
+    }
   }
 };

@@ -102,12 +102,16 @@
     },
     "stats": {
       "clients": "Mutlu Müşteriler",
-      "years": "Yılın Deneyimi",
+      "years": "Aktif iş ortakları",
       "satisfaction": "Memnuniyet",
       "support": "Destek"
     }
   },
   "contact": {
+      "form": {
+      "successMessage": "Mesaj başarıyla gönderildi! Mesajınız için teşekkürler.",
+      "errorMessage": "Mesaj gönderilirken hata oluştu. Lütfen tekrar deneyin."
+    },
     "emailTitle": "E-posta",
     "phoneTitle": "Telefon",
     "addressTitle": "Adres",
@@ -146,8 +150,8 @@
     },
     "contactInfo": {
       "hours": {
-        "weekdays": "Pzt-Cum: 08:00 - 17:00",
-        "weekend": "Cmt: 09:00 - 13:00"
+        "weekdays": "Pzt-Cmt: 08:00 - 16:00",
+        "weekend": "Paz: Kapalı"
       }
     },
     "map": {

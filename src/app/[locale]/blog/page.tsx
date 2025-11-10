@@ -17,9 +17,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'edukativni',
       title: 'Šta je bilans stanja i zašto je važan za vaše poslovanje?',
       excerpt: 'Saznajte šta je bilans stanja i kako ga koristi vaše poslovanje.',
-      image: 'https://images.unsplash.com/photo-1554224311-beee415c15c7?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/1.jpg",
       date: '2025-11-04',
-      readTime: 5
+      readTime:2 
     },
     {
       id: 2,
@@ -27,9 +27,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'edukativni',
       title: 'Kako otvoriti preduzeće u Crnoj Gori – korak po korak vodič',
       excerpt: 'Kompletan vodič za otvaranje novog preduzeća sa svim potrebnim informacijama.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/2.jpg",
       date: '2025-11-02',
-      readTime: 8
+      readTime:1
     },
     {
       id: 3,
@@ -37,9 +37,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'edukativni',
       title: 'Porez na dobit: sve što vlasnici firmi treba da znaju',
       excerpt: 'Sve relevantne informacije o porezu na dobit za vlasnike preduzeća.',
-      image: 'https://images.unsplash.com/photo-1611632736579-6b16e2b50449?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/3.jpg",
       date: '2025-10-30',
-      readTime: 6
+      readTime:1
     },
     {
       id: 4,
@@ -47,9 +47,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'edukativni',
       title: 'PDV obaveze i rokovi u 2025. godini',
       excerpt: 'Ažurirane informacije o PDV obavezama i važnim rokovima za 2025. godinu.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/4.jpg",
       date: '2025-10-28',
-      readTime: 7
+      readTime:1
     },
     {
       id: 5,
@@ -57,9 +57,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'edukativni',
       title: 'Vođenje knjiga za preduzetnike – najčešće greške',
       excerpt: 'Upoznajte se sa najčešćim greškama pri vođenju poslovnih knjiga.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/5.jpg",
       date: '2025-10-26',
-      readTime: 5
+      readTime:1
     },
     {
       id: 6,
@@ -67,9 +67,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'praktichni',
       title: 'Checklista za kraj poslovne godine – šta sve morate predati računovođi',
       excerpt: 'Praktična checklista sa svim dokumentima i informacijama potrebnih na kraju godine.',
-      image: 'https://images.unsplash.com/photo-1507842217343-583f20270319?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/6.jpg",
       date: '2025-10-25',
-      readTime: 4
+      readTime:1
     },
     {
       id: 7,
@@ -77,9 +77,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'praktichni',
       title: 'Kako pravilno obračunati i prijaviti porez na zarade',
       excerpt: 'Detaljno uputstvo za obračun i prijavu poreza na zarade.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/7.jpg",
       date: '2025-10-20',
-      readTime: 6
+      readTime:1
     },
     {
       id: 8,
@@ -87,9 +87,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'praktichni',
       title: '10 saveta za lakšu saradnju sa računovođom',
       excerpt: '10 praktičnih saveta koji će unaprediti vašu saradnju sa računovođom.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/8.jpg",
       date: '2025-10-18',
-      readTime: 5
+      readTime:1
     },
     {
       id: 9,
@@ -97,9 +97,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'saveti',
       title: 'Kako tumačiti finansijske izveštaje svoje firme',
       excerpt: 'Naučite kako čitati i razumeti finansijske izveštaje vašeg preduzeća.',
-      image: 'https://images.unsplash.com/photo-1611632736579-6b16e2b50449?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/9.jpg",
       date: '2025-10-15',
-      readTime: 7
+      readTime:1
     },
     {
       id: 10,
@@ -107,9 +107,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'saveti',
       title: 'Planiranje budžeta za mikro i mala preduzeća',
       excerpt: 'Kako efikasno planirati budžet za vašu malu firmu.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/10.jpg",
       date: '2025-10-12',
-      readTime: 8
+      readTime:1
     },
     {
       id: 11,
@@ -117,9 +117,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'saveti',
       title: 'Kako prepoznati da vam je potreban profesionalni računovođa',
       excerpt: 'Znakovi koji pokazuju da je vrijeme da angažujete profesionalnog računovođu.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/11.jpg",
       date: '2025-10-10',
-      readTime: 5
+      readTime:1
     },
     {
       id: 12,
@@ -127,9 +127,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'seo',
       title: 'Razlika između knjigovodstva i računovodstva',
       excerpt: 'Saznajte razliku između ova dva važna profesionalna polja.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/12.jpg",
       date: '2025-10-05',
-      readTime: 4
+      readTime:1
     },
     {
       id: 13,
@@ -137,9 +137,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'seo',
       title: 'Kako izabrati najboljeg računovođu za vašu firmu',
       excerpt: 'Vodič sa savjetima kako odabrati pravi tim za vaše računovodstvene potrebe.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/13.jpg",
       date: '2025-10-01',
-      readTime: 6
+      readTime:1
     },
     {
       id: 14,
@@ -147,9 +147,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'seo',
       title: 'Koje dokumente morate čuvati i koliko dugo?',
       excerpt: 'Kompletan pregled obavezne čuvanja i arhiviranja poslovnih dokumenata.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/14.jpg",
       date: '2025-09-28',
-      readTime: 5
+      readTime:1
     }
   ],
   en: [
@@ -159,9 +159,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'educational',
       title: 'What is a Balance Sheet and Why is it Important for Your Business?',
       excerpt: 'Learn what a balance sheet is and how it benefits your business.',
-      image: 'https://images.unsplash.com/photo-1554224311-beee415c15c7?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/1.jpg",
       date: '2025-11-04',
-      readTime: 5
+      readTime:2
     },
     {
       id: 2,
@@ -169,9 +169,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'educational',
       title: 'How to Open a Business in Montenegro – Step by Step Guide',
       excerpt: 'Complete guide for opening a new business with all necessary information.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/2.jpg",
       date: '2025-11-02',
-      readTime: 8
+      readTime:1
     },
     {
       id: 3,
@@ -179,9 +179,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'educational',
       title: 'Corporate Income Tax: Everything Business Owners Need to Know',
       excerpt: 'All relevant information about corporate income tax for business owners.',
-      image: 'https://images.unsplash.com/photo-1611632736579-6b16e2b50449?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/3.jpg",
       date: '2025-10-30',
-      readTime: 6
+      readTime:1
     },
     {
       id: 4,
@@ -189,9 +189,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'educational',
       title: 'VAT Obligations and Deadlines in 2025',
       excerpt: 'Updated information on VAT obligations and important deadlines for 2025.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/4.jpg",
       date: '2025-10-28',
-      readTime: 7
+      readTime:1
     },
     {
       id: 5,
@@ -199,9 +199,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'educational',
       title: 'Bookkeeping for Entrepreneurs – Common Mistakes',
       excerpt: 'Learn about the most common mistakes when keeping business records.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/5.jpg",
       date: '2025-10-26',
-      readTime: 5
+      readTime:1
     },
     {
       id: 6,
@@ -209,9 +209,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'practical',
       title: 'Year-End Checklist – What to Submit to Your Accountant',
       excerpt: 'Practical checklist with all documents and information needed at year-end.',
-      image: 'https://images.unsplash.com/photo-1507842217343-583f20270319?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/6.jpg",
       date: '2025-10-25',
-      readTime: 4
+      readTime:1
     },
     {
       id: 7,
@@ -219,9 +219,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'practical',
       title: 'How to Properly Calculate and Report Payroll Tax',
       excerpt: 'Detailed instructions for calculating and reporting payroll tax.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/7.jpg",
       date: '2025-10-20',
-      readTime: 6
+      readTime:1
     },
     {
       id: 8,
@@ -229,9 +229,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'practical',
       title: '10 Tips for Easier Cooperation with Your Accountant',
       excerpt: '10 practical tips that will improve your cooperation with your accountant.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/8.jpg",
       date: '2025-10-18',
-      readTime: 5
+      readTime:1
     },
     {
       id: 9,
@@ -239,9 +239,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'tips',
       title: 'How to Interpret Your Company\'s Financial Statements',
       excerpt: 'Learn how to read and understand your company\'s financial statements.',
-      image: 'https://images.unsplash.com/photo-1611632736579-6b16e2b50449?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/9.jpg",
       date: '2025-10-15',
-      readTime: 7
+      readTime:1
     },
     {
       id: 10,
@@ -249,9 +249,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'tips',
       title: 'Budget Planning for Micro and Small Businesses',
       excerpt: 'How to effectively plan a budget for your small business.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/10.jpg",
       date: '2025-10-12',
-      readTime: 8
+      readTime:1
     },
     {
       id: 11,
@@ -259,9 +259,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'tips',
       title: 'How to Recognize When You Need a Professional Accountant',
       excerpt: 'Signs that show it\'s time to hire a professional accountant.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/11.jpg",
       date: '2025-10-10',
-      readTime: 5
+      readTime:1
     },
     {
       id: 12,
@@ -269,9 +269,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'seo',
       title: 'The Difference Between Bookkeeping and Accounting',
       excerpt: 'Learn the difference between these two important professional fields.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/12.jpg",
       date: '2025-10-05',
-      readTime: 4
+      readTime:1
     },
     {
       id: 13,
@@ -279,9 +279,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'seo',
       title: 'How to Choose the Best Accountant for Your Company',
       excerpt: 'Guide with tips on how to select the right team for your accounting needs.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/13.jpg",
       date: '2025-10-01',
-      readTime: 6
+      readTime:1
     },
     {
       id: 14,
@@ -289,9 +289,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'seo',
       title: 'Which Documents Must You Keep and For How Long?',
       excerpt: 'Complete overview of mandatory storage and archiving of business documents.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/14.jpg",
       date: '2025-09-28',
-      readTime: 5
+      readTime:1
     }
   ],
   tr: [
@@ -301,9 +301,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'educational',
       title: 'Bilanço Nedir ve İşletmeniz İçin Neden Önemlidir?',
       excerpt: 'Bilanço nedir ve işletmenize nasıl fayda sağlar öğrenin.',
-      image: 'https://images.unsplash.com/photo-1554224311-beee415c15c7?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/1.jpg",
       date: '2025-11-04',
-      readTime: 5
+      readTime:2
     },
     {
       id: 2,
@@ -311,9 +311,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'educational',
       title: 'Karadağ\'da Şirket Açma – Adım Adım Rehber',
       excerpt: 'Yeni bir işletme açmak için gerekli tüm bilgileri içeren eksiksiz rehber.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/2.jpg",
       date: '2025-11-02',
-      readTime: 8
+      readTime:1
     },
     {
       id: 3,
@@ -321,9 +321,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'educational',
       title: 'Kurumlar Vergisi: İşletme Sahipleri Bilmesi Gerekenler',
       excerpt: 'İşletme sahipleri için kurumlar vergisi hakkında tüm ilgili bilgiler.',
-      image: 'https://images.unsplash.com/photo-1611632736579-6b16e2b50449?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/3.jpg",
       date: '2025-10-30',
-      readTime: 6
+      readTime:1
     },
     {
       id: 4,
@@ -331,9 +331,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'educational',
       title: 'KDV Yükümlülükleri ve 2025 Son Tarihleri',
       excerpt: '2025 için KDV yükümlülükleri ve önemli son tarihler hakkında güncellenmiş bilgiler.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/4.jpg",
       date: '2025-10-28',
-      readTime: 7
+      readTime:1
     },
     {
       id: 5,
@@ -341,9 +341,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'educational',
       title: 'Girişimciler İçin Defter Tutma – Yaygın Hatalar',
       excerpt: 'İş kayıtlarını tutarken yapılan en yaygın hatalar hakkında bilgi edinin.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/5.jpg",
       date: '2025-10-26',
-      readTime: 5
+      readTime:1
     },
     {
       id: 6,
@@ -351,9 +351,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'practical',
       title: 'Yıl Sonu Kontrol Listesi – Muhasebeciye Sunulması Gereken Belgeler',
       excerpt: 'Yıl sonunda gereken tüm belgeleri ve bilgileri içeren pratik kontrol listesi.',
-      image: 'https://images.unsplash.com/photo-1507842217343-583f20270319?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/6.jpg",
       date: '2025-10-25',
-      readTime: 4
+      readTime:1
     },
     {
       id: 7,
@@ -361,9 +361,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'practical',
       title: 'Bordro Vergisini Nasıl Doğru Hesaplayıp Raporlayacaksınız?',
       excerpt: 'Bordro vergisini hesaplama ve raporlama için ayrıntılı talimatlar.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/7.jpg",
       date: '2025-10-20',
-      readTime: 6
+      readTime:1
     },
     {
       id: 8,
@@ -371,9 +371,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'practical',
       title: 'Muhasebecimizle Daha Kolay İşbirliği İçin 10 İpucu',
       excerpt: 'Muhasebeci ile işbirliğinizi geliştirecek 10 pratik ipucu.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/8.jpg",
       date: '2025-10-18',
-      readTime: 5
+      readTime:1
     },
     {
       id: 9,
@@ -381,9 +381,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'tips',
       title: 'Şirketinizin Mali Tablolarını Nasıl Yorumlayacaksınız',
       excerpt: 'Şirketinizin mali tablolarını nasıl okuyup anlayacağınızı öğrenin.',
-      image: 'https://images.unsplash.com/photo-1611632736579-6b16e2b50449?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/9.jpg",
       date: '2025-10-15',
-      readTime: 7
+      readTime:1
     },
     {
       id: 10,
@@ -391,9 +391,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'tips',
       title: 'Mikro ve Küçük İşletmeler İçin Bütçe Planlama',
       excerpt: 'Küçük işletmeniz için bütçeyi nasıl etkili bir şekilde planlayacaksınız.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/10.jpg",
       date: '2025-10-12',
-      readTime: 8
+      readTime:1
     },
     {
       id: 11,
@@ -401,9 +401,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'tips',
       title: 'Profesyonel Muhasebeciye İhtiyacınız Olduğunu Nasıl Anlarsınız?',
       excerpt: 'Profesyonel muhasebeci işe almanın zamanının geldiğini gösteren işaretler.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/11.jpg",
       date: '2025-10-10',
-      readTime: 5
+      readTime:1
     },
     {
       id: 12,
@@ -411,9 +411,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'seo',
       title: 'Defter Tutma ve Muhasebe Arasındaki Fark',
       excerpt: 'Bu iki önemli profesyonel alan arasındaki farkı öğrenin.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/12.jpg",
       date: '2025-10-05',
-      readTime: 4
+      readTime:1
     },
     {
       id: 13,
@@ -421,9 +421,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'seo',
       title: 'Şirketiniz İçin En İyi Muhasebecisi Nasıl Seçersiniz',
       excerpt: 'Muhasebe ihtiyaçlarınız için doğru ekibi nasıl seçeceğiniz konusunda ipuçları içeren rehber.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/13.jpg",
       date: '2025-10-01',
-      readTime: 6
+      readTime:1
     },
     {
       id: 14,
@@ -431,9 +431,9 @@ const blogPostsByLocale: { [locale: string]: any[] } = {
       category: 'seo',
       title: 'Hangi Belgeleri Saklamalısınız ve Ne Kadar Süre?',
       excerpt: 'İş belgelerinin zorunlu saklama ve arşivleme ile ilgili tam genel bakış.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
+      image:"/images/14.jpg",
       date: '2025-09-28',
-      readTime: 5
+      readTime:1
     }
   ]
 };

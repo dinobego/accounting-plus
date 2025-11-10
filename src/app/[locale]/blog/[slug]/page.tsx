@@ -17,7 +17,7 @@ export default function BlogPostPage() {
     return (
       <>
         <Header />
-        <div className="min-h-screen bg-gray-50 pt-32 pb-20 px-4">
+        <div className="min-h-screen bg-gray-50 pt-25 pb-20 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Članak nije pronađen</h1>
             <Link href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-700 cursor-pointer font-semibold">
@@ -26,7 +26,7 @@ export default function BlogPostPage() {
             </Link>
           </div>
         </div>
-        <Footer />
+    
       </>
     );
   }
@@ -35,7 +35,7 @@ export default function BlogPostPage() {
     <>
       <Header />
       
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50 pt-32 pb-20">
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50 pt-25 pb-20">
         {/* Hero Section sa Image */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -293,7 +293,7 @@ export default function BlogPostPage() {
         </motion.div>
       </div>
 
-      <Footer />
+      
     </>
   );
 }

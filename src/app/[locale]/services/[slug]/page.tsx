@@ -13,7 +13,7 @@ const servicesContent: { [key: string]: any } = {
     titleMe: '🏢 Osnivanje preduzeća',
     titleEn: '🏢 Company Formation',
     titleTr: '🏢 Şirket Kuruluşu',
-    descriptionMe: 'Osnivanje preduzeća predstavlja ključni korak ka vašem poslovnom uspjehu. Naš tim pruža kompletnu podršku u procesu registracije, pravnog savjetovanja i administrativne pripreme.',
+    descriptionMe: 'Osnivanje preduzeća predstavlja ključni korak ka Vašem poslovnom uspjehu. Naš tim pruža kompletnu podršku u procesu registracije, pravnog savjetovanja i administrativne pripreme.',
     descriptionEn: 'Company formation is a key step towards your business success. Our team provides complete support in registration, legal consultation and administrative preparation.',
     descriptionTr: 'Şirket kurulması, ticari başarınıza giden önemli bir adımdır. Ekibimiz, kayıt, yasal danışmanlık ve idari hazırlık sürecinde tam destek sağlar.',
     contentMe: `
@@ -23,15 +23,15 @@ const servicesContent: { [key: string]: any } = {
       
       <h3>Naše usluge uključuju:</h3>
       <ul>
-        <li>Registraciju pravnog lica u Centralnom registru privrednih subjekata (CRPS)</li>
-        <li>Izradu osnivačkih akata i internih pravilnika</li>
-        <li>Savjetovanje o izboru poreskog i pravnog statusa</li>
-        <li>Prijavu u sistem PDV-a i poreske evidencije</li>
-        <li>Administrativnu podršku prilikom pokretanja poslovanja</li>
+        <li>Registraciju pravnog lica u Centralnom registru privrednih subjekata (CRPS).</li>
+        <li>Izradu osnivačkih akata i internih pravilnika.</li>
+        <li>Savjetovanje o izboru poreskog i pravnog statusa.</li>
+        <li>Prijavu u sistem PDV-a i poreske evidencije.</li>
+        <li>Administrativnu podršku prilikom pokretanja poslovanja.</li>
       </ul>
       
       <h3>Zašto izabrati nas:</h3>
-      <p>Uštedite vrijeme i novac, izbjegnite greške u procedurama i budite sigurni da vaše preduzeće posluje u skladu sa zakonom od prvog dana.</p>
+      <p>Uštedite vrijeme i novac, izbjegnite greške u procedurama i budite sigurni da Vaše preduzeće posluje u skladu sa zakonom od prvog dana.</p>
     `,
     contentEn: `
       <p>Whether you are establishing an LLC, sole proprietorship, partnership or branch of a foreign company, we take care of all paperwork and communication with state institutions.</p>
@@ -80,10 +80,10 @@ const servicesContent: { [key: string]: any } = {
       
       <h3>Usluge koje pružamo:</h3>
       <ul>
-        <li>Priprema i predaja dokumentacije za privremeni boravak</li>
-        <li>Dobijanje i produženje radnih dozvola</li>
-        <li>Savjetovanje o izboru tipa boravka (radni, investitorski, porodični)</li>
-        <li>Prijava stranaca u sistem MUP-a i Poreske uprave</li>
+        <li>Priprema i predaja dokumentacije za privremeni boravak.</li>
+        <li>Dobijanje i produženje radnih dozvola.</li>
+        <li>Savjetovanje o izboru tipa boravka (radni, investitorski, porodični).</li>
+        <li>Prijava stranaca u sistem MUP-a i Poreske uprave.</li>
       </ul>
       
       <h3>Naša prednost:</h3>
@@ -126,19 +126,19 @@ const servicesContent: { [key: string]: any } = {
     descriptionEn: 'Reliable bookkeeping is the foundation of every successful business. Our accounting team ensures precise maintenance of business books.',
     descriptionTr: 'Güvenilir muhasebe, her başarılı işletmenin temelidir. Muhasebe ekibimiz işletme defterlerinin kesin bir şekilde tutulmasını sağlar.',
     contentMe: `
-      <p>Radimo sa svim pravnim formama – od malih preduzetnika do velikih kompanija. Naša misija je da vam omogućimo jasan uvid u vaše finansijsko stanje.</p>
+      <p>Radimo sa svim pravnim formama – od malih preduzetnika do velikih kompanija. Naša misija je da Vam omogućimo jasan uvid u vaše finansijsko stanje.</p>
       
       <h3>Šta obuhvata naša usluga:</h3>
       <ul>
-        <li>Knjiženje svih poslovnih događaja</li>
-        <li>Obrada obračuna plata i doprinosa</li>
-        <li>Izrada mjesečnih i godišnjih finansijskih izvještaja</li>
-        <li>Poreske prijave (PDV, dohodak, dobit)</li>
-        <li>Interno i eksterno finansijsko izvještavanje</li>
+        <li>Knjiženje svih poslovnih događaja.</li>
+        <li>Obrada obračuna plata i doprinosa.</li>
+        <li>Izrada mjesečnih i godišnjih finansijskih izvještaja.</li>
+        <li>Poreske prijave (PDV, dohodak, dobit).</li>
+        <li>Interno i eksterno finansijsko izvještavanje.</li>
       </ul>
       
       <h3>Zašto odabrati nas:</h3>
-      <p>Tačnost, diskrecija i posvećenost svakom klijentu. Dok mi brinemo o brojkama, vi se možete posvetiti razvoju vašeg biznisa.</p>
+      <p>Tačnost, diskrecija i posvećenost svakom klijentu. Dok mi brinemo o brojkama, vi se možete posvetiti razvoju Vašeg biznisa.</p>
     `,
     contentEn: `
       <p>We work with all legal forms – from small entrepreneurs to large companies. Our mission is to give you a clear insight into your financial situation.</p>
@@ -179,18 +179,18 @@ const servicesContent: { [key: string]: any } = {
     descriptionEn: 'Montenegro tax system often changes and proper tax planning is crucial for financial stability.',
     descriptionTr: 'Karadağ vergi sistemi sık sık değişir ve uygun vergi planlaması finansal istikrar için çok önemlidir.',
     contentMe: `
-      <p>Naši stručnjaci za poreze pomažu vam da optimizujete svoje obaveze i spriječite nepotrebne troškove. Kroz detaljnu analizu vašeg poslovanja, predlažemo strategije koje omogućavaju zakonito smanjenje poreskog opterećenja.</p>
+      <p>Naši stručnjaci za poreze pomažu Vam da optimizujete svoje obaveze i spriječite nepotrebne troškove. Kroz detaljnu analizu Vašeg poslovanja, predlažemo strategije koje omogućavaju zakonito smanjenje poreskog opterećenja.</p>
       
       <h3>Naše usluge uključuju:</h3>
       <ul>
-        <li>Poresko planiranje i optimizaciju troškova</li>
-        <li>Savjetovanje o poreskim olakšicama</li>
-        <li>Pripremu poreskih prijava i obračuna</li>
-        <li>Podršku tokom poreskih kontrola i inspekcija</li>
+        <li>Poresko planiranje i optimizaciju troškova.</li>
+        <li>Savjetovanje o poreskim olakšicama.</li>
+        <li>Pripremu poreskih prijava i obračuna.</li>
+        <li>Podršku tokom poreskih kontrola i inspekcija.</li>
       </ul>
       
       <h3>Prednosti:</h3>
-      <p>Zahvaljujući našoj ekspertizi, vaša firma posluje u skladu sa propisima, a vi imate potpunu kontrolu nad svojim finansijama.</p>
+      <p>Zahvaljujući našoj ekspertizi, Vaša firma posluje u skladu sa propisima, a Vi imate potpunu kontrolu nad svojim finansijama.</p>
     `,
     contentEn: `
       <p>Our tax experts help you optimize your obligations and prevent unnecessary costs. Through detailed analysis of your business, we suggest strategies that enable legal reduction of tax burden.</p>
@@ -233,10 +233,10 @@ const servicesContent: { [key: string]: any } = {
       
       <h3>Usluga obuhvata:</h3>
       <ul>
-        <li>Izradu godišnjih finansijskih izvještaja</li>
-        <li>Bilans stanja, bilans uspjeha i dodatne napomene</li>
-        <li>Obračun i prijavu poreza na dobit</li>
-        <li>Izvještaje za potrebe menadžmenta i banaka</li>
+        <li>Izradu godišnjih finansijskih izvještaja.</li>
+        <li>Bilans stanja, bilans uspjeha i dodatne napomene.</li>
+        <li>Obračun i prijavu poreza na dobit.</li>
+        <li>Izvještaje za potrebe menadžmenta i banaka.</li>
       </ul>
       
       <h3>Prednosti:</h3>
@@ -275,19 +275,19 @@ const servicesContent: { [key: string]: any } = {
     titleMe: '📈 Analize poslovanja',
     titleEn: '📈 Business Analysis',
     titleTr: '📈 İş Analizleri',
-    descriptionMe: 'U dagens poslovnom okruženju, donošenje odluka bez jasnih podataka može biti rizično. Naše analize poslovanja daju vam detaljan uvid.',
+    descriptionMe: 'U poslovnom okruženju, donošenje odluka bez jasnih podataka može biti rizično. Naše analize poslovanja daju Vam detaljan uvid.',
     descriptionEn: 'In today business environment, making decisions without clear data can be risky. Our business analysis provides you with detailed insight.',
     descriptionTr: 'Günümüzün iş ortamında net veriler olmadan karar almak riskli olabilir. İşletme analizimiz size ayrıntılı bir fikir verir.',
     contentMe: `
-      <p>Na osnovu realnih podataka, pomažemo vam da prepoznate prilike za rast, smanjite troškove i unaprijedite profitabilnost.</p>
+      <p>Na osnovu realnih podataka, pomažemo Vam da prepoznate prilike za rast, smanjite troškove i unaprijedite profitabilnost.</p>
       
       <h3>Šta nudimo:</h3>
       <ul>
-        <li>Analizu finansijskih pokazatelja</li>
-        <li>Procjenu profitabilnosti i rizika</li>
-        <li>Analizu novčanih tokova</li>
-        <li>Komparativne analize sa tržištem</li>
-        <li>Preporuke za unapređenje poslovanja</li>
+        <li>Analizu finansijskih pokazatelja.</li>
+        <li>Procjenu profitabilnosti i rizika.</li>
+        <li>Analizu novčanih tokova.</li>
+        <li>Komparativne analize sa tržištem.</li>
+        <li>Preporuke za unapređenje poslovanja.</li>
       </ul>
       
       <h3>Prednosti:</h3>
@@ -328,7 +328,7 @@ const servicesContent: { [key: string]: any } = {
     titleMe: '🧾 Elektronsko slanje i prijem dokumentacije',
     titleEn: '🧾 Electronic Document Management',
     titleTr: '🧾 Elektronik Belge Yönetimi',
-    descriptionMe: 'Digitalizacija je budućnost poslovanja, a mi vam pomažemo da budete korak ispred sa elektronskim slanjem i prijemom dokumenata.',
+    descriptionMe: 'Digitalizacija je budućnost poslovanja, a mi Vam pomažemo da budete korak ispred sa elektronskim slanjem i prijemom dokumenata.',
     descriptionEn: 'Digitalization is the future of business and we help you stay ahead with electronic document sending and receiving.',
     descriptionTr: 'Dijitalleşme işletmenin geleceğidir ve elektronik belge gönderme ve almakla bir adım öne geçmenize yardımcı oluyoruz.',
     contentMe: `
@@ -336,12 +336,12 @@ const servicesContent: { [key: string]: any } = {
       
       <h3>Naša rješenja omogućavaju:</h3>
       <ul>
-        <li>Elektronsko potpisivanje dokumenata</li>
-        <li>Sigurno arhiviranje i čuvanje podataka</li>
-        <li>Integraciju sa e-servisima Vlade Crne Gore</li>
-        <li>Potpuno digitalno knjigovodstvo</li>
+        <li>Elektronsko potpisivanje dokumenata.</li>
+        <li>Sigurno arhiviranje i čuvanje podataka.</li>
+        <li>Integraciju sa e-servisima Vlade Crne Gore.</li>
+        <li>Potpuno digitalno knjigovodstvo.</li>
       </ul>
-      
+      c
       <h3>Prednosti:</h3>
       <p>Ušteda vremena, smanjenje troškova i sigurnost podataka – sve na jednom mjestu.</p>
     `,
@@ -382,18 +382,18 @@ const servicesContent: { [key: string]: any } = {
     descriptionEn: 'We provide professional support in all matters related to purchase, sale, registration and taxation of real estate.',
     descriptionTr: 'Gayrimenkul alımı, satışı, kaydı ve vergilendirilmesiyle ilgili tüm konularda profesyonel destek sağlarız.',
     contentMe: `
-      <p>Naš tim kombinuje znanje iz oblasti prava, poreza i računovodstva kako bi vaš proces bio siguran i transparentan.</p>
+      <p>Naš tim kombinuje znanje iz oblasti prava, poreza i računovodstva kako bi Vaš proces bio siguran i transparentan.</p>
       
       <h3>Šta radimo za vas:</h3>
       <ul>
-        <li>Registracija vlasništva u katastaru</li>
-        <li>Poreske analize i savjetovanje</li>
-        <li>Provjera dokumentacije i pravnog statusa</li>
-        <li>Procjena vrijednosti i pomoć u transakcijama</li>
+        <li>Registracija vlasništva u katastaru.</li>
+        <li>Poreske analize i savjetovanje.</li>
+        <li>Provjera dokumentacije i pravnog statusa.</li>
+        <li>Procjena vrijednosti i pomoć u transakcijama.</li>
       </ul>
       
       <h3>Prednosti:</h3>
-      <p>Bez rizika i neizvjesnosti – vaš imovinski interes zaštićen je profesionalnim pristupom i iskustvom.</p>
+      <p>Bez rizika i neizvjesnosti – Vaš imovinski interes zaštićen je profesionalnim pristupom i iskustvom.</p>
     `,
     contentEn: `
       <p>Our team combines knowledge from law, tax and accounting to make your process safe and transparent.</p>
@@ -436,10 +436,10 @@ const servicesContent: { [key: string]: any } = {
       
       <h3>Usluga obuhvata:</h3>
       <ul>
-        <li>Selekciju i regrutaciju kandidata</li>
-        <li>Pripremu ugovora o radu i dokumentacije</li>
-        <li>Administrativno vođenje zaposlenih</li>
-        <li>Savjetovanje u oblasti ljudskih resursa</li>
+        <li>Selekciju i regrutaciju kandidata.</li>
+        <li>Pripremu ugovora o radu i dokumentacije.</li>
+        <li>Administrativno vođenje zaposlenih.</li>
+        <li>Savjetovanje u oblasti ljudskih resursa.</li>
       </ul>
       
       <h3>Prednosti:</h3>
@@ -486,10 +486,10 @@ const servicesContent: { [key: string]: any } = {
       
       <h3>Usluga uključuje:</h3>
       <ul>
-        <li>Savjetovanje o vrsti i uslovima vize</li>
-        <li>Pripremu i provjeru dokumentacije</li>
-        <li>Praćenje statusa zahtjeva i obnavljanje viza</li>
-        <li>Koordinaciju sa ambasadama i institucijama</li>
+        <li>Savjetovanje o vrsti i uslovima vize.</li>
+        <li>Pripremu i provjeru dokumentacije.</li>
+        <li>Praćenje statusa zahtjeva i obnavljanje viza.</li>
+        <li>Koordinaciju sa ambasadama i institucijama.</li>
       </ul>
       
       <h3>Prednosti:</h3>
@@ -659,10 +659,10 @@ export default function ServicePage() {
             className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-white text-center"
           >
             <h2 className="text-3xl font-bold mb-6">
-              {locale === 'me' ? 'Spreman da počneš?' : locale === 'tr' ? 'Başlamaya Hazır Mısınız?' : 'Ready to Get Started?'}
+              {locale === 'me' ? 'Spremni da počnete?' : locale === 'tr' ? 'Başlamaya Hazır Mısınız?' : 'Ready to Get Started?'}
             </h2>
             <p className="text-lg mb-8 opacity-90">
-              {locale === 'me' ? 'Kontaktiraj nas i dogovori se za konzultaciju' : locale === 'tr' ? 'Bize ulaşın ve danışmanlık için randevu alın' : 'Contact us and schedule a consultation'}
+              {locale === 'me' ? 'Kontaktirajte nas i dogovorite se za konsultacije.' : locale === 'tr' ? 'Bize ulaşın ve danışmanlık için randevu alın.' : 'Contact us and schedule a consultation.'}
             </p>
             <Link
               href="/contact"

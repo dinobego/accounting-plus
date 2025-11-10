@@ -44,20 +44,10 @@ export default function Footer() {
 
             {/* Social Media */}
             <div className="flex space-x-4">
+             
+              
               <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all duration-300 hover:scale-110 cursor-pointer"
-              >
-                <Linkedin size={18} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all duration-300 hover:scale-110 cursor-pointer"
-              >
-                <Facebook size={18} />
-              </a>
-              <a
-                href="#"
+                href="https://instagram.com/accounting_plus_mne"
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all duration-300 hover:scale-110 cursor-pointer"
               >
                 <Instagram size={18} />
@@ -119,24 +109,40 @@ export default function Footer() {
               <div className="flex items-start space-x-3 text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
                 <Mail size={20} className="mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-sm">info@accpro.com</p>
-                  <p className="text-sm">support@accpro.com</p>
+                 <a href="mailto:racunovodstvo2020@hotmail.com">
+  <p className="text-sm">racunovodstvo2020@hotmail.com</p>
+</a>
+
+
                 </div>
               </div>
               <div className="flex items-start space-x-3 text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
                 <Phone size={20} className="mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-sm">+382 123 456 789</p>
-                  <p className="text-sm">+382 987 654 321</p>
+                 <a 
+  href="tel:+382698428843"
+  className="cursor-pointer hover:text-blue-600 transition"
+>
+  <p className="text-sm">+382 69 842 843</p>
+</a>
+
+                
                 </div>
               </div>
               <div className="flex items-start space-x-3 text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
                 <MapPin size={20} className="mt-1 flex-shrink-0" />
-                <p className="text-sm">
-                  Podgorica
-                  <br />
-                  Montenegro
-                </p>
+                <a 
+  href="https://maps.app.goo.gl/NsofWhWD3LGVeWNT9?g_st=ipc"
+  target="_blank"
+  className="cursor-pointer hover:text-blue-600 transition"
+>
+  <p className="text-sm">
+    Podgorica
+    <br />
+    Montenegro
+  </p>
+</a>
+
               </div>
             </div>
           </div>
@@ -146,7 +152,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} AccPro. {t("rights")}.
+              © {currentYear} Accounting plus. {t("rights")}.
             </p>
 
             {/* Scroll to Top Button */}

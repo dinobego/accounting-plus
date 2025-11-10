@@ -70,7 +70,8 @@
   },
   "about": {
     "title": "About Our Agency",
-    "description": "We are a team of certified accountants dedicated to providing exceptional financial services. With years of experience and commitment to excellence, we help businesses achieve their financial goals.",
+    "subtitle": "We are a team of certified accountants dedicated to providing exceptional financial services. With years of experience and commitment to excellence, we help businesses achieve their financial goals.",
+  "description": "We are a team of certified accountants dedicated to providing exceptional financial services. With years of experience and commitment to excellence, we help businesses achieve their financial goals.",
     "experience": "Active business partners",
     "clients": "Happy Clients",
     "experts": "Expert Accountants",
@@ -102,12 +103,16 @@
     },
     "stats": {
       "clients": "Happy Clients",
-      "years": "Years of Experience",
+      "years": "Active business partners",
       "satisfaction": "Satisfaction",
       "support": "Support"
     }
   },
   "contact": {
+      "form": {
+      "successMessage": "Message sent successfully! Thank you for your message.",
+      "errorMessage": "Error sending message. Please try again."
+    },
     "emailTitle": "Email",
     "phoneTitle": "Phone",
     "addressTitle": "Address",
@@ -146,8 +151,8 @@
     },
     "contactInfo": {
       "hours": {
-        "weekdays": "Mon-Fri: 08:00 - 17:00",
-        "weekend": "Sat: 09:00 - 13:00"
+        "weekdays": "Mon-Sat: 08:00 - 17:00",
+        "weekend": "Sun: Closed"
       }
     },
     "map": {

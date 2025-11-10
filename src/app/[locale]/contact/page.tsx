@@ -6,6 +6,10 @@ import { Mail, Phone, MapPin, Send, Clock } from 'lucide-react';
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import emailjs from '@emailjs/browser';
+
+// Inicijalizuj EmailJS
+emailjs.init('YOUR_PUBLIC_KEY'); // Zamijeni sa tvojim Public Key
 
 export default function ContactPage() {
   const t = useTranslations('contact');
@@ -21,38 +25,54 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    setTimeout(() => {
-      alert(t('form.successMessage'));
-      setFormData({ name: '', email: '', phone: '', message: '' });
+    try {
+      const response = await emailjs.send(
+        'YOUR_SERVICE_ID',  // Zamijeni
+        'YOUR_TEMPLATE_ID', // Zamijeni
+        {
+          to_email: 'dinobegovic6@gmail.com',
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message
+        }
+      );
+
+      if (response.status === 200) {
+        alert(t('form.successMessage'));
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        alert('Greška pri slanju poruke. Pokušajte ponovo.');
+      }
+    } catch (error) {
+      alert('Greška pri slanju poruke. Pokušajte ponovo.');
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
-const contactInfo = [
-  {
-    icon: Mail,
-    title: t('emailTitle'),  // ← DIREKTNO, bez 'contact.'
-    details: ['info@accpro.me', 'support@accpro.me']
-  },
-  {
-    icon: Phone,
-    title: t('phoneTitle'),  // ← DIREKTNO
-    details: ['+382 123 456 789', '+382 987 654 321']
-  },
-  {
-    icon: MapPin,
-    title: t('addressTitle'),  // ← DIREKTNO
-    details: ['Podgorica', 'Montenegro']
-  },
-  {
-    icon: Clock,
-    title: t('hoursTitle'),  // ← DIREKTNO
-    details: [t('contactInfo.hours.weekdays'), t('contactInfo.hours.weekend')]
-  }
-];
-
-
-
+  const contactInfo = [
+    {
+      icon: Mail,
+      title: t('emailTitle'),
+      details: ['racunovodstvo2020@hotmail.com', '']
+    },
+    {
+      icon: Phone,
+      title: t('phoneTitle'),
+      details: ['+382 69 842 843', '']
+    },
+    {
+      icon: MapPin,
+      title: t('addressTitle'),
+      details: ["88 Hercegovačka, Podgorica"]
+    },
+    {
+      icon: Clock,
+      title: t('hoursTitle'),
+      details: [t('contactInfo.hours.weekdays'), t('contactInfo.hours.weekend')]
+    }
+  ];
 
   return (
     <>
@@ -60,7 +80,6 @@ const contactInfo = [
       
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          {/* Hero */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -75,7 +94,6 @@ const contactInfo = [
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Form */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -96,7 +114,7 @@ const contactInfo = [
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none text-gray-900 bg-white"
                       placeholder={t('form.namePlaceholder')}
                     />
                   </div>
@@ -110,7 +128,7 @@ const contactInfo = [
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none text-gray-900 bg-white"
                       placeholder={t('form.emailPlaceholder')}
                     />
                   </div>
@@ -123,7 +141,7 @@ const contactInfo = [
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none text-gray-900 bg-white"
                       placeholder={t('form.phonePlaceholder')}
                     />
                   </div>
@@ -137,7 +155,7 @@ const contactInfo = [
                       rows={5}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none resize-none"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none resize-none text-gray-900 bg-white"
                       placeholder={t('form.messagePlaceholder')}
                     />
                   </div>
@@ -154,7 +172,6 @@ const contactInfo = [
               </div>
             </motion.div>
 
-            {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -180,9 +197,11 @@ const contactInfo = [
                           {info.title}
                         </h3>
                         {info.details.map((detail, idx) => (
-                          <p key={idx} className="text-gray-600 mb-1">
-                            {detail}
-                          </p>
+                          detail && (
+                            <p key={idx} className="text-gray-600 mb-1">
+                              {detail}
+                            </p>
+                          )
                         ))}
                       </div>
                     </div>
@@ -190,16 +209,18 @@ const contactInfo = [
                 );
               })}
 
-              {/* Map */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7 }}
-                className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl p-8 text-center h-64 flex items-center justify-center"
+                onClick={() => {
+                  window.open('https://share.google/IhwQ6CbMcNtTGVqKN', '_blank');
+                }}
+                className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl p-8 text-center h-64 flex items-center justify-center cursor-pointer hover:shadow-lg transition-all hover:scale-105"
               >
                 <div>
                   <MapPin size={48} className="text-blue-600 mx-auto mb-4" />
-                  <p className="text-gray-700 font-semibold">
+                  <p className="text-gray-700 font-semibold hover:text-blue-600 transition">
                     {t('map.title')}
                   </p>
                 </div>
@@ -209,7 +230,7 @@ const contactInfo = [
         </div>
       </div>
 
-    
+      <Footer />
     </>
   );
 }
