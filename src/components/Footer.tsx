@@ -63,7 +63,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#home"
+                  href="/#home"
                   className="text-gray-400 hover:text-blue-400 transition-colors flex items-center group cursor-pointer"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-300"></span>
@@ -72,7 +72,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="/#services"
                   className="text-gray-400 hover:text-blue-400 transition-colors flex items-center group cursor-pointer"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-300"></span>
@@ -81,7 +81,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#about"
+                  href="/#about"
                   className="text-gray-400 hover:text-blue-400 transition-colors flex items-center group cursor-pointer"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-300"></span>
@@ -90,7 +90,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="/#contact"
                   className="text-gray-400 hover:text-blue-400 transition-colors flex items-center group cursor-pointer"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-300"></span>
