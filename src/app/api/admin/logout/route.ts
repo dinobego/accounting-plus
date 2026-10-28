@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
-import { destroyAdminSession } from '@/lib/cms/auth';
+import { clearAdminSession } from '@/lib/cms/auth';
+
+export const dynamic = 'force-dynamic';
 
 export async function POST() {
-  await destroyAdminSession();
-  return NextResponse.json({ ok: true });
+  return clearAdminSession(NextResponse.json({ ok: true }));
 }

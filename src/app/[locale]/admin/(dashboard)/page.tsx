@@ -7,9 +7,18 @@ export default async function AdminDashboardPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const posts = getPosts();
-  const services = getServices();
-  const messages = getMessages();
+  let posts: ReturnType<typeof getPosts> = [];
+  let services: ReturnType<typeof getServices> = [];
+  let messages: ReturnType<typeof getMessages> = [];
+  try {
+    posts = getPosts();
+    services = getServices();
+    messages = getMessages();
+  } catch {
+    posts = [];
+    services = [];
+    messages = [];
+  }
   const unread = messages.filter((item) => !item.read).length;
   const base = `/${locale}/admin`;
 

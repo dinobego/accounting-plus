@@ -3,39 +3,71 @@ import path from 'path';
 import { createSeedStore } from './seed';
 import type { BlogPost, CmsStore, ContactMessage, ServiceItem, SiteSettings } from './types';
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const DATA_FILE = path.join(DATA_DIR, 'cms.json');
+const FILE_CANDIDATES = [
+  path.join(process.cwd(), 'data', 'cms.json'),
+  path.join('/tmp', 'accounting-plus-cms.json'),
+];
 
+let memoryStore: CmsStore | null = null;
 let writeQueue: Promise<void> = Promise.resolve();
 
-function ensureStore(): CmsStore {
-  if (!existsSync(DATA_FILE)) {
-    const seeded = createSeedStore();
-    mkdirSync(DATA_DIR, { recursive: true });
-    writeFileSync(DATA_FILE, JSON.stringify(seeded, null, 2), 'utf8');
-    return seeded;
-  }
+function cloneStore(store: CmsStore): CmsStore {
+  return structuredClone(store);
+}
 
-  const raw = readFileSync(DATA_FILE, 'utf8');
-  const parsed = JSON.parse(raw) as CmsStore;
-  return {
-    posts: parsed.posts || [],
-    services: parsed.services || [],
-    settings: parsed.settings || createSeedStore().settings,
-    messages: parsed.messages || [],
-  };
+function loadFromDisk(): CmsStore | null {
+  for (const file of FILE_CANDIDATES) {
+    try {
+      if (!existsSync(file)) continue;
+      const parsed = JSON.parse(readFileSync(file, 'utf8')) as CmsStore;
+      return {
+        posts: parsed.posts || [],
+        services: parsed.services || [],
+        settings: parsed.settings || createSeedStore().settings,
+        messages: parsed.messages || [],
+      };
+    } catch {
+      // Read-only hosts and missing files should fall through to seed data.
+    }
+  }
+  return null;
+}
+
+function saveToDisk(store: CmsStore) {
+  const payload = JSON.stringify(store);
+  for (const file of FILE_CANDIDATES) {
+    try {
+      mkdirSync(path.dirname(file), { recursive: true });
+      writeFileSync(file, payload, 'utf8');
+      return;
+    } catch {
+      // Vercel production filesystem is read-only except /tmp.
+    }
+  }
+}
+
+function ensureStore(): CmsStore {
+  if (memoryStore) return memoryStore;
+  memoryStore = loadFromDisk() || createSeedStore();
+  saveToDisk(memoryStore);
+  return memoryStore;
 }
 
 function persist(store: CmsStore) {
+  memoryStore = store;
   writeQueue = writeQueue.then(() => {
-    mkdirSync(DATA_DIR, { recursive: true });
-    writeFileSync(DATA_FILE, JSON.stringify(store, null, 2), 'utf8');
+    saveToDisk(store);
   });
   return writeQueue;
 }
 
 export function readStore(): CmsStore {
-  return structuredClone(ensureStore());
+  try {
+    return cloneStore(ensureStore());
+  } catch {
+    memoryStore = createSeedStore();
+    return cloneStore(memoryStore);
+  }
 }
 
 export async function writeStore(store: CmsStore) {

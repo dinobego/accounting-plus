@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
-import { createAdminSession, verifyPassword } from '@/lib/cms/auth';
+import { applyAdminSession, verifyPassword } from '@/lib/cms/auth';
+
+export const dynamic = 'force-dynamic';
 
 export async function POST(request: Request) {
   let password = '';
@@ -13,6 +15,5 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Pogrešna lozinka' }, { status: 401 });
   }
 
-  await createAdminSession();
-  return NextResponse.json({ ok: true });
+  return applyAdminSession(NextResponse.json({ ok: true }));
 }
