@@ -8,5 +8,6 @@ export const runtime = 'nodejs';
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const locale = searchParams.get('locale') || 'en';
-  return NextResponse.json(getPublishedPosts().map((post) => mapPostForLocale(post, locale)));
+  const posts = await getPublishedPosts();
+  return NextResponse.json(posts.map((post) => mapPostForLocale(post, locale)));
 }

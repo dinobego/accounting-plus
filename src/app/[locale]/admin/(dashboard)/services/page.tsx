@@ -7,7 +7,7 @@ export default async function AdminServicesPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const services = getServices();
+  const services = await getServices();
   const base = `/${locale}/admin/services`;
 
   return (

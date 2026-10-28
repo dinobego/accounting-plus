@@ -6,7 +6,7 @@ import type { SiteSettings } from '@/lib/cms/types';
 export async function GET() {
   try {
     await requireAdmin();
-    return NextResponse.json(getSettings());
+    return NextResponse.json(await getSettings());
   } catch {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }

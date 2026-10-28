@@ -10,7 +10,7 @@ export async function GET(
   try {
     await requireAdmin();
     const { id } = await params;
-    const post = getPostById(id);
+    const post = await getPostById(id);
     if (!post) return NextResponse.json({ error: 'Not found' }, { status: 404 });
     return NextResponse.json(post);
   } catch {

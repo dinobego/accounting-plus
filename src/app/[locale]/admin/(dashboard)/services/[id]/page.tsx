@@ -8,7 +8,7 @@ export default async function EditServicePage({
   params: Promise<{ locale: string; id: string }>;
 }) {
   const { locale, id } = await params;
-  const service = getServiceById(id);
+  const service = await getServiceById(id);
   if (!service) notFound();
   return <ServiceEditor locale={locale} initial={service} />;
 }

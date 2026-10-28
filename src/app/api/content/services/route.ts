@@ -8,12 +8,13 @@ export async function GET(request: Request) {
   const slug = searchParams.get('slug');
 
   if (slug) {
-    const service = getServiceBySlug(slug);
+    const service = await getServiceBySlug(slug);
     if (!service) return NextResponse.json({ error: 'Not found' }, { status: 404 });
     return NextResponse.json(mapServiceForLocale(service, locale));
   }
 
+  const services = await getPublishedServices();
   return NextResponse.json(
-    getPublishedServices().map((service) => mapServiceForLocale(service, locale))
+    services.map((service) => mapServiceForLocale(service, locale))
   );
 }

@@ -6,7 +6,7 @@ import type { BlogPost } from '@/lib/cms/types';
 export async function GET() {
   try {
     await requireAdmin();
-    return NextResponse.json(getPosts());
+    return NextResponse.json(await getPosts());
   } catch {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }

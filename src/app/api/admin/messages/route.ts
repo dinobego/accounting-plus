@@ -5,7 +5,7 @@ import { getMessages } from '@/lib/cms/store';
 export async function GET() {
   try {
     await requireAdmin();
-    return NextResponse.json(getMessages());
+    return NextResponse.json(await getMessages());
   } catch {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }

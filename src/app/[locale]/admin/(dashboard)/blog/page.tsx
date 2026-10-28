@@ -7,7 +7,7 @@ export default async function AdminBlogPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const posts = getPosts();
+  const posts = await getPosts();
   const base = `/${locale}/admin/blog`;
 
   return (

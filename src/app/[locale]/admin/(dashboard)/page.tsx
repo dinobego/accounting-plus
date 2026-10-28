@@ -7,13 +7,13 @@ export default async function AdminDashboardPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  let posts: ReturnType<typeof getPosts> = [];
-  let services: ReturnType<typeof getServices> = [];
-  let messages: ReturnType<typeof getMessages> = [];
+  let posts: Awaited<ReturnType<typeof getPosts>> = [];
+  let services: Awaited<ReturnType<typeof getServices>> = [];
+  let messages: Awaited<ReturnType<typeof getMessages>> = [];
   try {
-    posts = getPosts();
-    services = getServices();
-    messages = getMessages();
+    posts = await getPosts();
+    services = await getServices();
+    messages = await getMessages();
   } catch {
     posts = [];
     services = [];

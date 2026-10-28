@@ -6,7 +6,7 @@ import type { ServiceItem } from '@/lib/cms/types';
 export async function GET() {
   try {
     await requireAdmin();
-    return NextResponse.json(getServices());
+    return NextResponse.json(await getServices());
   } catch {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }

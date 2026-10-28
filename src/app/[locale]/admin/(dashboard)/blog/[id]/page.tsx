@@ -8,7 +8,7 @@ export default async function EditBlogPage({
   params: Promise<{ locale: string; id: string }>;
 }) {
   const { locale, id } = await params;
-  const post = getPostById(id);
+  const post = await getPostById(id);
   if (!post) notFound();
   return <BlogEditor locale={locale} initial={post} />;
 }
