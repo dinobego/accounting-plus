@@ -1,30 +1,39 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { usePublicServices } from '@/lib/cms/usePublicCms';
+
+const FALLBACK_SERVICES = [
+  { slug: 'company-formation', title: '' },
+  { slug: 'residence-work-permits', title: '' },
+  { slug: 'bookkeeping', title: '' },
+  { slug: 'tax-consulting', title: '' },
+  { slug: 'final-reports', title: '' },
+  { slug: 'business-analysis', title: '' },
+  { slug: 'electronic-documents', title: '' },
+  { slug: 'real-estate', title: '' },
+  { slug: 'employment-agency-services', title: '' },
+  { slug: 'visa', title: '' }
+];
 
 export default function Header() {
   const t = useTranslations('nav');
   const tServices = useTranslations('services');
+  const locale = useLocale();
+  const cmsServices = usePublicServices<{ slug: string; title: string }>(locale);
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
-  const services = [
-    { key: 'company-formation', href: '/services/company-formation' },
-    { key: 'residence-work-permits', href: '/services/residence-work-permits' },
-    { key: 'bookkeeping', href: '/services/bookkeeping' },
-    { key: 'tax-consulting', href: '/services/tax-consulting' },
-    { key: 'final-reports', href: '/services/final-reports' },
-    { key: 'business-analysis', href: '/services/business-analysis' },
-    { key: 'electronic-documents', href: '/services/electronic-documents' },
-    { key: 'real-estate', href: '/services/real-estate' },
-    { key: 'employment-agency-services', href: '/services/employment-agency-services' },
-    { key: 'visa', href: '/services/visa' }
-  ];
+  const services = (cmsServices.length ? cmsServices : FALLBACK_SERVICES).map((service) => ({
+    slug: service.slug,
+    href: `/services/${service.slug}`,
+    title: service.title || tServices(service.slug as any),
+  }));
 
   return (
     <header className="fixed top-0 w-full bg-gradient-to-r from-white via-blue-50 to-white backdrop-blur-lg z-50 shadow-lg border-b border-blue-100">
@@ -69,13 +78,13 @@ export default function Header() {
                   >
                     {services.map((service) => (
                       <Link
-                        key={service.key}
+                        key={service.slug}
                         href={service.href}
                         className="block px-6 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 hover:translate-x-1 cursor-pointer group/item"
                         prefetch
                       >
                         <span className="text-blue-600 font-bold mr-2">•</span>
-                        <span className="group-hover/item:font-semibold">{tServices(service.key)}</span>
+                        <span className="group-hover/item:font-semibold">{service.title}</span>
                       </Link>
                     ))}
                   </motion.div>
@@ -143,14 +152,14 @@ export default function Header() {
                     >
                       {services.map((service) => (
                         <Link
-                          key={service.key}
+                          key={service.slug}
                           href={service.href}
                           className="block py-2.5 px-4 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all cursor-pointer hover:translate-x-1"
                           onClick={() => setIsOpen(false)}
                           prefetch
                         >
                           <span className="text-blue-600 font-bold mr-2">•</span>
-                          {tServices(service.key)}
+                          {service.title}
                         </Link>
                       ))}
                     </motion.div>

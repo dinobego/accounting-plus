@@ -60,11 +60,11 @@ export default function LanguageSwitcher() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="cursor-pointer flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors touch-action-auto pointer-events-auto z-[9999] relative"
+        className="cursor-pointer flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors touch-action-auto pointer-events-auto z-[9999] relative"
       >
         <Globe size={18} className="text-blue-600" />
         {currentLanguage && <currentLanguage.Flag />}
-        <span className="text-sm font-medium">
+        <span className="text-sm font-medium text-gray-700">
           {currentLanguage?.code.toUpperCase()}
         </span>
       </button>
@@ -76,8 +76,8 @@ export default function LanguageSwitcher() {
             <button
               key={language.code}
               onClick={() => handleLanguageChange(language.code)}
-              className={`cursor-pointer w-full flex items-center space-x-3 px-4 py-3 hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg transition-colors pointer-events-auto touch-action-auto ${
-                currentLocale === language.code ? "bg-blue-50" : ""
+              className={`cursor-pointer w-full flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 first:rounded-t-lg last:rounded-b-lg transition-colors pointer-events-auto touch-action-auto ${
+                currentLocale === language.code ? "bg-blue-50 text-blue-600" : ""
               }`}
             >
               <language.Flag />

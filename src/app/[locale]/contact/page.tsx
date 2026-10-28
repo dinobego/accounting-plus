@@ -1,17 +1,22 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Clock, CheckCircle, XCircle } from 'lucide-react';
 import { useState } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import emailjs from '@emailjs/browser';
+import { pickLocalized } from '@/lib/cms/types';
+import { usePublicSettings } from '@/lib/cms/usePublicCms';
 
 emailjs.init('HaHtjF1LCb7T8TNCx');
 
 export default function ContactPage() {
   const t = useTranslations('contact');
+  const locale = useLocale();
+  const settings = usePublicSettings();
+  const email = settings?.contact.email || 'racunovodstvo2020@hotmail.com';
+  const phone = settings?.contact.phone || '+382 69 842 843';
+  const address = settings?.contact.address || '88 Hercegovačka, Podgorica';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -31,7 +36,7 @@ export default function ContactPage() {
         'service_k184mtc',
         'template_4b114ae',
         {
-          to_email: 'racunovodstvo2020@hotmail.com',
+          to_email: email,
           from_name: formData.name,
           from_email: formData.email,
           phone: formData.phone,
@@ -39,6 +44,12 @@ export default function ContactPage() {
         },
         'HaHtjF1LCb7T8TNCx'
       );
+
+      await fetch('/api/content/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
       if (response.status === 200) {
         setToastType('success');
@@ -64,29 +75,30 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: t('emailTitle'),
-      details: ['racunovodstvo2020@hotmail.com', '']
+      details: [email, '']
     },
     {
       icon: Phone,
       title: t('phoneTitle'),
-      details: ['+382 69 842 843', '']
+      details: [phone, '']
     },
     {
       icon: MapPin,
       title: t('addressTitle'),
-      details: ["88 Hercegovačka, Podgorica"]
+      details: [address]
     },
     {
       icon: Clock,
       title: t('hoursTitle'),
-      details: [t('contactInfo.hours.weekdays'), t('contactInfo.hours.weekend')]
+      details: [
+        settings ? pickLocalized(settings.contact.hoursWeekdays, locale) : t('contactInfo.hours.weekdays'),
+        settings ? pickLocalized(settings.contact.hoursWeekend, locale) : t('contactInfo.hours.weekend')
+      ]
     }
   ];
 
   return (
     <>
-      <Header />
-      
       {/* Toast Notification */}
       <AnimatePresence>
         {showToast && (

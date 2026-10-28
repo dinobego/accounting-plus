@@ -1,22 +1,45 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
-import { ArrowLeft, Clock, Calendar, Share2, BookOpen } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { blogPostsData } from '@/lib/blogData';
+import { ArrowLeft, Clock, Calendar, BookOpen } from 'lucide-react';
+
+type PublicPost = {
+  title: string;
+  image: string;
+  category: string;
+  date: string;
+  readTime: number;
+  author: string;
+  content: string;
+};
 
 export default function BlogPostPage() {
   const params = useParams();
   const slug = params.slug as string;
-  const post = blogPostsData[slug];
+  const locale = params.locale as string;
+  const [post, setPost] = useState<PublicPost | null>(null);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    fetch(`/api/content/posts/${slug}?locale=${locale}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        setPost(data);
+        setLoaded(true);
+      })
+      .catch(() => setLoaded(true));
+  }, [slug, locale]);
+
+  if (!loaded) {
+    return <div className="min-h-screen pt-32 text-center text-gray-500">Učitavanje...</div>;
+  }
 
   if (!post) {
     return (
       <>
-        <Header />
         <div className="min-h-screen bg-gray-50 pt-25 pb-20 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Članak nije pronađen</h1>
@@ -33,8 +56,6 @@ export default function BlogPostPage() {
 
   return (
     <>
-      <Header />
-      
       <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50 pt-25 pb-20">
         {/* Hero Section sa Image */}
         <motion.div

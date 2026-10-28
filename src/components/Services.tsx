@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { motion } from 'framer-motion';
 import { 
@@ -14,64 +14,53 @@ import {
   Home,
   Users,
   Globe,
-  ArrowRight 
+  ArrowRight,
+  type LucideIcon
 } from 'lucide-react';
+import { usePublicServices } from '@/lib/cms/usePublicCms';
 
-const services = [
-  { 
-    key: 'companyFormation', 
-    icon: Building2, 
-    href: '/services/company-formation'
-  },
-  { 
-    key: 'permits', 
-    icon: FileText, 
-    href: '/services/residence-work-permits'
-  },
-  { 
-    key: 'bookkeeping', 
-    icon: BookOpen, 
-    href: '/services/bookkeeping'
-  },
-  { 
-    key: 'taxConsulting', 
-    icon: Calculator, 
-    href: '/services/tax-consulting'
-  },
-  { 
-    key: 'finalReports', 
-    icon: PieChart, 
-    href: '/services/final-reports'
-  },
-  { 
-    key: 'businessAnalysis', 
-    icon: TrendingUp, 
-    href: '/services/business-analysis'
-  },
-  { 
-    key: 'electronicDocuments', 
-    icon: FileCheck, 
-    href: '/services/electronic-documents'
-  },
-  { 
-    key: 'realEstate', 
-    icon: Home, 
-    href: '/services/real-estate'
-  },
-  { 
-    key: 'employmentAgency', 
-    icon: Users, 
-    href: '/services/employment-agency-services'
-  },
-  { 
-    key: 'visa', 
-    icon: Globe, 
-    href: '/services/visa'
-  }
+const ICONS: Record<string, LucideIcon> = {
+  Building2,
+  FileText,
+  BookOpen,
+  Calculator,
+  PieChart,
+  TrendingUp,
+  FileCheck,
+  Home,
+  Users,
+  Globe,
+};
+
+const FALLBACK_SERVICES = [
+  { slug: 'company-formation', icon: 'Building2', title: '', shortDescription: '', key: 'companyFormation' },
+  { slug: 'residence-work-permits', icon: 'FileText', title: '', shortDescription: '', key: 'permits' },
+  { slug: 'bookkeeping', icon: 'BookOpen', title: '', shortDescription: '', key: 'bookkeeping' },
+  { slug: 'tax-consulting', icon: 'Calculator', title: '', shortDescription: '', key: 'taxConsulting' },
+  { slug: 'final-reports', icon: 'PieChart', title: '', shortDescription: '', key: 'finalReports' },
+  { slug: 'business-analysis', icon: 'TrendingUp', title: '', shortDescription: '', key: 'businessAnalysis' },
+  { slug: 'electronic-documents', icon: 'FileCheck', title: '', shortDescription: '', key: 'electronicDocuments' },
+  { slug: 'real-estate', icon: 'Home', title: '', shortDescription: '', key: 'realEstate' },
+  { slug: 'employment-agency-services', icon: 'Users', title: '', shortDescription: '', key: 'employmentAgency' },
+  { slug: 'visa', icon: 'Globe', title: '', shortDescription: '', key: 'visa' },
 ];
 
 export default function Services() {
   const t = useTranslations('servicesSection');
+  const locale = useLocale();
+  const cmsServices = usePublicServices<{
+    slug: string;
+    icon: string;
+    title: string;
+    shortDescription: string;
+  }>(locale);
+  const services = cmsServices.length
+    ? cmsServices
+    : FALLBACK_SERVICES.map((service) => ({
+        ...service,
+        title: t(`${service.key}.title`),
+        shortDescription: t(`${service.key}.description`),
+      }));
 
   return (
     <section id="services" className="py-20 bg-gradient-to-b from-white to-gray-50">
@@ -94,17 +83,17 @@ export default function Services() {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {services.map((service, index) => {
-            const Icon = service.icon;
+            const Icon = ICONS[service.icon] || Building2;
             return (
               <motion.div
-                key={service.key}
+                key={service.slug}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
                 <Link
-                  href={service.href}
+                  href={`/services/${service.slug}`}
                   className="block group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full overflow-hidden border border-gray-100"
                 >
                   {/* Animated Corner Gradients */}
@@ -117,11 +106,11 @@ export default function Services() {
                     </div>
                     
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
-                      {t(`${service.key}.title`)}
+                      {service.title}
                     </h3>
                     
                     <p className="text-gray-600 mb-4 flex-grow">
-                      {t(`${service.key}.description`)}
+                      {service.shortDescription}
                     </p>
                     
                     <div className="flex items-center text-blue-600 font-semibold group-hover:gap-2 transition-all duration-300">

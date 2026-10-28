@@ -1,26 +1,32 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Award, Users, TrendingUp } from "lucide-react";
+import { pickLocalized } from "@/lib/cms/types";
+import { usePublicSettings } from "@/lib/cms/usePublicCms";
 
 export default function About() {
   const t = useTranslations("about");
+  const locale = useLocale();
+  const settings = usePublicSettings();
+  const title = settings ? pickLocalized(settings.about.titles, locale) : t("title");
+  const description = settings ? pickLocalized(settings.about.descriptions, locale) : t("description");
 
   const stats = [
     {
       icon: Award,
-      value: "30+",
+      value: settings?.about.stats.partners || "30+",
       label: t("experience"),
     },
     {
       icon: Users,
-      value: "500+",
+      value: settings?.about.stats.clients || "500+",
       label: t("clients"),
     },
     {
       icon: TrendingUp,
-      value: "10+",
+      value: settings?.about.stats.experts || "10+",
       label: t("experts"),
     },
   ];
@@ -43,7 +49,7 @@ export default function About() {
             transition={{ duration: 0.7 }}
             className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight"
           >
-            {t("title")}
+            {title}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -52,7 +58,7 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-lg md:text-xl text-gray-700 mb-2 leading-relaxed"
           >
-            {t("description")}
+            {description}
           </motion.p>
         </div>
 

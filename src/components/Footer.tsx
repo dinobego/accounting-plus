@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { usePublicSettings } from "@/lib/cms/usePublicCms";
 import {
   Mail,
   Phone,
@@ -14,7 +15,13 @@ import {
 
 export default function Footer() {
   const t = useTranslations("footer");
+  const settings = usePublicSettings();
   const currentYear = new Date().getFullYear();
+  const email = settings?.contact.email || "racunovodstvo2020@hotmail.com";
+  const phone = settings?.contact.phone || "+382 69 842 843";
+  const instagram = settings?.contact.instagram || "https://instagram.com/accounting_plus_mne";
+  const mapsUrl = settings?.contact.mapsUrl || "https://maps.app.goo.gl/NsofWhWD3LGVeWNT9?g_st=ipc";
+  const address = settings?.contact.address || "Podgorica";
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -47,7 +54,7 @@ export default function Footer() {
              
               
               <a
-                href="https://instagram.com/accounting_plus_mne"
+                href={instagram}
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all duration-300 hover:scale-110 cursor-pointer"
               >
                 <Instagram size={18} />
@@ -109,8 +116,8 @@ export default function Footer() {
               <div className="flex items-start space-x-3 text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
                 <Mail size={20} className="mt-1 flex-shrink-0" />
                 <div>
-                 <a href="mailto:racunovodstvo2020@hotmail.com">
-  <p className="text-sm">racunovodstvo2020@hotmail.com</p>
+                 <a href={`mailto:${email}`}>
+  <p className="text-sm">{email}</p>
 </a>
 
 
@@ -120,10 +127,10 @@ export default function Footer() {
                 <Phone size={20} className="mt-1 flex-shrink-0" />
                 <div>
                  <a 
-  href="tel:+382698428843"
+  href={`tel:${phone.replace(/\s/g, '')}`}
   className="cursor-pointer hover:text-blue-600 transition"
 >
-  <p className="text-sm">+382 69 842 843</p>
+  <p className="text-sm">{phone}</p>
 </a>
 
                 
@@ -132,14 +139,12 @@ export default function Footer() {
               <div className="flex items-start space-x-3 text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
                 <MapPin size={20} className="mt-1 flex-shrink-0" />
                 <a 
-  href="https://maps.app.goo.gl/NsofWhWD3LGVeWNT9?g_st=ipc"
+  href={mapsUrl}
   target="_blank"
   className="cursor-pointer hover:text-blue-600 transition"
 >
   <p className="text-sm">
-    Podgorica
-    <br />
-    Montenegro
+    {address}
   </p>
 </a>
 

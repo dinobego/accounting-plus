@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Send, Mail, Phone, User, MessageSquare, CheckCircle, XCircle } from "lucide-react";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
+import { usePublicSettings } from '@/lib/cms/usePublicCms';
 
 emailjs.init('HaHtjF1LCb7T8TNCx');
 
@@ -20,6 +21,11 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const [toastType, setToastType] = useState<'success' | 'error'>('success');
+  const settings = usePublicSettings();
+  const email = settings?.contact.email || 'racunovodstvo2020@hotmail.com';
+  const phone = settings?.contact.phone || '+382 69 842 843';
+  const mapsUrl = settings?.contact.mapsUrl || 'https://maps.app.goo.gl/NsofWhWD3LGVeWNT9?g_st=ipc';
+  const address = settings?.contact.address || 'Podgorica, Montenegro';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,7 +36,7 @@ export default function Contact() {
         'service_k184mtc',
         'template_4b114ae',
         {
-          to_email: 'racunovodstvo2020@hotmail.com',
+          to_email: email,
           from_name: formData.name,
           from_email: formData.email,
           phone: formData.phone,
@@ -38,6 +44,12 @@ export default function Contact() {
         },
         'HaHtjF1LCb7T8TNCx'
       );
+
+      await fetch('/api/content/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
       if (response.status === 200) {
         setToastType('success');
@@ -257,7 +269,7 @@ export default function Contact() {
                 whileHover={{ y: -5 }}
                 className="p-4 rounded-xl bg-blue-50 cursor-pointer"
                 onClick={() => {
-                  window.location.href = "mailto:racunovodstvo2020@hotmail.com";
+                  window.location.href = `mailto:${email}`;
                 }}
               >
                 <Mail className="mx-auto mb-2 text-blue-600" size={24} />
@@ -271,21 +283,21 @@ export default function Contact() {
                 whileHover={{ y: -5 }}
                 className="p-4 rounded-xl bg-indigo-50 cursor-pointer"
                 onClick={() => {
-                  window.location.href = "tel:+382698428843";
+                  window.location.href = `tel:${phone.replace(/\s/g, '')}`;
                 }}
               >
                 <Phone className="mx-auto mb-2 text-indigo-600" size={24} />
                 <p className="text-sm font-semibold text-gray-700">
                   {t("info.phone")}
                 </p>
-                <p className="text-sm text-gray-600">+382 69 842 843</p>
+                <p className="text-sm text-gray-600">{phone}</p>
               </motion.div>
 
               <motion.div
                 whileHover={{ y: -5 }}
                 className="p-4 rounded-xl bg-purple-50 cursor-pointer"
                 onClick={() => {
-                  window.open("https://maps.app.goo.gl/NsofWhWD3LGVeWNT9?g_st=ipc", "_blank");
+                  window.open(mapsUrl, "_blank");
                 }}
               >
                 <MessageSquare
@@ -295,7 +307,7 @@ export default function Contact() {
                 <p className="text-sm font-semibold text-gray-700">
                   {t("info.location")}
                 </p>
-                <p className="text-sm text-gray-600">Podgorica, Montenegro</p>
+                <p className="text-sm text-gray-600">{address}</p>
               </motion.div>
             </div>
           </div>

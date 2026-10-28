@@ -1,10 +1,10 @@
 'use client';
 
 import { NextIntlClientProvider } from 'next-intl';
+import { usePathname } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ReactNode } from 'react';
-import { useLocale } from 'next-intl';
 
 export default function ClientWrapper({
   children,
@@ -13,13 +13,16 @@ export default function ClientWrapper({
 }: {
   children: ReactNode;
   messages: any;
-  locale: string;  // ← DODAJ OVO
+  locale: string;
 }) {
+  const pathname = usePathname();
+  const isAdmin = pathname?.includes('/admin');
+
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
-      <Header />
+      {!isAdmin && <Header />}
       {children}
-      <Footer />
+      {!isAdmin && <Footer />}
     </NextIntlClientProvider>
   );
 }

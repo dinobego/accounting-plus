@@ -1,11 +1,17 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { pickLocalized } from "@/lib/cms/types";
+import { usePublicSettings } from "@/lib/cms/usePublicCms";
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const locale = useLocale();
+  const settings = usePublicSettings();
+  const title = settings ? pickLocalized(settings.hero.titles, locale) : t("title");
+  const subtitle = settings ? pickLocalized(settings.hero.subtitles, locale) : t("subtitle");
 
   return (
     <section
@@ -34,7 +40,7 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg"
           >
-            {t("title")}
+            {title}
           </motion.h1>
 
           <motion.p
@@ -43,7 +49,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-white mb-10 max-w-3xl mx-auto drop-shadow-md"
           >
-            {t("subtitle")}
+            {subtitle}
           </motion.p>
 
           <motion.div

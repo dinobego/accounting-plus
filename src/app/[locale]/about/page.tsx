@@ -1,13 +1,17 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Award, Shield, Heart, TrendingUp, Users } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import { pickLocalized } from '@/lib/cms/types';
+import { usePublicSettings } from '@/lib/cms/usePublicCms';
 
 export default function AboutPage() {
   const t = useTranslations('about');
+  const locale = useLocale();
+  const settings = usePublicSettings();
+  const title = settings ? pickLocalized(settings.about.titles, locale) : t('title');
+  const subtitle = settings ? pickLocalized(settings.about.descriptions, locale) : t('subtitle');
 
   const values = [
     {
@@ -33,16 +37,14 @@ export default function AboutPage() {
   ];
 
   const stats = [
-    { number: '500+', label: t('stats.clients') },
-    { number: '30+', label: t('stats.years') },
-    { number: '98%', label: t('stats.satisfaction') },
-    { number: '24/7', label: t('stats.support') }
+    { number: settings?.about.stats.clients || '500+', label: t('stats.clients') },
+    { number: settings?.about.stats.partners || '30+', label: t('stats.years') },
+    { number: settings?.about.stats.satisfaction || '98%', label: t('stats.satisfaction') },
+    { number: settings?.about.stats.support || '24/7', label: t('stats.support') }
   ];
 
   return (
     <>
-      <Header />
-      
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
           {/* Hero */}
@@ -52,10 +54,10 @@ export default function AboutPage() {
             className="text-center mb-20"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              {t('title')}
+              {title}
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('subtitle')}
+              {subtitle}
             </p>
           </motion.div>
 
