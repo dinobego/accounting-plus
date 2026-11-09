@@ -46,11 +46,14 @@ async function ensureSeeded() {
   if (seedPromise) return seedPromise;
   seedPromise = (async () => {
     const supabase = getSupabase();
-    const { count, error } = await supabase
-      .from('posts')
-      .select('id', { count: 'exact', head: true });
-    if (error) throw error;
-    if ((count || 0) > 0) return;
+    const [postsResult, servicesResult] = await Promise.all([
+      supabase.from('posts').select('id', { count: 'exact', head: true }),
+      supabase.from('services').select('id', { count: 'exact', head: true }),
+    ]);
+    if (postsResult.error) throw postsResult.error;
+    if (servicesResult.error) throw servicesResult.error;
+    // Do not re-seed when any CMS rows remain (unpublished/deleted leftovers included).
+    if ((postsResult.count || 0) > 0 || (servicesResult.count || 0) > 0) return;
     await saveAdminStore(createSeedStore());
   })().catch((error) => {
     seedPromise = null;

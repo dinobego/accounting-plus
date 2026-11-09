@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { requireAdmin } from '@/lib/cms/auth';
+import { revalidatePublicContent } from '@/lib/cms/revalidatePublic';
 import { deleteService, getServiceById, saveService } from '@/lib/cms/store';
 import type { ServiceItem } from '@/lib/cms/types';
 
@@ -26,7 +27,9 @@ export async function PUT(
     await requireAdmin();
     const { id } = await params;
     const service = (await request.json()) as ServiceItem;
-    return NextResponse.json(await saveService({ ...service, id }));
+    const saved = await saveService({ ...service, id });
+    revalidatePublicContent();
+    return NextResponse.json(saved);
   } catch {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
@@ -40,6 +43,7 @@ export async function DELETE(
     await requireAdmin();
     const { id } = await params;
     await deleteService(id);
+    revalidatePublicContent();
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });

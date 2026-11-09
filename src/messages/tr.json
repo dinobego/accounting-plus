@@ -185,6 +185,23 @@
     "backToBlog": "Bloga Geri Dön",
     "author": "Yazar",
     "share": "Makaleyi Paylaş",
-    "notFound": "Makale bulunamadı"
+    "notFound": "Makale bulunamadı",
+    "shareLike": "Bu makaleyi beğendiniz mi?",
+    "shareHint": "Meslektaşlarınız ve arkadaşlarınızla paylaşın",
+    "moreArticles": "Daha fazla makale okuyun"
+  },
+  "seo": {
+    "homeTitle": "Podgorica Muhasebe ve Defter Tutma | Accounting Plus",
+    "homeDescription": "Accounting Plus, Podgorica'da profesyonel muhasebe ve defter tutma hizmetleri sunar. Vergi danışmanlığı, şirket kuruluşu ve işletme desteği.",
+    "aboutTitle": "Hakkımızda | Accounting Plus",
+    "aboutDescription": "Accounting Plus, Podgorica'da bir muhasebe ajansıdır. Ekibimiz defter tutma, vergi danışmanlığı ve işletme desteği sağlar.",
+    "contactTitle": "İletişim | Accounting Plus Podgorica",
+    "contactDescription": "Muhasebe, defter tutma, vergi danışmanlığı ve şirket kuruluşu için Podgorica'daki Accounting Plus ile iletişime geçin.",
+    "blogTitle": "Blog | Accounting Plus",
+    "blogDescription": "Accounting Plus'ın Karadağ'da muhasebe, defter tutma, vergiler ve şirket kuruluşu üzerine yazıları.",
+    "servicesTitle": "Muhasebe ve Defter Tutma Hizmetleri | Accounting Plus",
+    "servicesDescription": "Accounting Plus hizmetleri: defter tutma, vergi danışmanlığı, şirket kuruluşu ve Podgorica'da işletme desteği.",
+    "serviceTitleSuffix": " | Accounting Plus",
+    "notFoundTitle": "Sayfa bulunamadı | Accounting Plus"
   }
 }

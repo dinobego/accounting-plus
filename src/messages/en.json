@@ -186,6 +186,23 @@
     "backToBlog": "Back to Blog",
     "author": "Author",
     "share": "Share Article",
-    "notFound": "Article not found"
+    "notFound": "Article not found",
+    "shareLike": "Enjoyed this article?",
+    "shareHint": "Share it with your colleagues and friends",
+    "moreArticles": "Read more articles"
+  },
+  "seo": {
+    "homeTitle": "Accounting and Bookkeeping in Podgorica | Accounting Plus",
+    "homeDescription": "Accounting Plus provides professional accounting and bookkeeping services in Podgorica. Tax consulting, company formation and business support.",
+    "aboutTitle": "About Us | Accounting Plus",
+    "aboutDescription": "Accounting Plus is an accounting agency in Podgorica. Our team provides bookkeeping, tax consulting and support for businesses.",
+    "contactTitle": "Contact | Accounting Plus Podgorica",
+    "contactDescription": "Contact Accounting Plus in Podgorica for accounting and bookkeeping services, tax consulting and company formation.",
+    "blogTitle": "Blog | Accounting Plus",
+    "blogDescription": "Articles from Accounting Plus on accounting, bookkeeping, taxes and starting a company in Montenegro.",
+    "servicesTitle": "Accounting and Bookkeeping Services | Accounting Plus",
+    "servicesDescription": "Accounting Plus services: bookkeeping, tax consulting, company formation and business support in Podgorica.",
+    "serviceTitleSuffix": " | Accounting Plus",
+    "notFoundTitle": "Page not found | Accounting Plus"
   }
 }

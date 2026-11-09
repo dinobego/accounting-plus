@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { requireAdmin } from '@/lib/cms/auth';
+import { revalidatePublicContent } from '@/lib/cms/revalidatePublic';
 import { getPosts, savePost } from '@/lib/cms/store';
 import type { BlogPost } from '@/lib/cms/types';
 
@@ -19,7 +20,9 @@ export async function POST(request: Request) {
     if (!post.id) {
       post.id = crypto.randomUUID();
     }
-    return NextResponse.json(await savePost(post));
+    const saved = await savePost(post);
+    revalidatePublicContent();
+    return NextResponse.json(saved);
   } catch {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }

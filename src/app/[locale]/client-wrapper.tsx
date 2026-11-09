@@ -19,7 +19,7 @@ export default function ClientWrapper({
   const isAdmin = pathname?.includes('/admin');
 
   return (
-    <NextIntlClientProvider messages={messages} locale={locale}>
+    <NextIntlClientProvider messages={messages} locale={locale} timeZone="Europe/Podgorica">
       {!isAdmin && <Header />}
       {children}
       {!isAdmin && <Footer />}

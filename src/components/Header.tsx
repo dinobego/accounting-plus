@@ -47,7 +47,7 @@ export default function Header() {
           >
             <img 
               src="/images/logoBlue.png" 
-              alt="AccPro" 
+              alt="Accounting Plus" 
               className="h-17 w-auto"
             />
           </Link>

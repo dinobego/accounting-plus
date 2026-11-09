@@ -7,13 +7,25 @@ const intlMiddleware = createMiddleware(routing);
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  if (pathname === '/admin' || pathname.startsWith('/admin/')) {
-    return NextResponse.redirect(new URL(`/${routing.defaultLocale}${pathname}`, request.url));
+  if (pathname === '/') {
+    return NextResponse.redirect(new URL('/me', request.url), 308);
   }
 
-  return intlMiddleware(request);
+  if (pathname === '/admin' || pathname.startsWith('/admin/')) {
+    return NextResponse.redirect(new URL(`/me${pathname}`, request.url), 308);
+  }
+
+  const firstSegment = pathname.split('/').filter(Boolean)[0];
+  const publicRoots = new Set(['about', 'contact', 'services', 'blog']);
+  if (firstSegment && publicRoots.has(firstSegment)) {
+    return NextResponse.redirect(new URL(`/me${pathname}`, request.url), 308);
+  }
+
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set('x-pathname', pathname);
+  return intlMiddleware(new NextRequest(request, { headers: requestHeaders }));
 }
 
 export const config = {
-  matcher: ['/', '/admin', '/admin/:path*', '/(me|en|tr)/:path*']
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
 };

@@ -185,7 +185,23 @@
     "backToBlog": "Nazad na blog",
     "author": "Autor",
     "share": "Podijeli članak",
-    "notFound": "Članak nije pronađen"
+    "notFound": "Članak nije pronađen",
+    "shareLike": "Sviđa vam se ovaj članak?",
+    "shareHint": "Podijelite ga sa Vašim kolegama i prijateljima",
+    "moreArticles": "Pročitajte više članaka"
+  },
+  "seo": {
+    "homeTitle": "Računovodstvo i knjigovodstvo Podgorica | Accounting Plus",
+    "homeDescription": "Accounting Plus pruža profesionalne računovodstvene i knjigovodstvene usluge u Podgorici. Poresko savjetovanje, osnivanje firmi i podrška poslovanju.",
+    "aboutTitle": "O nama | Accounting Plus",
+    "aboutDescription": "Accounting Plus je računovodstvena agencija u Podgorici. Tim računovođa pruža knjigovodstvo, poresko savjetovanje i podršku preduzećima.",
+    "contactTitle": "Kontakt | Accounting Plus Podgorica",
+    "contactDescription": "Kontaktirajte Accounting Plus u Podgorici za računovodstvene i knjigovodstvene usluge, poresko savjetovanje i osnivanje firmi.",
+    "blogTitle": "Blog | Accounting Plus",
+    "blogDescription": "Članci Accounting Plus o računovodstvu, knjigovodstvu, porezima i osnivanju preduzeća u Crnoj Gori.",
+    "servicesTitle": "Računovodstvene i knjigovodstvene usluge | Accounting Plus",
+    "servicesDescription": "Pregled usluga Accounting Plus: knjigovodstvo, poresko savjetovanje, osnivanje preduzeća i podrška poslovanju u Podgorici.",
+    "serviceTitleSuffix": " | Accounting Plus",
+    "notFoundTitle": "Stranica nije pronađena | Accounting Plus"
   }
-  
 }

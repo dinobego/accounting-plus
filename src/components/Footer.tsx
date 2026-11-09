@@ -40,7 +40,7 @@ export default function Footer() {
           <Link href="/" className="hover:opacity-80 transition-opacity cursor-pointer">
   <img 
     src="/images/logoWhite.png" 
-    alt="AccPro" 
+    alt="Accounting Plus" 
     className="h-24 w-auto"
   />
 </Link>
@@ -69,40 +69,40 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="/#home"
+                <Link
+                  href="/"
                   className="text-gray-400 hover:text-blue-400 transition-colors flex items-center group cursor-pointer"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                   {t("links.home")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/#services"
+                <Link
+                  href="/services"
                   className="text-gray-400 hover:text-blue-400 transition-colors flex items-center group cursor-pointer"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                   {t("links.services")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/#about"
+                <Link
+                  href="/about"
                   className="text-gray-400 hover:text-blue-400 transition-colors flex items-center group cursor-pointer"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                   {t("links.about")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/#contact"
+                <Link
+                  href="/contact"
                   className="text-gray-400 hover:text-blue-400 transition-colors flex items-center group cursor-pointer"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                   {t("links.contact")}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

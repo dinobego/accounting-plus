@@ -45,23 +45,33 @@ const FALLBACK_SERVICES = [
   { slug: 'visa', icon: 'Globe', title: '', shortDescription: '', key: 'visa' },
 ];
 
-export default function Services() {
+type ServiceCard = {
+  slug: string;
+  icon: string;
+  title: string;
+  shortDescription: string;
+};
+
+export default function Services({
+  initialServices,
+  heading = 'h2',
+}: {
+  initialServices?: ServiceCard[];
+  heading?: 'h1' | 'h2';
+}) {
   const t = useTranslations('servicesSection');
   const locale = useLocale();
-  const cmsServices = usePublicServices<{
-    slug: string;
-    icon: string;
-    title: string;
-    shortDescription: string;
-  }>(locale);
+  const cmsServices = usePublicServices<ServiceCard>(locale);
+  const fallbackServices = FALLBACK_SERVICES.map((service) => ({
+    ...service,
+    title: t(`${service.key}.title`),
+    shortDescription: t(`${service.key}.description`),
+  }));
   const services = cmsServices.length
     ? cmsServices
-    : FALLBACK_SERVICES.map((service) => ({
-        ...service,
-        title: t(`${service.key}.title`),
-        shortDescription: t(`${service.key}.description`),
-      }));
-
+    : initialServices?.length
+      ? initialServices
+      : fallbackServices;
   return (
     <section id="services" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
@@ -72,9 +82,15 @@ export default function Services() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            {t('title')}
-          </h2>
+          {heading === 'h1' ? (
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              {t('title')}
+            </h1>
+          ) : (
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              {t('title')}
+            </h2>
+          )}
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>

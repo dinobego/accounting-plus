@@ -1,45 +1,29 @@
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { headers } from 'next/headers';
 import { routing } from '@/i18n/routing';
 import { ReactNode } from 'react';
+import type { Metadata } from 'next';
 import ClientWrapper from './client-wrapper';
+import JsonLd from '@/components/JsonLd';
+import { loadPublicSettings } from '@/lib/cms/publicContent';
+import type { Locale } from '@/lib/cms/types';
+import { HTML_LANG, SITE_URL, isAppLocale } from '@/lib/seo';
+import { organizationSchema } from '@/lib/seoSchema';
 import './globals.css';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export const metadata = {
-  title: 'Accounting plus - Profesionalne računovodstvene usluge',
-  description: 'Stručna finansijska rješenja za rast Vašeg poslovanja. Usluge: Osnivanje preduzeća, Poresko savjetovanje, Analiza poslovanja i više.',
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   icons: {
-    icon: '/images/icon.png'  
-  },
-  openGraph: {
-    title: 'Accounting plus - Profesionalne računovodstvene usluge',
-    description: 'Stručna finansijska rješenja za rast Vašeg poslovanja. Osnivanje preduzeća, Poresko savjetovanje, Analiza poslovanja, Knjigovodstvo.',
-    url: 'https://accounting-plus.me',
-    siteName: 'Accounting plus',
-    images: [
-      {
-        url: 'https://accounting-plus.me/images/logoBlue.png',
-        width: 1200,
-        height: 630,
-        alt: 'Accounting plus'
-      }
-    ],
-    locale: 'sr_RS',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Accounting plus',
-    description: 'Stručna finansijska rješenja za rast Vašeg poslovanja',
-    images: ['https://accounting-plus.me/images/logoBlue.png']
+    icon: '/images/icon.png',
   },
   verification: {
-    google: "dxZZXjwpnjWhCYwk94DWOYmkw_gz15w53TZ0SlM2K1E",
-  }
+    google: 'dxZZXjwpnjWhCYwk94DWOYmkw_gz15w53TZ0SlM2K1E',
+  },
 };
 
 export default async function LocaleLayout({
@@ -51,27 +35,19 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as any)) {
+  if (!isAppLocale(locale) || !routing.locales.includes(locale as Locale)) {
     notFound();
   }
 
   const messages = await getMessages();
+  const pathname = (await headers()).get('x-pathname') || '';
+  const isAdmin = pathname.split('/').includes('admin');
+  const settings = isAdmin ? null : await loadPublicSettings();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <head>
-        <meta property="og:title" content="Accounting plus - Profesionalne računovodstvene usluge" />
-        <meta property="og:description" content="Stručna finansijska rješenja za rast Vašeg poslovanja. Osnivanje preduzeća, Poresko savjetovanje, Analiza poslovanja, Knjigovodstvo." />
-        <meta property="og:url" content="https://accounting-plus.me" />
-        <meta property="og:image" content="https://accounting-plus.me/images/logoBlue.png" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Accounting plus" />
-        <meta name="twitter:description" content="Stručna finansijska rješenja za rast Vašeg poslovanja" />
-        <meta name="twitter:image" content="https://accounting-plus.me/images/logoBlue.png" />
-        <link rel="icon" href="/images/icon.jpg" type="image/jpeg" />
-      </head>
+      <html lang={HTML_LANG[locale as Locale]} suppressHydrationWarning>
       <body>
+        {settings ? <JsonLd data={organizationSchema(settings)} /> : null}
         <ClientWrapper messages={messages} locale={locale}>
           {children}
         </ClientWrapper>

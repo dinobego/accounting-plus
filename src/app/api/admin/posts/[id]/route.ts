@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { requireAdmin } from '@/lib/cms/auth';
+import { revalidatePublicContent } from '@/lib/cms/revalidatePublic';
 import { deletePost, getPostById, savePost } from '@/lib/cms/store';
 import type { BlogPost } from '@/lib/cms/types';
 
@@ -26,7 +27,9 @@ export async function PUT(
     await requireAdmin();
     const { id } = await params;
     const post = (await request.json()) as BlogPost;
-    return NextResponse.json(await savePost({ ...post, id }));
+    const saved = await savePost({ ...post, id });
+    revalidatePublicContent();
+    return NextResponse.json(saved);
   } catch {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
@@ -40,6 +43,7 @@ export async function DELETE(
     await requireAdmin();
     const { id } = await params;
     await deletePost(id);
+    revalidatePublicContent();
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
