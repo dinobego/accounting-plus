@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
 import { BookOpen, Lightbulb, Brain, ArrowRight, Search } from 'lucide-react';
+import { intlDateLocale } from '@/lib/seo';
 import { useState } from 'react';
 
 const CATEGORY_LABELS: Record<string, Record<string, string>> = {
@@ -27,6 +28,13 @@ const CATEGORY_LABELS: Record<string, Record<string, string>> = {
     practical: 'Pratik Rehberler',
     tips: 'İpuçları',
     seo: 'SEO/Otorite',
+  },
+  sq: {
+    all: 'Të gjitha postimet',
+    educational: 'Artikuj edukativë',
+    practical: 'Udhëzues praktikë',
+    tips: 'Këshilla',
+    seo: 'SEO/Autoritet',
   },
 };
 
@@ -145,7 +153,7 @@ export default function BlogListing({ posts }: { posts: PublicBlogCard[] }) {
                 </h2>
                 <p className="text-gray-600 mb-4 line-clamp-2">{post.excerpt}</p>
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                  <span>{new Date(post.date).toLocaleDateString(locale === 'me' ? 'sr-ME' : locale)}</span>
+                  <span>{new Date(post.date).toLocaleDateString(intlDateLocale(locale))}</span>
                   <span>{post.readTime} {t('readTime')}</span>
                 </div>
                 <Link

@@ -3,6 +3,8 @@ import { slugTranslations } from '@/lib/blogTranslations';
 import me from '@/messages/me.json';
 import en from '@/messages/en.json';
 import tr from '@/messages/tr.json';
+import sq from '@/messages/sq.json';
+import { albanianServices } from './albanianServices';
 import { servicesContent } from './legacyServices';
 import type { BlogCategory, BlogPost, CmsStore, ServiceItem, SiteSettings } from './types';
 
@@ -27,8 +29,8 @@ function excerptFromHtml(html = '') {
 
 function categoryFromLabel(label = ''): BlogCategory {
   const value = label.toLowerCase();
-  if (value.includes('prakti') || value.includes('practical')) return 'practical';
-  if (value.includes('savet') || value.includes('tip') || value.includes('ipucu')) return 'tips';
+  if (value.includes('prakti') || value.includes('practical') || value.includes('udhëz') || value.includes('udhez')) return 'practical';
+  if (value.includes('savet') || value.includes('tip') || value.includes('ipucu') || value.includes('kësh') || value.includes('keshill')) return 'tips';
   if (value.includes('seo')) return 'seo';
   return 'educational';
 }
@@ -38,6 +40,7 @@ function localizedFromPosts(slugs: Record<string, string>, field: 'title' | 'aut
     me: String(blogPostsData[slugs.me]?.[field] || ''),
     en: String(blogPostsData[slugs.en]?.[field] || ''),
     tr: String(blogPostsData[slugs.tr]?.[field] || ''),
+    sq: String(blogPostsData[slugs.sq]?.[field] || ''),
   };
 }
 
@@ -55,12 +58,14 @@ export function seedPosts(): BlogPost[] {
         me: slugs.me,
         en: slugs.en,
         tr: slugs.tr,
+        sq: slugs.sq,
       },
       titles: localizedFromPosts(slugs, 'title'),
       excerpts: {
         me: excerptFromHtml(blogPostsData[slugs.me]?.content),
         en: excerptFromHtml(blogPostsData[slugs.en]?.content),
         tr: excerptFromHtml(blogPostsData[slugs.tr]?.content),
+        sq: excerptFromHtml(blogPostsData[slugs.sq]?.content),
       },
       authors: localizedFromPosts(slugs, 'author'),
       contents: localizedFromPosts(slugs, 'content'),
@@ -82,6 +87,8 @@ export function seedServices(): ServiceItem[] {
     const shortMe = sectionCopy(me, meta.sectionKey);
     const shortEn = sectionCopy(en, meta.sectionKey);
     const shortTr = sectionCopy(tr, meta.sectionKey);
+    const shortSq = sectionCopy(sq, meta.sectionKey);
+    const albanian = albanianServices[meta.slug];
     return {
       id: meta.slug,
       slug: meta.slug,
@@ -92,21 +99,25 @@ export function seedServices(): ServiceItem[] {
         me: detail.titleMe || (me.services as Record<string, string>)[meta.slug] || shortMe.title,
         en: detail.titleEn || (en.services as Record<string, string>)[meta.slug] || shortEn.title,
         tr: detail.titleTr || (tr.services as Record<string, string>)[meta.slug] || shortTr.title,
+        sq: albanian?.title || (sq.services as Record<string, string>)[meta.slug] || shortSq.title,
       },
       shortDescriptions: {
         me: shortMe.description,
         en: shortEn.description,
         tr: shortTr.description,
+        sq: shortSq.description,
       },
       descriptions: {
         me: detail.descriptionMe || shortMe.description,
         en: detail.descriptionEn || shortEn.description,
         tr: detail.descriptionTr || shortTr.description,
+        sq: albanian?.description || shortSq.description,
       },
       contents: {
         me: detail.contentMe || '',
         en: detail.contentEn || '',
         tr: detail.contentTr || '',
+        sq: albanian?.content || '',
       },
     };
   });
@@ -124,11 +135,13 @@ export function seedSettings(): SiteSettings {
         me: me.contact.contactInfo.hours.weekdays,
         en: en.contact.contactInfo.hours.weekdays,
         tr: tr.contact.contactInfo.hours.weekdays,
+        sq: sq.contact.contactInfo.hours.weekdays,
       },
       hoursWeekend: {
         me: me.contact.contactInfo.hours.weekend,
         en: en.contact.contactInfo.hours.weekend,
         tr: tr.contact.contactInfo.hours.weekend,
+        sq: sq.contact.contactInfo.hours.weekend,
       },
     },
     hero: {
@@ -136,11 +149,13 @@ export function seedSettings(): SiteSettings {
         me: me.hero.title,
         en: en.hero.title,
         tr: tr.hero.title,
+        sq: sq.hero.title,
       },
       subtitles: {
         me: me.hero.subtitle,
         en: en.hero.subtitle,
         tr: tr.hero.subtitle,
+        sq: sq.hero.subtitle,
       },
     },
     about: {
@@ -148,11 +163,13 @@ export function seedSettings(): SiteSettings {
         me: me.about.title,
         en: en.about.title,
         tr: tr.about.title,
+        sq: sq.about.title,
       },
       descriptions: {
         me: me.about.description,
         en: en.about.description,
         tr: tr.about.description,
+        sq: sq.about.description,
       },
       stats: {
         partners: '30+',

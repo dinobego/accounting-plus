@@ -1,8 +1,82 @@
-import { createSeedStore } from './seed';
+import { createSeedStore, seedPosts, seedServices, seedSettings } from './seed';
 import { getCmsSecret, getSupabase } from './supabase';
-import type { BlogPost, CmsStore, ContactMessage, ServiceItem, SiteSettings } from './types';
+import type { BlogPost, CmsStore, ContactMessage, Localized, ServiceItem, SiteSettings } from './types';
 
 let seedPromise: Promise<void> | null = null;
+let seededPosts: BlogPost[] | null = null;
+let seededServices: ServiceItem[] | null = null;
+
+function seedPostList() {
+  seededPosts ??= seedPosts();
+  return seededPosts;
+}
+
+function seedServiceList() {
+  seededServices ??= seedServices();
+  return seededServices;
+}
+
+function mergeLocalized(current: Partial<Localized> | null | undefined, fallback?: Partial<Localized>): Localized {
+  const source = current || {};
+  const sq = typeof source.sq === 'string' && source.sq.trim() ? source.sq : fallback?.sq || '';
+  return {
+    me: source.me ?? fallback?.me ?? '',
+    en: source.en ?? fallback?.en ?? '',
+    tr: source.tr ?? fallback?.tr ?? '',
+    sq,
+  };
+}
+
+function withAlbanianPost(post: BlogPost): BlogPost {
+  const slugs = post.slugs || ({} as BlogPost['slugs']);
+  const seeded = seedPostList().find(
+    (item) =>
+      item.id === post.id ||
+      item.slugs.me === slugs.me ||
+      Object.values(slugs).filter(Boolean).some((slug) => Object.values(item.slugs).includes(slug))
+  );
+  return {
+    ...post,
+    slugs: mergeLocalized(slugs, seeded?.slugs),
+    titles: mergeLocalized(post.titles, seeded?.titles),
+    excerpts: mergeLocalized(post.excerpts, seeded?.excerpts),
+    authors: mergeLocalized(post.authors, seeded?.authors),
+    contents: mergeLocalized(post.contents, seeded?.contents),
+  };
+}
+
+function withAlbanianService(service: ServiceItem): ServiceItem {
+  const seeded = seedServiceList().find((item) => item.slug === service.slug || item.id === service.id);
+  return {
+    ...service,
+    titles: mergeLocalized(service.titles, seeded?.titles),
+    shortDescriptions: mergeLocalized(service.shortDescriptions, seeded?.shortDescriptions),
+    descriptions: mergeLocalized(service.descriptions, seeded?.descriptions),
+    contents: mergeLocalized(service.contents, seeded?.contents),
+  };
+}
+
+function withAlbanianSettings(settings: SiteSettings): SiteSettings {
+  const seeded = seedSettings();
+  return {
+    ...settings,
+    contact: {
+      ...settings.contact,
+      hoursWeekdays: mergeLocalized(settings.contact?.hoursWeekdays, seeded.contact.hoursWeekdays),
+      hoursWeekend: mergeLocalized(settings.contact?.hoursWeekend, seeded.contact.hoursWeekend),
+    },
+    hero: {
+      titles: mergeLocalized(settings.hero?.titles, seeded.hero.titles),
+      subtitles: mergeLocalized(settings.hero?.subtitles, seeded.hero.subtitles),
+    },
+    about: {
+      ...settings.about,
+      titles: mergeLocalized(settings.about?.titles, seeded.about.titles),
+      descriptions: mergeLocalized(settings.about?.descriptions, seeded.about.descriptions),
+      stats: settings.about?.stats || seeded.about.stats,
+    },
+  };
+}
 
 function emptyStore(): CmsStore {
   return {
@@ -15,10 +89,11 @@ function emptyStore(): CmsStore {
 
 function asStore(data: unknown): CmsStore {
   const value = (data || {}) as Partial<CmsStore>;
+  const settings = value.settings || emptyStore().settings;
   return {
-    posts: value.posts || [],
-    services: value.services || [],
-    settings: value.settings || emptyStore().settings,
+    posts: (value.posts || []).map(withAlbanianPost),
+    services: (value.services || []).map(withAlbanianService),
+    settings: withAlbanianSettings(settings),
     messages: value.messages || [],
   };
 }
@@ -85,7 +160,7 @@ export async function getPublishedPosts() {
     .eq('published', true)
     .order('date', { ascending: false });
   if (error) throw error;
-  return (data || []).map((row) => ({
+  const posts = (data || []).map((row) => ({
     id: row.id,
     published: row.published,
     date: row.date,
@@ -98,6 +173,7 @@ export async function getPublishedPosts() {
     authors: row.authors,
     contents: row.contents,
   })) as BlogPost[];
+  return posts.map(withAlbanianPost);
 }
 
 export async function getPostById(id: string) {
@@ -139,7 +215,7 @@ export async function getPublishedServices() {
     .eq('published', true)
     .order('sort_order', { ascending: true });
   if (error) throw error;
-  return (data || []).map((row) => ({
+  const services = (data || []).map((row) => ({
     id: row.id,
     slug: row.slug,
     icon: row.icon,
@@ -150,6 +226,7 @@ export async function getPublishedServices() {
     descriptions: row.descriptions,
     contents: row.contents,
   })) as ServiceItem[];
+  return services.map(withAlbanianService);
 }
 
 export async function getServiceById(id: string) {
@@ -182,7 +259,7 @@ export async function getSettings(): Promise<SiteSettings> {
   const supabase = getSupabase();
   const { data, error } = await supabase.from('site_settings').select('data').eq('id', 1).maybeSingle();
   if (error) throw error;
-  return (data?.data || emptyStore().settings) as SiteSettings;
+  return withAlbanianSettings((data?.data || emptyStore().settings) as SiteSettings);
 }
 
 export async function saveSettings(settings: SiteSettings) {

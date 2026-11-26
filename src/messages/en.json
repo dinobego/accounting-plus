@@ -3,7 +3,11 @@
     "home": "Home",
     "services": "Services",
     "about": "About Us",
-    "contact": "Contact"
+    "contact": "Contact",
+    "blog": "Blog",
+    "language": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "services": {
     "company-formation": "Company Formation",
@@ -67,6 +71,11 @@
     "title": "Visa Services",
     "description": "Complete visa application and travel documentation assistance."
   }
+  },
+  "serviceCta": {
+    "title": "Ready to Get Started?",
+    "text": "Contact us and schedule a consultation.",
+    "button": "Contact Us"
   },
   "about": {
     "title": "About Our Agency",
@@ -159,6 +168,14 @@
       "title": "Find us on map"
     }
   },
+  "errors": {
+    "sendFailed": "Error sending message",
+    "tryAgain": "Please try again"
+  },
+  "validation": {
+    "required": "This field is required.",
+    "email": "Enter a valid email address."
+  },
   "footer": {
     "description": "Professional accounting services you can trust",
     "rights": "All rights reserved",
@@ -186,6 +203,7 @@
     "backToBlog": "Back to Blog",
     "author": "Author",
     "share": "Share Article",
+    "copyLink": "Copy",
     "notFound": "Article not found",
     "shareLike": "Enjoyed this article?",
     "shareHint": "Share it with your colleagues and friends",

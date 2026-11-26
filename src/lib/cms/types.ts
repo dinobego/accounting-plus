@@ -1,4 +1,4 @@
-export type Locale = 'me' | 'en' | 'tr';
+export type Locale = 'me' | 'en' | 'tr' | 'sq';
 
 export type Localized<T = string> = Record<Locale, T>;
 
@@ -74,17 +74,24 @@ export type CmsStore = {
   messages: ContactMessage[];
 };
 
-export const LOCALES: Locale[] = ['me', 'en', 'tr'];
+export const LOCALES: Locale[] = ['me', 'en', 'tr', 'sq'];
 
 export const emptyLocalized = (value = ''): Localized => ({
   me: value,
   en: value,
   tr: value,
+  sq: value,
 });
 
-export function pickLocalized<T>(values: Record<Locale, T>, locale: string): T {
-  if (locale === 'me' || locale === 'en' || locale === 'tr') {
-    return values[locale];
+export function isLocale(value: string): value is Locale {
+  return (LOCALES as string[]).includes(value);
+}
+
+export function pickLocalized<T>(values: Partial<Record<Locale, T>> | null | undefined, locale: string): T {
+  const bag = values || {};
+  if (isLocale(locale)) {
+    const selected = bag[locale];
+    if (selected != null && selected !== ('' as T)) return selected;
   }
-  return values.en;
+  return (bag.en ?? bag.me ?? bag.tr ?? bag.sq) as T;
 }

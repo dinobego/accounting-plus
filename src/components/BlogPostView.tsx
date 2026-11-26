@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
 import { ArrowLeft, Clock, Calendar, BookOpen } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
+import { intlDateLocale } from '@/lib/seo';
 
 export type BlogPostContent = {
   title: string;
@@ -83,7 +84,7 @@ export default function BlogPostView({ post }: { post: BlogPostContent }) {
           >
             <div className="flex items-center space-x-2">
               <Calendar size={20} className="text-blue-600" />
-              <span>{new Date(post.date).toLocaleDateString(locale === 'me' ? 'sr-ME' : locale)}</span>
+              <span>{new Date(post.date).toLocaleDateString(intlDateLocale(locale))}</span>
             </div>
             <div className="flex items-center space-x-2">
               <Clock size={20} className="text-blue-600" />
@@ -218,7 +219,8 @@ export default function BlogPostView({ post }: { post: BlogPostContent }) {
                     navigator.clipboard.writeText(window.location.href);
                   }}
                   className="p-4 bg-gray-600 text-white rounded-full hover:bg-gray-700 transition-all duration-300 hover:scale-110 cursor-pointer shadow-lg hover:shadow-xl"
-                  title="Copy"
+                  title={t('copyLink')}
+                  aria-label={t('copyLink')}
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>

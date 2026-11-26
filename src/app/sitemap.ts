@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { loadPublishedPosts, loadPublishedServices } from '@/lib/cms/publicContent';
 import { LOCALES, type Locale } from '@/lib/cms/types';
-import { SITE_URL, localizedPath } from '@/lib/seo';
+import { HREFLANG, SITE_URL, localizedPath } from '@/lib/seo';
 
 export const revalidate = 60;
 
@@ -9,9 +9,9 @@ const STATIC_PATHS = ['', '/about', '/contact', '/services', '/blog'];
 
 function languageMap(getPath: (locale: Locale) => string, locales: Locale[] = LOCALES) {
   const languages: Record<string, string> = {};
-  if (locales.includes('me')) languages['sr-ME'] = `${SITE_URL}${getPath('me')}`;
-  if (locales.includes('en')) languages.en = `${SITE_URL}${getPath('en')}`;
-  if (locales.includes('tr')) languages.tr = `${SITE_URL}${getPath('tr')}`;
+  for (const locale of locales) {
+    languages[HREFLANG[locale]] = `${SITE_URL}${getPath(locale)}`;
+  }
   const defaultLocale = locales.includes('me') ? 'me' : locales[0];
   languages['x-default'] = `${SITE_URL}${getPath(defaultLocale)}`;
   return languages;

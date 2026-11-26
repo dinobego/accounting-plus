@@ -25,7 +25,7 @@ export default function Contact() {
   const email = settings?.contact.email || 'racunovodstvo2020@hotmail.com';
   const phone = settings?.contact.phone || '+382 69 842 843';
   const mapsUrl = settings?.contact.mapsUrl || 'https://maps.app.goo.gl/NsofWhWD3LGVeWNT9?g_st=ipc';
-  const address = settings?.contact.address || 'Podgorica, Montenegro';
+  const address = settings?.contact.address || '88 Hercegovačka, Podgorica';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -101,12 +101,12 @@ export default function Contact() {
                 <h4 className="text-white font-bold text-lg">
                   {toastType === 'success'
                     ? t('form.successMessage')
-                    : 'Greška pri slanju poruke'}
+                    : t('errors.sendFailed')}
                 </h4>
                 <p className="text-white/90 text-sm">
                   {toastType === 'success'
                     ? ''
-                    : 'Pokušajte ponovo'}
+                    : t('errors.tryAgain')}
                 </p>
               </div>
             </div>
@@ -168,6 +168,8 @@ export default function Contact() {
                   className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none text-gray-800"
                   placeholder={t("placeholders.name")}
                   required
+                  onInvalid={(event) => event.currentTarget.setCustomValidity(t('validation.required'))}
+                  onInput={(event) => event.currentTarget.setCustomValidity('')}
                 />
               </div>
             </div>
@@ -193,6 +195,12 @@ export default function Contact() {
                   className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none text-gray-800"
                   placeholder={t("placeholders.email")}
                   required
+                  onInvalid={(event) =>
+                    event.currentTarget.setCustomValidity(
+                      event.currentTarget.validity.typeMismatch ? t('validation.email') : t('validation.required')
+                    )
+                  }
+                  onInput={(event) => event.currentTarget.setCustomValidity('')}
                 />
               </div>
             </div>
@@ -242,6 +250,8 @@ export default function Contact() {
                   className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none resize-none text-gray-800"
                   placeholder={t("placeholders.message")}
                   required
+                  onInvalid={(event) => event.currentTarget.setCustomValidity(t('validation.required'))}
+                  onInput={(event) => event.currentTarget.setCustomValidity('')}
                 ></textarea>
               </div>
             </div>
@@ -254,7 +264,7 @@ export default function Contact() {
               disabled={isSubmitting}
               className="w-full flex items-center justify-center px-8 py-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-lg font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 group shadow-xl hover:shadow-2xl cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <span>{isSubmitting ? 'Šalje se...' : t("submit")}</span>
+              <span>{isSubmitting ? t('form.sending') : t('submit')}</span>
               <Send
                 className="ml-3 group-hover:translate-x-2 group-hover:-translate-y-1 transition-transform duration-300"
                 size={22}

@@ -123,12 +123,10 @@ export default function ContactView() {
                 <h4 className="text-white font-bold text-lg">
                   {toastType === 'success'
                     ? t('form.successMessage')
-                    : 'Greška pri slanju poruke'}
+                    : t('errors.sendFailed')}
                 </h4>
                 <p className="text-white/90 text-sm">
-                  {toastType === 'success'
-                    ? ''
-                    : 'Pokušajte ponovo'}
+                  {toastType === 'success' ? '' : t('errors.tryAgain')}
                 </p>
               </div>
             </div>
@@ -174,6 +172,8 @@ export default function ContactView() {
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none text-gray-900 bg-white"
                       placeholder={t('form.namePlaceholder')}
+                      onInvalid={(event) => event.currentTarget.setCustomValidity(t('validation.required'))}
+                      onInput={(event) => event.currentTarget.setCustomValidity('')}
                     />
                   </div>
 
@@ -188,6 +188,12 @@ export default function ContactView() {
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none text-gray-900 bg-white"
                       placeholder={t('form.emailPlaceholder')}
+                      onInvalid={(event) =>
+                        event.currentTarget.setCustomValidity(
+                          event.currentTarget.validity.typeMismatch ? t('validation.email') : t('validation.required')
+                        )
+                      }
+                      onInput={(event) => event.currentTarget.setCustomValidity('')}
                     />
                   </div>
 
@@ -215,6 +221,8 @@ export default function ContactView() {
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 transition-all outline-none resize-none text-gray-900 bg-white"
                       placeholder={t('form.messagePlaceholder')}
+                      onInvalid={(event) => event.currentTarget.setCustomValidity(t('validation.required'))}
+                      onInput={(event) => event.currentTarget.setCustomValidity('')}
                     />
                   </div>
 

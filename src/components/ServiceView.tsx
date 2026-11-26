@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { stripLeadingEmoji } from '@/lib/seo';
+import { useTranslations } from 'next-intl';
 
 export default function ServiceView({
-  locale,
   title,
   description,
   content,
@@ -16,6 +16,7 @@ export default function ServiceView({
   description: string;
   content: string;
 }) {
+  const t = useTranslations('serviceCta');
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-32 pb-20 px-4">
       <div className="container mx-auto max-w-4xl">
@@ -85,21 +86,13 @@ export default function ServiceView({
           transition={{ delay: 0.2 }}
           className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-white text-center"
         >
-          <h2 className="text-3xl font-bold mb-6">
-            {locale === 'me' ? 'Spremni da počnete?' : locale === 'tr' ? 'Başlamaya Hazır Mısınız?' : 'Ready to Get Started?'}
-          </h2>
-          <p className="text-lg mb-8 opacity-90">
-            {locale === 'me'
-              ? 'Kontaktirajte nas i dogovorite se za konsultacije.'
-              : locale === 'tr'
-                ? 'Bize ulaşın ve danışmanlık için randevu alın.'
-                : 'Contact us and schedule a consultation.'}
-          </p>
+          <h2 className="text-3xl font-bold mb-6">{t('title')}</h2>
+          <p className="text-lg mb-8 opacity-90">{t('text')}</p>
           <Link
             href="/contact"
             className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-100 transition-all hover:scale-105"
           >
-            <span>{locale === 'me' ? 'Kontaktiraj nas' : locale === 'tr' ? 'İletişime geç' : 'Contact Us'}</span>
+            <span>{t('button')}</span>
             <ArrowRight size={20} />
           </Link>
         </motion.div>

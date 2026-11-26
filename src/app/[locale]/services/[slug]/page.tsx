@@ -11,6 +11,7 @@ import {
   localizedPath,
   plainText,
   stripLeadingEmoji,
+  HTML_LANG,
 } from '@/lib/seo';
 import { accountingServiceSchema, breadcrumbSchema } from '@/lib/seoSchema';
 
@@ -72,6 +73,7 @@ export default async function ServicePage({
             description: mapped.description,
             url,
             settings,
+            inLanguage: HTML_LANG[locale],
           }),
         ]}
       />

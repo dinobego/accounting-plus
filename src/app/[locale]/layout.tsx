@@ -47,7 +47,7 @@ export default async function LocaleLayout({
   return (
       <html lang={HTML_LANG[locale as Locale]} suppressHydrationWarning>
       <body>
-        {settings ? <JsonLd data={organizationSchema(settings)} /> : null}
+        {settings ? <JsonLd data={organizationSchema(settings, HTML_LANG[locale as Locale])} /> : null}
         <ClientWrapper messages={messages} locale={locale}>
           {children}
         </ClientWrapper>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import type { Locale } from '@/lib/cms/types';
+import { LOCALES, type Locale } from '@/lib/cms/types';
 import { routing } from '@/i18n/routing';
 
 export const SITE_URL = 'https://accounting-plus.me';
@@ -10,19 +10,28 @@ export const HREFLANG: Record<Locale, string> = {
   me: 'sr-ME',
   en: 'en',
   tr: 'tr',
+  sq: 'sq',
 };
 
 export const HTML_LANG: Record<Locale, string> = {
   me: 'sr-ME',
   en: 'en',
   tr: 'tr',
+  sq: 'sq',
 };
 
 export const OG_LOCALE: Record<Locale, string> = {
   me: 'sr_ME',
   en: 'en_US',
   tr: 'tr_TR',
+  sq: 'sq_AL',
 };
+
+export function intlDateLocale(locale: string) {
+  if (locale === 'me') return 'sr-ME';
+  if (locale === 'sq') return 'sq-AL';
+  return locale;
+}
 
 export function isAppLocale(value: string): value is Locale {
   return routing.locales.includes(value as Locale);
@@ -41,13 +50,13 @@ export function localizedPath(locale: string, path = '') {
 export function languageAlternates(
   getPath: (locale: Locale) => string,
   currentLocale: Locale,
-  locales: Locale[] = ['me', 'en', 'tr']
+  locales: Locale[] = LOCALES
 ) {
-  const available = locales.filter((item) => item === 'me' || item === 'en' || item === 'tr');
+  const available = locales.filter((item) => LOCALES.includes(item));
   const languages: Record<string, string> = {};
-  if (available.includes('me')) languages['sr-ME'] = absoluteUrl(getPath('me'));
-  if (available.includes('en')) languages.en = absoluteUrl(getPath('en'));
-  if (available.includes('tr')) languages.tr = absoluteUrl(getPath('tr'));
+  for (const item of available) {
+    languages[HREFLANG[item]] = absoluteUrl(getPath(item));
+  }
   const defaultLocale = available.includes('me') ? 'me' : available[0] || currentLocale;
   languages['x-default'] = absoluteUrl(getPath(defaultLocale));
 

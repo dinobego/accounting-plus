@@ -3,7 +3,11 @@
     "home": "Ana Sayfa",
     "services": "Hizmetler",
     "about": "Hakkımızda",
-    "contact": "İletişim"
+    "contact": "İletişim",
+    "blog": "Blog",
+    "language": "Dil",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat"
   },
   "services": {
     "company-formation": "Şirket Kuruluşu",
@@ -67,6 +71,11 @@
     "title": "Vize Hizmetleri",
     "description": "Vize başvurusu ve seyahat belgelendirme yardımı."
   }
+  },
+  "serviceCta": {
+    "title": "Başlamaya Hazır Mısınız?",
+    "text": "Bize ulaşın ve danışmanlık için randevu alın.",
+    "button": "İletişime geç"
   },
   "about": {
     "title": "Ajansımız Hakkında",
@@ -158,6 +167,14 @@
       "title": "Haritada bizi bulun"
     }
   },
+  "errors": {
+    "sendFailed": "Mesaj gönderilirken hata oluştu",
+    "tryAgain": "Lütfen tekrar deneyin"
+  },
+  "validation": {
+    "required": "Bu alan zorunludur.",
+    "email": "Geçerli bir e-posta adresi girin."
+  },
   "footer": {
     "description": "Güvenebileceğiniz profesyonel muhasebe hizmetleri",
     "rights": "Tüm hakları saklıdır",
@@ -185,6 +202,7 @@
     "backToBlog": "Bloga Geri Dön",
     "author": "Yazar",
     "share": "Makaleyi Paylaş",
+    "copyLink": "Kopyala",
     "notFound": "Makale bulunamadı",
     "shareLike": "Bu makaleyi beğendiniz mi?",
     "shareHint": "Meslektaşlarınız ve arkadaşlarınızla paylaşın",

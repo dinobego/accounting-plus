@@ -6,11 +6,13 @@ import BlogPostView from '@/components/BlogPostView';
 import JsonLd from '@/components/JsonLd';
 import { mapPostForLocale } from '@/lib/cms/public';
 import { loadPublishedPostBySlug } from '@/lib/cms/publicContent';
+import { LOCALES } from '@/lib/cms/types';
 import {
   buildPageMetadata,
   isAppLocale,
   localizedPath,
   plainText,
+  HTML_LANG,
 } from '@/lib/seo';
 import { articleSchema, breadcrumbSchema } from '@/lib/seoSchema';
 
@@ -28,7 +30,7 @@ export async function generateMetadata({
   if (!post || !post.published) return {};
   const mapped = mapPostForLocale(post, locale);
   const description = plainText(mapped.excerpt || mapped.content);
-  const locales = (['me', 'en', 'tr'] as const).filter((item) => Boolean(post.slugs[item]));
+  const locales = LOCALES.filter((item) => Boolean(post.slugs[item]));
   return buildPageMetadata({
     locale,
     title: `${mapped.title} | Accounting Plus`,
@@ -78,6 +80,7 @@ export default async function BlogPostPage({
             image: mapped.image,
             datePublished: mapped.date,
             author: mapped.author,
+            inLanguage: HTML_LANG[locale],
           }),
         ]}
       />

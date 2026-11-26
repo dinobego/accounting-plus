@@ -1,0 +1,222 @@
+{
+  "nav": {
+    "home": "Ballina",
+    "services": "Shërbimet",
+    "about": "Rreth nesh",
+    "contact": "Kontakt",
+    "blog": "Blog",
+    "language": "Gjuha",
+    "openMenu": "Hap menynë",
+    "closeMenu": "Mbyll menynë"
+  },
+  "services": {
+    "company-formation": "Themelimi i kompanive",
+    "residence-work-permits": "Lejet e qëndrimit dhe të punës",
+    "bookkeeping": "Shërbimet e kontabilitetit",
+    "tax-consulting": "Këshillim tatimor",
+    "final-reports": "Pasqyrat financiare vjetore",
+    "business-analysis": "Analiza e biznesit",
+    "electronic-documents": "Menaxhimi elektronik i dokumentacionit",
+    "real-estate": "Shërbimet për pasuritë e paluajtshme",
+    "employment-agency-services": "Shërbimet e ndërmjetësimit në punësim",
+    "visa": "Shërbimet për viza"
+  },
+  "hero": {
+    "title": "Shërbime profesionale të kontabilitetit",
+    "subtitle": "Zgjidhje financiare profesionale për rritjen e biznesit tuaj",
+    "cta": "Filloni",
+    "ctaSecondary": "Mësoni më shumë"
+  },
+  "servicesSection": {
+    "title": "Shërbimet tona",
+    "subtitle": "Zgjidhje të plota, të përshtatura për nevojat tuaja",
+    "learnMore": "Mësoni më shumë",
+    "companyFormation": {
+      "title": "Themelimi i kompanive",
+      "description": "Mbështetje e plotë juridike dhe administrative për themelimin e një DOO, të një biznesi individual ose të një forme tjetër shoqërie."
+    },
+    "permits": {
+      "title": "Lejet e qëndrimit dhe të punës",
+      "description": "Ndihmë profesionale në përgatitjen dhe dorëzimin e dokumentacionit për lejet e shtetasve të huaj në Mal të Zi."
+    },
+    "bookkeeping": {
+      "title": "Shërbimet e kontabilitetit",
+      "description": "Mbajtja e librave të biznesit, e evidencave dhe përgatitja e pasqyrave financiare në përputhje me rregulloren ligjore."
+    },
+    "taxConsulting": {
+      "title": "Këshillim tatimor",
+      "description": "Këshillim profesional për tatimet, optimizimin e detyrimeve tatimore dhe përgatitjen e deklaratave tatimore."
+    },
+    "finalReports": {
+      "title": "Pasqyrat financiare vjetore",
+      "description": "Përgatitja e pasqyrave financiare vjetore dhe e bilanceve për shoqëritë tregtare."
+    },
+    "businessAnalysis": {
+      "title": "Analiza e biznesit",
+      "description": "Analiza të hollësishme financiare, vlerësim i rentabilitetit dhe rekomandime për përmirësimin e biznesit."
+    },
+    "electronicDocuments": {
+      "title": "Menaxhimi elektronik i dokumentacionit",
+      "description": "Dixhitalizimi i proceseve të biznesit dhe shkëmbimi elektronik i dokumenteve me organet tatimore dhe institucionet."
+    },
+    "realEstate": {
+      "title": "Shërbimet për pasuritë e paluajtshme",
+      "description": "Regjistrimi i pronësisë, dokumentacioni dhe këshillimi tatimor për pasuritë e paluajtshme."
+    },
+    "employmentAgency": {
+      "title": "Shërbimet e ndërmjetësimit në punësim",
+      "description": "Rekrutimi dhe shërbimet e menaxhimit të punësimit për ndërmarrjet."
+    },
+    "visa": {
+      "title": "Shërbimet për viza",
+      "description": "Ndihmë e plotë për aplikimin për vizë dhe dokumentacionin e udhëtimit."
+    }
+  },
+  "serviceCta": {
+    "title": "Gati për të filluar?",
+    "text": "Na kontaktoni dhe caktoni një konsultë.",
+    "button": "Na kontaktoni"
+  },
+  "about": {
+    "title": "Rreth agjencisë sonë",
+    "subtitle": "Jemi një ekip kontabilistësh të certifikuar, të përkushtuar për të ofruar shërbime financiare të një niveli të lartë. Me vite përvoje dhe përkushtim ndaj cilësisë, i ndihmojmë bizneset të arrijnë qëllimet e tyre financiare.",
+    "description": "Jemi një ekip kontabilistësh të certifikuar, të përkushtuar për të ofruar shërbime financiare të një niveli të lartë. Me vite përvoje dhe përkushtim ndaj cilësisë, i ndihmojmë bizneset të arrijnë qëllimet e tyre financiare.",
+    "experience": "Partnerë aktivë biznesi",
+    "clients": "Klientë të kënaqur",
+    "experts": "Kontabilistë profesionistë",
+    "missionTitle": "Misioni ynë",
+    "missionDescription": "Ofrojmë shërbime kontabiliteti të nivelit të lartë për ndërmarrjet e vogla dhe të mesme, duke i ndihmuar të arrijnë sukses financiar përmes transparencës, ekspertizës dhe përkushtimit.",
+    "valuesTitle": "Vlerat tona",
+    "values": {
+      "expertise": {
+        "title": "Ekspertiza",
+        "description": "Ekip kontabilistësh të certifikuar me përvojë shumëvjeçare."
+      },
+      "trust": {
+        "title": "Besimi",
+        "description": "Transparencë dhe integritet në çdo marrëdhënie biznesi."
+      },
+      "dedication": {
+        "title": "Përkushtimi",
+        "description": "Suksesi juaj është suksesi ynë. Punojmë me përkushtim."
+      },
+      "growth": {
+        "title": "Rritja",
+        "description": "E ndihmojmë biznesin tuaj të rritet dhe të përparojë."
+      }
+    },
+    "team": {
+      "title": "Ekipi ynë",
+      "description": "Ekip profesional kontabilistësh të certifikuar, këshilltarësh tatimorë dhe specialistësh financiarë, gati t'ju ndihmojë."
+    },
+    "stats": {
+      "clients": "Klientë të kënaqur",
+      "years": "Partnerë aktivë biznesi",
+      "satisfaction": "Kënaqësia",
+      "support": "Mbështetja"
+    }
+  },
+  "contact": {
+    "emailTitle": "Email",
+    "phoneTitle": "Telefoni",
+    "addressTitle": "Adresa",
+    "hoursTitle": "Orari i punës",
+    "title": "Na kontaktoni",
+    "subtitle": "Gati t'i rregulloni financat? Na kontaktoni sot.",
+    "name": "Emri dhe mbiemri",
+    "email": "Adresa e emailit",
+    "phone": "Telefoni",
+    "message": "Mesazhi juaj",
+    "submit": "Dërgo mesazhin",
+    "placeholders": {
+      "name": "Emri dhe mbiemri",
+      "email": "email@example.com",
+      "phone": "+382 XX XXX XXX",
+      "message": "Shkruani mesazhin tuaj..."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Telefoni",
+      "location": "Vendndodhja"
+    },
+    "form": {
+      "title": "Na dërgoni një mesazh",
+      "name": "Emri dhe mbiemri",
+      "namePlaceholder": "Emri juaj",
+      "email": "Adresa e emailit",
+      "emailPlaceholder": "ju@email.com",
+      "phone": "Telefoni",
+      "phonePlaceholder": "+382...",
+      "message": "Mesazhi",
+      "messagePlaceholder": "Si mund t'ju ndihmojmë?",
+      "submit": "Dërgo mesazhin",
+      "sending": "Po dërgohet...",
+      "successMessage": "Mesazhi u dërgua me sukses! Do t'ju përgjigjemi së shpejti.",
+      "errorMessage": "Gabim gjatë dërgimit të mesazhit. Provoni përsëri."
+    },
+    "contactInfo": {
+      "hours": {
+        "weekdays": "Hën–Sht: 08:00 - 16:00.",
+        "weekend": "Die: Nuk punojmë."
+      }
+    },
+    "map": {
+      "title": "Na gjeni në hartë"
+    }
+  },
+  "errors": {
+    "sendFailed": "Gabim gjatë dërgimit të mesazhit",
+    "tryAgain": "Provoni përsëri"
+  },
+  "validation": {
+    "required": "Kjo fushë është e detyrueshme.",
+    "email": "Shkruani një adresë të vlefshme emaili."
+  },
+  "footer": {
+    "description": "Shërbime profesionale kontabiliteti, të cilave mund t'u besoni",
+    "rights": "Të gjitha të drejtat e rezervuara",
+    "quickLinks": "Lidhje të shpejta",
+    "contact": "Kontakt",
+    "backToTop": "Kthehu lart",
+    "links": {
+      "home": "Ballina",
+      "services": "Shërbimet",
+      "about": "Rreth nesh",
+      "contact": "Kontakt"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Artikuj edukativë, udhëzues dhe këshilla për zhvillimin e biznesit",
+    "search": "Kërko artikuj...",
+    "allPosts": "Të gjitha postimet",
+    "educational": "Artikuj edukativë",
+    "practical": "Udhëzues praktikë",
+    "tips": "Këshilla",
+    "seo": "SEO/Autoritet",
+    "readMore": "Lexo më shumë",
+    "readTime": "min lexim",
+    "backToBlog": "Kthehu te blogu",
+    "author": "Autori",
+    "share": "Ndaj artikullin",
+    "copyLink": "Kopjo",
+    "notFound": "Artikulli nuk u gjet",
+    "shareLike": "Ju pëlqeu ky artikull?",
+    "shareHint": "Ndajeni me kolegët dhe miqtë tuaj",
+    "moreArticles": "Lexoni artikuj të tjerë"
+  },
+  "seo": {
+    "homeTitle": "Kontabilitet në Podgoricë | Accounting Plus",
+    "homeDescription": "Accounting Plus ofron shërbime profesionale kontabiliteti në Podgoricë. Këshillim tatimor, themelim kompanish dhe mbështetje për biznesin në Mal të Zi.",
+    "aboutTitle": "Rreth nesh | Accounting Plus",
+    "aboutDescription": "Accounting Plus është agjenci kontabiliteti në Podgoricë. Ekipi ynë ofron kontabilitet, këshillim tatimor dhe mbështetje për ndërmarrjet.",
+    "contactTitle": "Kontakt | Accounting Plus Podgoricë",
+    "contactDescription": "Kontaktoni Accounting Plus në Podgoricë për shërbime kontabiliteti, këshillim tatimor dhe themelim kompanish në Mal të Zi.",
+    "blogTitle": "Blog | Accounting Plus",
+    "blogDescription": "Artikuj të Accounting Plus për kontabilitetin, tatimet dhe themelimin e kompanive në Mal të Zi.",
+    "servicesTitle": "Shërbime kontabiliteti në Mal të Zi | Accounting Plus",
+    "servicesDescription": "Shërbimet e Accounting Plus: kontabilitet, këshillim tatimor, themelim kompanish dhe mbështetje për biznesin në Podgoricë.",
+    "serviceTitleSuffix": " | Accounting Plus",
+    "notFoundTitle": "Faqja nuk u gjet | Accounting Plus"
+  }
+}

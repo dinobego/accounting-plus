@@ -5,13 +5,14 @@ export function organizationId() {
   return `${SITE_URL}/#organization`;
 }
 
-export function organizationSchema(settings?: SiteSettings | null) {
+export function organizationSchema(settings?: SiteSettings | null, inLanguage?: string) {
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': organizationId(),
     name: SITE_NAME,
     url: SITE_URL,
+    ...(inLanguage ? { inLanguage } : {}),
     logo: {
       '@type': 'ImageObject',
       url: `${SITE_URL}/images/logoBlue.png`,
@@ -37,6 +38,7 @@ export function accountingServiceSchema(input: {
   description: string;
   url: string;
   settings?: SiteSettings | null;
+  inLanguage?: string;
 }) {
   return {
     '@context': 'https://schema.org',
@@ -44,6 +46,7 @@ export function accountingServiceSchema(input: {
     name: input.name,
     description: input.description,
     url: input.url,
+    ...(input.inLanguage ? { inLanguage: input.inLanguage } : {}),
     provider: { '@id': organizationId() },
     ...(input.settings?.contact.address?.toLowerCase().includes('podgorica')
       ? { areaServed: { '@type': 'City', name: 'Podgorica' } }
@@ -71,6 +74,7 @@ export function articleSchema(input: {
   image?: string;
   datePublished?: string;
   author?: string;
+  inLanguage?: string;
 }) {
   return {
     '@context': 'https://schema.org',
@@ -79,6 +83,7 @@ export function articleSchema(input: {
     description: input.description,
     mainEntityOfPage: input.url,
     url: input.url,
+    ...(input.inLanguage ? { inLanguage: input.inLanguage } : {}),
     ...(input.datePublished ? { datePublished: input.datePublished } : {}),
     ...(input.image
       ? {

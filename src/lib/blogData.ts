@@ -816,6 +816,249 @@ export const blogPostsData: { [key: string]: any } = {
     `
   },
 
+  'cfare-eshte-bilanci-i-gjendjes': {
+    title: 'Çfarë është bilanci i gjendjes dhe pse është i rëndësishëm për biznesin tuaj?',
+    category: 'Artikuj edukativë',
+    date: '2025-11-04',
+    readTime: 2,
+    author: 'Ekipi i Accounting Plus',
+    image: '/images/1.jpg',
+    content: `
+      <h2>Hyrje në bilancin e gjendjes</h2>
+      <p>Bilanci i gjendjes është një nga tri pasqyrat kryesore financiare. I njohur edhe si bilanc, ai paraqet pozicionin financiar të kompanisë suaj në një moment të caktuar. Zakonisht përgatitet në fund të çdo tremujori ose një herë në vit.</p>
+      <h2>Çfarë përmban bilanci i gjendjes?</h2>
+      <p>Bilanci i gjendjes përbëhet nga tri pjesë kryesore:</p>
+      <ul>
+        <li><strong>Aktivet</strong> – gjithçka që zotëron kompania (para, pasuri të paluajtshme, pajisje, stoqe)</li>
+        <li><strong>Detyrimet</strong> – gjithçka që kompania u detyrohet të tjerëve (kredi, detyrime ndaj furnitorëve, tatime)</li>
+        <li><strong>Kapitali</strong> – vlera neto e kompanisë (aktivet minus detyrimet)</li>
+      </ul>
+      <h2>Pse është i rëndësishëm bilanci i gjendjes?</h2>
+      <p>Bilanci i gjendjes ju tregon qëndrueshmërinë financiare të kompanisë, likuiditetin dhe aftësinë për të paguar detyrimet, nivelin e borxhit dhe potencialin për rritje.</p>
+      <h2>Përfundim</h2>
+      <p>Kuptimi i bilancit të gjendjes është thelbësor për vendime të menduara biznesi.</p>
+    `
+  },
+  'si-te-hapni-nje-kompani-ne-mal-te-zi': {
+    title: 'Si të hapni një kompani në Mal të Zi – udhëzues hap pas hapi',
+    category: 'Artikuj edukativë',
+    date: '2025-11-02',
+    readTime: 1,
+    author: 'Ekipi i Accounting Plus',
+    image: '/images/2.jpg',
+    content: `
+      <h2>Hyrje</h2>
+      <p>Hapja e një kompanie në Mal të Zi tani është më e thjeshtë se kurrë. Ky udhëzues ju kalon nëpër hapat e nevojshëm për ta nisur biznesin në mënyrë të ligjshme.</p>
+      <h2>Hapi 1: Përgatitja e dokumentacionit</h2>
+      <p>Para regjistrimit duhet të përgatisni: dokument identifikimi, dëshmi të adresës, dëshmi të kualifikimeve dhe një plan biznesi.</p>
+      <h2>Hapi 2: Zgjedhja e formës së kompanisë</h2>
+      <p>Duhet të vendosni cilën formë dëshironi: DOO për shumicën e bizneseve, AD për kompani më të mëdha ose tregtar i pavarur për biznese të vogla.</p>
+      <h2>Përfundim</h2>
+      <p>Hapja e një kompanie është hap i rëndësishëm, por me udhëzuesin e duhur bëhet shumë më e lehtë.</p>
+    `
+  },
+  'tatimi-mbi-fitimin': {
+    title: 'Tatimi mbi fitimin: gjithçka që duhet të dinë pronarët e kompanive',
+    category: 'Artikuj edukativë',
+    date: '2025-10-30',
+    readTime: 1,
+    author: 'Ekipi i Accounting Plus',
+    image: '/images/3.jpg',
+    content: `
+      <h2>Çfarë është tatimi mbi fitimin?</h2>
+      <p>Tatimi mbi fitimin është detyrim fiskal që e paguajnë ndërmarrjet mbi fitimin neto. Në Mal të Zi, shkalla aktuale e tatimit mbi fitimin është 9%.</p>
+      <h2>Kush duhet ta paguajë tatimin mbi fitimin?</h2>
+      <p>Tatimin mbi fitimin janë të detyruara ta paguajnë të gjitha personat juridikë që realizojnë të ardhura nga ushtrimi i veprimtarisë.</p>
+      <h2>Si llogaritet fitimi neto?</h2>
+      <p>Fitimi neto = të ardhurat e përgjithshme minus zbritjet e lejuara. Zbritjet e lejuara përfshijnë koston e materialeve, të punonjësve, të qirasë dhe amortizimin.</p>
+      <h2>Përfundim</h2>
+      <p>Kuptimi i tatimit mbi fitimin ju ndihmon ta menaxhoni më mirë financën e kompanisë suaj.</p>
+    `
+  },
+  'detyrimet-e-pdv-se-2025': {
+    title: 'Detyrimet dhe afatet e PDV-së në vitin 2025',
+    category: 'Artikuj edukativë',
+    date: '2025-10-28',
+    readTime: 1,
+    author: 'Ekipi i Accounting Plus',
+    image: '/images/4.jpg',
+    content: `
+      <h2>Çfarë është PDV-ja?</h2>
+      <p>Tatimi mbi vlerën e shtuar (PDV) është tatim i tërthortë që zbatohet mbi produktet dhe shërbimet. Shkalla aktuale në Mal të Zi është 19%.</p>
+      <h2>Detyrimet e PDV-së në vitin 2025</h2>
+      <p>Afatet e rëndësishme: deklaratat mujore të PDV-së deri më 15 të muajit, gjashtëmujore deri më 31 korrik dhe deklarata përfundimtare vjetore deri më 31 mars.</p>
+      <h2>Përfundim</h2>
+      <p>Detyrimet e PDV-së duhet t'i merrni seriozisht dhe t'i përmbushni rregullisht.</p>
+    `
+  },
+  'gabimet-ne-mbajtjen-e-librave': {
+    title: 'Mbajtja e librave për sipërmarrësit – gabimet më të shpeshta',
+    category: 'Artikuj edukativë',
+    date: '2025-10-26',
+    readTime: 1,
+    author: 'Ekipi i Accounting Plus',
+    image: '/images/5.jpg',
+    content: `
+      <h2>Gabimet më të shpeshta në mbajtjen e librave</h2>
+      <p>Mbajtja e librave të biznesit është kritike për çdo biznes. Gabimet më të shpeshta janë: përzierja e mjeteve personale me ato të biznesit, dokumentacioni i paplotë dhe rendi i pasaktë i regjistrimeve.</p>
+      <h2>Si t'i shmangni këto gabime?</h2>
+      <p>Përdorni softuer kontabiliteti, ndiqni rregullisht transaksionet, konsultohuni me një kontabilist profesional dhe mbani evidenca të hollësishme.</p>
+      <h2>Përfundim</h2>
+      <p>Mbajtja e saktë e librave e mbron biznesin tuaj nga problemet.</p>
+    `
+  },
+  'lista-e-kontrollit-ne-fund-te-vitit': {
+    title: 'Lista e kontrollit për fundin e vitit financiar – çfarë duhet t’ia dorëzoni kontabilistit',
+    category: 'Udhëzues praktikë',
+    date: '2025-10-25',
+    readTime: 1,
+    author: 'Ekipi i Accounting Plus',
+    image: '/images/6.jpg',
+    content: `
+      <h2>Lista e kontrollit për fundin e vitit</h2>
+      <p>Dokumentacioni i rëndësishëm që duhet t’ia dorëzoni kontabilistit: pasqyrat bankare, të gjitha faturat, dëshmitë e pagesave dhe pasqyrat e gjendjes së stoqeve.</p>
+      <h2>Dokumentacioni për punonjësit</h2>
+      <p>Lista e punonjësve me pagat, të dhënat për kontributet dhe tatimet, të dhënat për pushimet vjetore dhe pushimet mjekësore.</p>
+      <h2>Përfundim</h2>
+      <p>Përgatitja në kohë e dokumentacionit e lehtëson mbylljen e vitit financiar.</p>
+    `
+  },
+  'llogaritja-e-tatimit-mbi-pagat': {
+    title: 'Si të llogaritet dhe të deklarohet saktë tatimi mbi pagat',
+    category: 'Udhëzues praktikë',
+    date: '2025-10-20',
+    readTime: 1,
+    author: 'Ekipi i Accounting Plus',
+    image: '/images/7.jpg',
+    content: `
+      <h2>Llogaritja e tatimit mbi pagat</h2>
+      <p>Tatimi mbi pagat është i ndërlikuar, por është pjesë e rëndësishme e detyrimeve të çdo punëdhënësi.</p>
+      <h2>Pjesët e pagës</h2>
+      <p>Paga bruto, kontributi për pension, kontributi për papunësi, tatimi mbi të ardhurat dhe paga neto.</p>
+      <h2>Përfundim</h2>
+      <p>Pagesa e rregullt e tatimit e mbron biznesin tuaj.</p>
+    `
+  },
+  '10-keshilla-per-bashkepunim-me-kontabilistin': {
+    title: '10 këshilla për një bashkëpunim më të lehtë me kontabilistin',
+    category: 'Udhëzues praktikë',
+    date: '2025-10-18',
+    readTime: 1,
+    author: 'Ekipi i Accounting Plus',
+    image: '/images/8.jpg',
+    content: `
+      <h2>10 këshilla për bashkëpunim më të mirë</h2>
+      <ol style="list-style-type: decimal; padding-left: 20px;">
+        <li>Ruani të gjitha dokumentet.</li>
+        <li>Jini të organizuar.</li>
+        <li>Komunikoni rregullisht.</li>
+        <li>Përdorni softuer kontabiliteti.</li>
+        <li>Mos i përzieni mjetet personale me ato të biznesit.</li>
+        <li>Bëni pyetje të qarta.</li>
+        <li>Paguani në kohë.</li>
+        <li>Jini të arritshëm.</li>
+        <li>Kërkoni këshilla.</li>
+        <li>Kuptoni rëndësinë e tatimeve.</li>
+      </ol>
+      <h2>Përfundim</h2>
+      <p>Bashkëpunimi i mirë me kontabilistin është thelbësor për suksesin.</p>
+    `
+  },
+  'si-te-interpretoni-pasqyrat-financiare': {
+    title: 'Si të interpretoni pasqyrat financiare të kompanisë suaj',
+    category: 'Këshilla',
+    date: '2025-10-15',
+    readTime: 1,
+    author: 'Ekipi i Accounting Plus',
+    image: '/images/9.jpg',
+    content: `
+      <h2>Kuptimi i pasqyrave financiare</h2>
+      <p>Pasqyrat financiare janë thelbësore për të kuptuar shëndetin e kompanisë suaj.</p>
+      <h2>Tri pasqyrat kryesore financiare</h2>
+      <p>Bilanci i gjendjes, pasqyra e të ardhurave dhe pasqyra e fluksit të parasë.</p>
+      <h2>Përfundim</h2>
+      <p>Ndjekja e rregullt e pasqyrave financiare ju ndihmon ta drejtoni biznesin.</p>
+    `
+  },
+  'planifikimi-i-buxhetit': {
+    title: 'Planifikimi i buxhetit për mikro dhe bizneset e vogla',
+    category: 'Këshilla',
+    date: '2025-10-12',
+    readTime: 1,
+    author: 'Ekipi i Accounting Plus',
+    image: '/images/10.jpg',
+    content: `
+      <h2>Pse është i rëndësishëm buxheti?</h2>
+      <p>Buxheti është plani se si do t’i përdorni financat. Ai është çelësi i kontrollit të kostove.</p>
+      <h2>Kategoritë e zakonshme të buxhetit</h2>
+      <p>Kostot e personelit, të lokalit, të materialeve, të marketingut, të transportit dhe rezerva për shpenzime të paplanifikuara.</p>
+      <h2>Përfundim</h2>
+      <p>Një buxhet i mirë është baza e suksesit financiar.</p>
+    `
+  },
+  'kur-ju-duhet-nje-kontabilist': {
+    title: 'Si ta kuptoni se ju duhet një kontabilist profesional',
+    category: 'Këshilla',
+    date: '2025-10-10',
+    readTime: 1,
+    author: 'Ekipi i Accounting Plus',
+    image: '/images/11.jpg',
+    content: `
+      <h2>Shenjat se ju duhet një kontabilist</h2>
+      <p>Biznes në rritje, punësimi i punonjësit të parë, pasiguri për tatimet, mungesë kohe, transaksione të ndërlikuara ose probleme të rregullta me Administratën Tatimore.</p>
+      <h2>Përfundim</h2>
+      <p>Të kuptuarit në kohë të nevojës për kontabilist e ruan biznesin tuaj.</p>
+    `
+  },
+  'ndryshimi-mes-librave-dhe-kontabilitetit': {
+    title: 'Ndryshimi mes mbajtjes së librave dhe kontabilitetit',
+    category: 'SEO/Autoritet',
+    date: '2025-10-05',
+    readTime: 1,
+    author: 'Ekipi i Accounting Plus',
+    image: '/images/12.jpg',
+    content: `
+      <h2>Cili është ndryshimi?</h2>
+      <p>Fjalët mbajtje librash dhe kontabilitet shpesh përdoren si sinonime, por kanë kuptime të ndryshme.</p>
+      <h2>Mbajtja e librave dhe kontabiliteti</h2>
+      <p>Mbajtja e librave është procesi i evidencimit të transaksioneve, me theks te hollësia. Kontabiliteti është analiza e të dhënave, me theks te vendimmarrja.</p>
+      <h2>Përfundim</h2>
+      <p>Për një biznes të suksesshëm ju duhen të dyja.</p>
+    `
+  },
+  'si-te-zgjidhni-kontabilistin': {
+    title: 'Si të zgjidhni kontabilistin më të përshtatshëm për kompaninë tuaj',
+    category: 'SEO/Autoritet',
+    date: '2025-10-01',
+    readTime: 1,
+    author: 'Ekipi i Accounting Plus',
+    image: '/images/13.jpg',
+    content: `
+      <h2>Kriteret kryesore të zgjedhjes</h2>
+      <p>Përvoja dhe kualifikimet, reputacioni, komunikimi, çmimet, teknologjia dhe specializimet.</p>
+      <h2>Pyetje për procesin</h2>
+      <p>Sa kohë janë në biznes? Sa klientë kanë? Cila është praktika e tyre e komunikimit? Cilat janë afatet e tyre?</p>
+      <h2>Përfundim</h2>
+      <p>Zgjedhja e duhur e kontabilistit sjell sukses.</p>
+    `
+  },
+  'ruajtja-e-dokumenteve': {
+    title: 'Cilat dokumente duhet të ruhen dhe për sa kohë?',
+    category: 'SEO/Autoritet',
+    date: '2025-09-28',
+    readTime: 1,
+    author: 'Ekipi i Accounting Plus',
+    image: '/images/14.jpg',
+    content: `
+      <h2>Rregullat për ruajtjen e dokumenteve</h2>
+      <p>Rregullat kërkojnë që dokumentet e biznesit të ruhen për një kohë të caktuar.</p>
+      <h2>Periudhat e ruajtjes</h2>
+      <p>3 vjet: faturat, llogaritë dhe pasqyrat bankare. 5 vjet: librat e biznesit dhe pasqyrat financiare vjetore. 10 vjet: kontratat me vlerë të madhe.</p>
+      <h2>Përfundim</h2>
+      <p>Ruajtja në kohë e dokumenteve e mbron biznesin tuaj.</p>
+    `
+  },
+
   // ===== ENGLESKI =====
   en: {
     'tips-working-accountant': {

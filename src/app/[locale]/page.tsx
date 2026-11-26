@@ -7,7 +7,7 @@ import Contact from '@/components/Contact';
 import JsonLd from '@/components/JsonLd';
 import { mapServiceForLocale } from '@/lib/cms/public';
 import { loadPublishedServices, loadPublicSettings } from '@/lib/cms/publicContent';
-import { isAppLocale, localizedPath, stripLeadingEmoji, buildPageMetadata } from '@/lib/seo';
+import { isAppLocale, localizedPath, stripLeadingEmoji, buildPageMetadata, HTML_LANG } from '@/lib/seo';
 import { accountingServiceSchema, breadcrumbSchema } from '@/lib/seoSchema';
 
 export const revalidate = 60;
@@ -49,6 +49,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
               : settings.about.descriptions.me,
             url: `https://accounting-plus.me${localizedPath(locale)}`,
             settings,
+            inLanguage: isAppLocale(locale) ? HTML_LANG[locale] : undefined,
           }),
         ]}
       />

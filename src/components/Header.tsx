@@ -3,7 +3,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import LanguageSwitcher from './LanguageSwitcher';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePublicServices } from '@/lib/cms/usePublicCms';
@@ -74,7 +74,7 @@ export default function Header() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-gray-100 py-3 backdrop-blur-xl"
+                    className="absolute left-0 mt-2 w-96 max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 py-3 backdrop-blur-xl"
                   >
                     {services.map((service) => (
                       <Link
@@ -84,7 +84,7 @@ export default function Header() {
                         prefetch
                       >
                         <span className="text-blue-600 font-bold mr-2">•</span>
-                        <span className="group-hover/item:font-semibold">{service.title}</span>
+                        <span className="group-hover/item:font-semibold whitespace-normal">{service.title}</span>
                       </Link>
                     ))}
                   </motion.div>
@@ -93,21 +93,27 @@ export default function Header() {
             </div>
 
             <NavLink href="/about" label={t('about')} />
-            <NavLink href="/blog" label="Blog" isBlog />
+            <NavLink href="/blog" label={t('blog')} isBlog />
             <NavLink href="/contact" label={t('contact')} />
 
             <div className="ml-4 pl-4 border-l border-gray-200 relative z-[999]">
-              <LanguageSwitcher />
+              <Suspense fallback={null}>
+                <LanguageSwitcher />
+              </Suspense>
             </div>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4 relative z-[9999]">
             <div className="relative z-[9999]">
-              <LanguageSwitcher />
+              <Suspense fallback={null}>
+                <LanguageSwitcher />
+              </Suspense>
             </div>
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? t('closeMenu') : t('openMenu')}
+              aria-expanded={isOpen}
               className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer p-2 hover:bg-blue-50 rounded-lg"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -168,7 +174,7 @@ export default function Header() {
               </div>
 
               <MobileNavLink href="/about" label={t('about')} onClick={() => setIsOpen(false)} />
-              <MobileNavLink href="/blog" label="Blog" onClick={() => setIsOpen(false)} isBlog />
+              <MobileNavLink href="/blog" label={t('blog')} onClick={() => setIsOpen(false)} isBlog />
               <MobileNavLink href="/contact" label={t('contact')} onClick={() => setIsOpen(false)} />
             </motion.div>
           )}

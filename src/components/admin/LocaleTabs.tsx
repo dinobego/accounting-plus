@@ -1,11 +1,12 @@
 'use client';
 
-import type { Locale } from '@/lib/cms/types';
+import { LOCALES, type Locale } from '@/lib/cms/types';
 
 const LABELS: Record<Locale, string> = {
   me: 'Crnogorski',
   en: 'English',
   tr: 'Türkçe',
+  sq: 'Shqip',
 };
 
 export default function LocaleTabs({
@@ -16,8 +17,8 @@ export default function LocaleTabs({
   onChange: (locale: Locale) => void;
 }) {
   return (
-    <div className="flex gap-2">
-      {(['me', 'en', 'tr'] as Locale[]).map((locale) => (
+    <div className="flex flex-wrap gap-2">
+      {LOCALES.map((locale) => (
         <button
           key={locale}
           type="button"

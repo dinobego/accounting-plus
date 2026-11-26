@@ -3,7 +3,11 @@
     "home": "Početna",
     "services": "Usluge",
     "about": "O nama",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "blog": "Blog",
+    "language": "Jezik",
+    "openMenu": "Otvori meni",
+    "closeMenu": "Zatvori meni"
   },
   "services": {
     "company-formation": "Osnivanje preduzeća",
@@ -67,6 +71,11 @@
     "title": "Usluge viza",
     "description": "Potpuna pomoć pri aplikaciji za vizu i dokumentacija za putovanje."
   }
+  },
+  "serviceCta": {
+    "title": "Spremni da počnete?",
+    "text": "Kontaktirajte nas i dogovorite se za konsultacije.",
+    "button": "Kontaktiraj nas"
   },
   "about": {
     "title": "O našoj agenciji",
@@ -158,6 +167,14 @@
       "title": "Pogledajte nas na mapi"
     }
   },
+  "errors": {
+    "sendFailed": "Greška pri slanju poruke",
+    "tryAgain": "Pokušajte ponovo"
+  },
+  "validation": {
+    "required": "Ovo polje je obavezno.",
+    "email": "Unesite ispravnu email adresu."
+  },
   "footer": {
     "description": "Profesionalne računovodstvene usluge kojima možete vjerovati",
     "rights": "Sva prava zadržana",
@@ -185,6 +202,7 @@
     "backToBlog": "Nazad na blog",
     "author": "Autor",
     "share": "Podijeli članak",
+    "copyLink": "Kopiraj",
     "notFound": "Članak nije pronađen",
     "shareLike": "Sviđa vam se ovaj članak?",
     "shareHint": "Podijelite ga sa Vašim kolegama i prijateljima",
